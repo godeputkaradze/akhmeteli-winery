@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akhmeteli Winery — Georgian Wine Heritage</title>
+  <meta name="description" content="Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Eagle+Lake&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="css/cover.css" />
+  <!-- 18+ age gate (runs before paint to avoid a flash of content) -->
+  <link rel="stylesheet" href="css/age-gate.css" />
+  <script src="js/age-gate.js"></script>
+</head>
+<body class="dev-blocks">
+
+  <!-- ================= MENU ================= -->
+  <nav class="nav">
+    <span class="block-tag">B0 · Menu</span>
+    <div class="nav__left">
+      <a class="nav__logo" href="index.html"><img src="img/logo-gold.png" alt="Akhmeteli Winery" /></a>
+
+      <button class="nav__menu" aria-label="Menu">
+        <span class="bars"><i></i><i></i></span>
+        <span data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="ka">KA</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ru">RU</button>
+      </div>
+    </div>
+
+    <div class="nav__right">
+      <div class="nav__links">
+        <a href="#awards" data-i18n="nav.awards">Awards</a>
+        <span class="div"></span>
+        <a href="#visit" data-i18n="nav.visit">Visit Us</a>
+      </div>
+      <a class="nav__shop" href="shop.html" data-i18n="nav.shop">Wine Shop</a>
+    </div>
+  </nav>
+
+  <!-- ================= COVER / HERO ================= -->
+  <header class="cover">
+    <span class="block-tag">B1 · Hero / Cover</span>
+    <div class="cover__bg"></div>
+    <div class="cover__inner">
+      <div class="cover__copy reveal reveal--up">
+        <h1 class="cover__title" data-i18n="cover.title">Akhmeteli</h1>
+        <p class="cover__tagline" data-i18n="cover.tagline">Georgian Wine Heritage</p>
+        <p class="cover__text" data-i18n="cover.text">
+          Rooted in the heart of Kakheti, Akhmeteli is dedicated to the timeless
+          traditions of Georgian winemaking. Crafted in qvevri, shaped by nature,
+          and passed down through generations.
+        </p>
+        <a class="cover__cta" href="shop.html">
+          <span data-i18n="cover.cta">Discover Our Wines</span>
+          <span class="arw"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- awards bar -->
+    <div class="awards-bar">
+      <div class="award">
+        <span class="medal medal--gold"></span>
+        <div class="award__txt">
+          <div class="t">IWSC <span data-i18n="award.gold">Gold</span></div>
+          <div class="w">Kakhuri Mtsvane 2023</div>
+          <div class="p">95 <span data-i18n="award.points">Points</span></div>
+        </div>
+      </div>
+      <span class="sep"></span>
+      <div class="award">
+        <span class="medal medal--silver"></span>
+        <div class="award__txt">
+          <div class="t">IWSC <span data-i18n="award.silver">Silver</span></div>
+          <div class="w">Rkatsiteli 2023</div>
+          <div class="p">92 <span data-i18n="award.points">Points</span></div>
+        </div>
+      </div>
+      <span class="sep"></span>
+      <div class="award">
+        <span class="medal medal--bronze"></span>
+        <div class="award__txt">
+          <div class="t">IWSC <span data-i18n="award.bronze">Bronze</span></div>
+          <div class="w">Saperavi 2023</div>
+          <div class="p">89 <span data-i18n="award.points">Points</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= #2 · ABOUT THE COMPANY ================= -->
+  <section class="about" id="about">
+    <span class="block-tag">B2 · About the Company</span>
+    <div class="about__bg"></div>
+    <div class="about__inner">
+      <div class="about__copy reveal reveal--left">
+        <p class="about__eyebrow uc" data-i18n="about.eyebrow">About the Company</p>
+        <h2 class="about__title" data-i18n="about.title">A tradition that lives in clay</h2>
+        <p class="about__text" data-i18n="about.text">
+          Akhmeteli was born in the heart of Kakheti, where the art of winemaking
+          passes from one generation to the next. We carry on the ancient qvevri
+          tradition — clay vessels buried in the earth, in which wine matures
+          naturally, just as our ancestors did for millennia. Every bottle is the
+          fruit of the Alazani Valley's sun, soil, and craft.
+        </p>
+        <a class="about__cta cover__cta" href="#wines">
+          <span data-i18n="about.cta">Read our story</span>
+          <span class="arw"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= #3 · ABOUT AKHMETA (THE PLACE) ================= -->
+  <section class="about about--alt" id="akhmeta">
+    <span class="block-tag">B3 · About Akhmeta (Place)</span>
+    <div class="about__bg"></div>
+    <div class="about__inner">
+      <div class="about__copy reveal reveal--right">
+        <p class="about__eyebrow uc" data-i18n="place.eyebrow">The Place</p>
+        <h2 class="about__title" data-i18n="place.title">Akhmeta — heart of the Alazani Valley</h2>
+        <p class="about__text" data-i18n="place.text">
+          In the Akhmeta district, where the snow-capped Caucasus meets the fertile
+          Alazani Valley, vineyards have been tended for millennia. Ancient monasteries
+          watch over the plain, and the same soil and sun that shaped this land shape
+          every Akhmeteli wine.
+        </p>
+        <a class="about__cta cover__cta" href="#visit">
+          <span data-i18n="place.cta">Visit us</span>
+          <span class="arw"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= #4 · ADVANTAGES ================= -->
+  <section class="adv" id="advantages">
+    <span class="block-tag">B4 · Advantages</span>
+    <div class="adv__inner">
+      <header class="adv__head reveal reveal--up">
+        <p class="adv__eyebrow uc" data-i18n="adv.eyebrow">Why Akhmeteli</p>
+        <h2 class="adv__title" data-i18n="adv.title">The Akhmeteli difference</h2>
+      </header>
+      <ol class="adv__list">
+        <li class="adv__item reveal reveal--left">
+          <span class="adv__num">01</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.1.t">Highest Quality</h3>
+            <p class="adv__text" data-i18n="adv.1.d">Strict quality control from vineyard to bottle. Every stage protects the purity, consistency, and natural character of the wine.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--right">
+          <span class="adv__num">02</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.2.t">International Recognition</h3>
+            <p class="adv__text" data-i18n="adv.2.d">Award-winning wines that meet the highest international standards — a proud representation of Georgian winemaking on the world stage.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--left">
+          <span class="adv__num">03</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.3.t">Exceptional Land &amp; Climate</h3>
+            <p class="adv__text" data-i18n="adv.3.d">Vineyards set in one of Georgia's finest wine regions, where rich soil, generous sun, and a gentle climate yield grapes of rare depth and aroma.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--right">
+          <span class="adv__num">04</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.4.t">Selected Georgian Grapes</h3>
+            <p class="adv__text" data-i18n="adv.4.d">Crafted from Georgia's noblest varieties — Saperavi, Rkatsiteli, Kisi, Kakhuri Mtsvane and more — each lending its own character and taste.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--left">
+          <span class="adv__num">05</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.5.t">Traditional Qvevri Wine</h3>
+            <p class="adv__text" data-i18n="adv.5.d">Made the ancient Georgian way, in buried clay qvevri that preserve the wine's natural structure, deep aroma, and true identity.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--right">
+          <span class="adv__num">06</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.6.t">Premium Georgian Chacha</h3>
+            <p class="adv__text" data-i18n="adv.6.d">Alongside the wines, a traditional Georgian chacha — a strong, characterful spirit at the heart of Georgian hospitality.</p>
+          </div>
+        </li>
+        <li class="adv__item reveal reveal--left">
+          <span class="adv__num">07</span>
+          <div class="adv__body">
+            <h3 class="adv__name" data-i18n="adv.7.t">Tradition Meets Modern Standards</h3>
+            <p class="adv__text" data-i18n="adv.7.d">Centuries-old craft, natural terroir, and modern quality standards united in products that proudly represent Georgia.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= #5 · PRODUCT · MUKUZANI ================= -->
+  <!-- ================= #5 · WINES (slider) ================= -->
+  <section class="wines" id="wines">
+    <span class="block-tag">B5 · Wines</span>
+    <header class="wines__head reveal reveal--up">
+      <p class="wines__eyebrow uc" data-i18n="wines.eyebrow">Our Collection</p>
+      <h2 class="wines__title" data-i18n="wines.title">Wines</h2>
+    </header>
+    <div class="wslider" id="wslider">
+      <div class="wslider__viewport">
+        <img class="wslide is-active" src="assets/wines/01-saperavi.png" alt="Saperavi 2023 — Red Dry Wine" />
+        <img class="wslide" src="assets/wines/02-kindzmarauli.png" alt="Kindzmarauli 2023 — Red Semi-Sweet" loading="lazy" />
+        <img class="wslide" src="assets/wines/03-pirosmani.png" alt="Pirosmani 2023 — Red Semi-Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/04-alazani-valley.png" alt="Alazani Valley 2023 — Red Semi-Sweet" loading="lazy" />
+        <img class="wslide" src="assets/wines/05-kisi.png" alt="Kisi 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/06-rkatsiteli.png" alt="Rkatsiteli 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/07-tsarapi.png" alt="Tsarapi 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/08-tibaani.png" alt="Tibaani 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/09-kakhuri-mtsvane.png" alt="Kakhuri Mtsvane 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/10-gurjaani.png" alt="Gurjaani 2023 — Amber Dry" loading="lazy" />
+        <img class="wslide" src="assets/wines/11-tsinandali.png" alt="Tsinandali 2023 — White Dry" loading="lazy" />
+      </div>
+      <button class="wslider__nav wslider__prev" aria-label="Previous wine">‹</button>
+      <button class="wslider__nav wslider__next" aria-label="Next wine">›</button>
+      <div class="wslider__dots" id="wdots"></div>
+    </div>
+  </section>
+
+  <!-- ================= #6 · CHACHA (3 static pictures) ================= -->
+  <section class="chacha" id="chacha">
+    <span class="block-tag">B6 · Chacha</span>
+    <header class="wines__head reveal reveal--up">
+      <p class="wines__eyebrow uc" data-i18n="chacha.eyebrow">Georgian Spirit</p>
+      <h2 class="wines__title" data-i18n="chacha.title">Chacha</h2>
+    </header>
+    <div class="wslider" id="cslider">
+      <div class="wslider__viewport">
+        <img class="wslide is-active" src="assets/chacha/classic.png" alt="Akhmeteli Chacha Classic" />
+        <img class="wslide" src="assets/chacha/gold.png" alt="Akhmeteli Chacha Gold" loading="lazy" />
+        <img class="wslide" src="assets/chacha/silver.png" alt="Akhmeteli Chacha Silver" loading="lazy" />
+      </div>
+      <button class="wslider__nav wslider__prev" aria-label="Previous chacha">‹</button>
+      <button class="wslider__nav wslider__next" aria-label="Next chacha">›</button>
+      <div class="wslider__dots"></div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="foot" id="footer">
+    <span class="block-tag">B6 · Footer</span>
+    <div class="foot__inner">
+
+      <!-- brand + phone -->
+      <div class="foot__brand reveal reveal--up">
+        <a class="foot__logo" href="index.html"><img src="img/logo-gold.png" alt="Akhmeteli Winery" /></a>
+        <p class="foot__tagline" data-i18n="foot.tagline">
+          Rooted in Kakheti — crafted in qvevri, shaped by nature, and passed down
+          through generations.
+        </p>
+        <a class="foot__phone" href="tel:+995577080525">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1.2 4.5a1 1 0 0 1-.27 1L7.21 11.12a16 16 0 0 0 6 6l1.87-1.87a1 1 0 0 1 1-.27l4.5 1.2a1 1 0 0 1 .75 1z"/></svg>
+          <span>+995 577 08 05 25</span>
+        </a>
+      </div>
+
+      <!-- explore -->
+      <nav class="foot__col">
+        <h4 class="foot__h" data-i18n="foot.explore">Explore</h4>
+        <a href="#about" data-i18n="about.eyebrow">About the Company</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop Wines</a>
+        <a href="#advantages" data-i18n="adv.eyebrow">Why Akhmeteli</a>
+        <a href="#awards" data-i18n="nav.awards">Awards</a>
+        <a href="#visit" data-i18n="nav.visit">Visit Us</a>
+      </nav>
+
+      <!-- legal + contact -->
+      <nav class="foot__col">
+        <h4 class="foot__h" data-i18n="foot.legal">Legal</h4>
+        <a href="#" data-i18n="foot.terms">Terms &amp; Conditions</a>
+        <a href="#" data-i18n="foot.privacy">Privacy Policy</a>
+        <a href="contact.html" data-i18n="foot.contact">Contact</a>
+      </nav>
+
+      <!-- social -->
+      <div class="foot__col">
+        <h4 class="foot__h" data-i18n="foot.follow">Follow Us</h4>
+        <div class="foot__social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5h2.5V5.5H14c-2.2 0-3.5 1.4-3.5 3.6V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.4c0-.6.3-.9 1-.9z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.5 12 5.5 12 5.5s-6 0-7.9.6A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.6 7.9.6 7.9.6s6 0 7.9-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2zM10 15V9l5.2 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.2 1.6 3.7 3.8 3.9V9.4c-1.3.1-2.5-.3-3.8-1v5.9c0 3.3-2.4 5.7-5.4 5.7-3 0-5.1-2.4-4.9-5.2.2-2.6 2.3-4.5 5.1-4.3v2.6c-.4-.1-.9-.2-1.3-.1-1.1.1-1.9 1-1.9 2.1 0 1.2.9 2.1 2.1 2.1 1.3 0 2.2-1 2.2-2.4V3h2.9z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="foot__bar">
+      <span>&copy; <span id="foot-year">2026</span> Akhmeteli Winery. <span data-i18n="foot.rights">All rights reserved.</span></span>
+      <span class="foot__region" data-i18n="foot.region">Akhmeta · Kakheti · Georgia</span>
+    </div>
+  </footer>
+  <script>document.getElementById("foot-year").textContent = new Date().getFullYear();</script>
+
+  <!-- ================= SLIDERS (wines + chacha) ================= -->
+  <script>
+  (function () {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll(".wslider").forEach((slider) => {
+      const slides = Array.prototype.slice.call(slider.querySelectorAll(".wslide"));
+      const dotsWrap = slider.querySelector(".wslider__dots");
+      if (!slides.length || !dotsWrap) return;
+      let i = 0, timer = null;
+      slides.forEach((_, n) => {
+        const b = document.createElement("button");
+        b.setAttribute("aria-label", "Go to slide " + (n + 1));
+        b.addEventListener("click", () => go(n));
+        dotsWrap.appendChild(b);
+      });
+      const dots = Array.prototype.slice.call(dotsWrap.children);
+      function paint() {
+        slides.forEach((s, n) => s.classList.toggle("is-active", n === i));
+        dots.forEach((d, n) => d.classList.toggle("is-active", n === i));
+      }
+      function go(n) { i = (n + slides.length) % slides.length; paint(); restart(); }
+      function next() { go(i + 1); }
+      function prev() { go(i - 1); }
+      const nextBtn = slider.querySelector(".wslider__next");
+      const prevBtn = slider.querySelector(".wslider__prev");
+      if (nextBtn) nextBtn.addEventListener("click", next);
+      if (prevBtn) prevBtn.addEventListener("click", prev);
+      function restart() { clearInterval(timer); if (!reduce) timer = setInterval(next, 4500); }
+      paint(); restart();
+    });
+  })();
+  </script>
+
+  <!-- ================= HERO SLIDESHOW (auto crossfade, no controls) ================= -->
+  <script>
+  (function () {
+    const bg = document.querySelector(".cover__bg");
+    if (!bg) return;
+    const images = ["hero-4.png", "cover.png", "hero-2.png", "hero-3.png"];
+    const slides = images.map((name, i) => {
+      const el = document.createElement("div");
+      el.className = "cover__slide" + (i === 0 ? " is-active" : "");
+      el.style.backgroundImage = 'url("assets/hero/' + name + '")';
+      bg.appendChild(el);
+      return el;
+    });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || slides.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      slides[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active");
+    }, 5500);
+  })();
+  </script>
+
+  <!-- ================= SCROLL REVEAL (no dependencies) ================= -->
+  <script>
+  (function () {
+    const els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach(e => e.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add("is-in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(e => io.observe(e));
+  })();
+  </script>
+
+  <!-- ================= PRODUCT PARALLAX (scroll-linked) ================= -->
+  <script>
+  (function () {
+    const sections = document.querySelectorAll("[data-product]");
+    if (!sections.length) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    let ticking = false;
+    function update() {
+      ticking = false;
+      const vh = window.innerHeight;
+      const mobile = window.innerWidth <= 820;
+      sections.forEach(sec => {
+        const g0 = sec.querySelector("[data-grapes]");
+        const b0 = sec.querySelector("[data-bottle]");
+        if (mobile) { if (g0) g0.style.transform = ""; if (b0) b0.style.transform = ""; return; }
+        const r = sec.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        let p = (vh - r.top) / (vh + r.height);
+        p = Math.max(0, Math.min(1, p));
+        const g = sec.querySelector("[data-grapes]");
+        const b = sec.querySelector("[data-bottle]");
+        if (g) g.style.transform = "translate(" + (-28 + 42 * p).toFixed(2) + "%,-50%)";
+        if (b) b.style.transform = "translate(-50%,calc(-50% + " + (28 - 56 * p).toFixed(1) + "px))";
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  })();
+  </script>
+
+  <!-- ================= LANGUAGE (self-contained for the cover page) ================= -->
+  <script>
+  (function () {
+    const KEY = "akhmeteli.lang";
+    const SUPPORTED = ["ka", "en", "ru"];
+    const DICT = {
+      ka: {
+        "nav.menu": "მენიუ",
+        "nav.awards": "ჯილდოები",
+        "nav.visit": "ვიზიტი",
+        "nav.shop": "მაღაზია",
+        "cover.title": "ახმეტელი",
+        "cover.tagline": "ქართული ღვინის მემკვიდრეობა",
+        "cover.text": "კახეთის გულში დაბადებული, ახმეტელი ერთგულია ქართული მეღვინეობის უძველესი ტრადიციებისა. დამზადებული ქვევრში, ბუნებით ნაკვები და თაობიდან თაობას გადაცემული.",
+        "cover.cta": "აღმოაჩინე ჩვენი ღვინოები",
+        "about.eyebrow": "კომპანიის შესახებ",
+        "about.title": "ტრადიცია, რომელიც ქვევრში ცოცხლობს",
+        "about.text": "ახმეტელი დაიბადა კახეთის გულში, სადაც ღვინის დაყენების ხელოვნება თაობიდან თაობას გადაეცემა. ჩვენ ვაგრძელებთ ქვევრის უძველეს ტრადიციას — მიწაში ჩაფლული თიხის ჭურჭელი, რომელშიც ღვინო ბუნებრივად მწიფდება, ისე როგორც ჩვენი წინაპრები აკეთებდნენ ათასწლეულების მანძილზე. თითოეული ბოთლი ალაზნის ველის მზის, ნიადაგისა და ხელოსნობის ნაყოფია.",
+        "about.cta": "ჩვენი ისტორია",
+        "place.eyebrow": "ადგილი",
+        "place.title": "ახმეტა — ალაზნის ველის გული",
+        "place.text": "ახმეტის მხარეში, სადაც თოვლიანი კავკასიონი ალაზნის ნაყოფიერ ველს ხვდება, ვენახებს ათასწლეულების მანძილზე უვლიან. უძველესი მონასტრები დარაჯად უდგას ველს, და იგივე ნიადაგი და მზე, რომელმაც ეს მიწა შექმნა, ქმნის ყველა ახმეტელის ღვინოს.",
+        "place.cta": "ეწვიე ჩვენ",
+        "adv.eyebrow": "უპირატესობები",
+        "adv.title": "რატომ ახმეტელი",
+        "adv.1.t": "უმაღლესი ხარისხი",
+        "adv.1.d": "მკაცრი ხარისხის კონტროლი ვენახიდან ბოთლამდე. ყოველი ეტაპი იცავს ღვინის სიწმინდეს, თანმიმდევრულობასა და ბუნებრივ ხასიათს.",
+        "adv.2.t": "საერთაშორისო აღიარება",
+        "adv.2.d": "ჯილდოებით აღიარებული ღვინოები, რომლებიც აკმაყოფილებენ უმაღლეს საერთაშორისო სტანდარტებს — ქართული მეღვინეობის ღირსეული წარმომადგენლობა მსოფლიო ასპარეზზე.",
+        "adv.3.t": "გამორჩეული მიწა და კლიმატი",
+        "adv.3.d": "ვენახები საქართველოს ერთ-ერთ საუკეთესო მხარეშია, სადაც ნაყოფიერი ნიადაგი, უხვი მზე და რბილი კლიმატი იშვიათი სიღრმისა და არომატის ყურძენს იძლევა.",
+        "adv.4.t": "რჩეული ქართული ჯიშები",
+        "adv.4.d": "შექმნილია საქართველოს კეთილშობილური ჯიშებისგან — საფერავი, რქაწითელი, ქისი, კახური მწვანე და სხვა — თითოეული თავისი ხასიათითა და გემოთი.",
+        "adv.5.t": "ტრადიციული ქვევრის ღვინო",
+        "adv.5.d": "დაყენებული უძველესი ქართული წესით, მიწაში ჩაფლულ ქვევრში, რომელიც ინახავს ღვინის ბუნებრივ სტრუქტურას, ღრმა არომატსა და ნამდვილ ვინაობას.",
+        "adv.6.t": "პრემიუმ ქართული ჭაჭა",
+        "adv.6.d": "ღვინოებთან ერთად — ტრადიციული ქართული ჭაჭა, ძლიერი და გამორჩეული სასმელი, ქართული სტუმართმოყვარეობის გულში.",
+        "adv.7.t": "ტრადიცია თანამედროვე სტანდარტებს ხვდება",
+        "adv.7.d": "საუკუნოვანი ხელოვნება, ბუნებრივი ტერუარი და თანამედროვე ხარისხის სტანდარტები — გაერთიანებული პროდუქტებში, რომლებიც ამაყად წარმოადგენენ საქართველოს.",
+        "wines.eyebrow": "ჩვენი კოლექცია",
+        "wines.title": "ღვინოები",
+        "chacha.eyebrow": "ქართული სასმელი",
+        "chacha.title": "ჭაჭა",
+        "prod.eyebrow": "ჯილდოსმფლობელი ქართული ღვინო",
+        "prod.grape": "ჯიში",
+        "prod.origin": "მხარე",
+        "prod.muk.name": "მუკუზანი",
+        "prod.muk.type": "წითელი მშრალი ღვინო",
+        "prod.muk.grape": "საფერავი",
+        "prod.muk.origin": "მუკუზანი, კახეთი, საქართველო",
+        "award.gold": "ოქრო",
+        "award.silver": "ვერცხლი",
+        "award.bronze": "ბრინჯაო",
+        "award.points": "ქულა",
+        "foot.tagline": "კახეთში ფესვგადგმული — დამზადებული ქვევრში, ბუნებით ნაკვები და თაობიდან თაობას გადაცემული.",
+        "foot.explore": "ნავიგაცია",
+        "foot.legal": "სამართლებრივი",
+        "foot.terms": "წესები და პირობები",
+        "foot.privacy": "კონფიდენციალურობის პოლიტიკა",
+        "foot.contact": "კონტაქტი",
+        "foot.follow": "გამოგვყევით",
+        "foot.rights": "ყველა უფლება დაცულია.",
+        "foot.region": "ახმეტა · კახეთი · საქართველო"
+      },
+      en: {
+        "nav.menu": "Menu",
+        "nav.awards": "Awards",
+        "nav.visit": "Visit Us",
+        "nav.shop": "Wine Shop",
+        "cover.title": "Akhmeteli",
+        "cover.tagline": "Georgian Wine Heritage",
+        "cover.text": "Rooted in the heart of Kakheti, Akhmeteli is dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri, shaped by nature, and passed down through generations.",
+        "cover.cta": "Discover Our Wines",
+        "about.eyebrow": "About the Company",
+        "about.title": "A tradition that lives in clay",
+        "about.text": "Akhmeteli was born in the heart of Kakheti, where the art of winemaking passes from one generation to the next. We carry on the ancient qvevri tradition — clay vessels buried in the earth, in which wine matures naturally, just as our ancestors did for millennia. Every bottle is the fruit of the Alazani Valley's sun, soil, and craft.",
+        "about.cta": "Read our story",
+        "place.eyebrow": "The Place",
+        "place.title": "Akhmeta — heart of the Alazani Valley",
+        "place.text": "In the Akhmeta district, where the snow-capped Caucasus meets the fertile Alazani Valley, vineyards have been tended for millennia. Ancient monasteries watch over the plain, and the same soil and sun that shaped this land shape every Akhmeteli wine.",
+        "place.cta": "Visit us",
+        "adv.eyebrow": "Why Akhmeteli",
+        "adv.title": "The Akhmeteli difference",
+        "adv.1.t": "Highest Quality",
+        "adv.1.d": "Strict quality control from vineyard to bottle. Every stage protects the purity, consistency, and natural character of the wine.",
+        "adv.2.t": "International Recognition",
+        "adv.2.d": "Award-winning wines that meet the highest international standards — a proud representation of Georgian winemaking on the world stage.",
+        "adv.3.t": "Exceptional Land & Climate",
+        "adv.3.d": "Vineyards set in one of Georgia's finest wine regions, where rich soil, generous sun, and a gentle climate yield grapes of rare depth and aroma.",
+        "adv.4.t": "Selected Georgian Grapes",
+        "adv.4.d": "Crafted from Georgia's noblest varieties — Saperavi, Rkatsiteli, Kisi, Kakhuri Mtsvane and more — each lending its own character and taste.",
+        "adv.5.t": "Traditional Qvevri Wine",
+        "adv.5.d": "Made the ancient Georgian way, in buried clay qvevri that preserve the wine's natural structure, deep aroma, and true identity.",
+        "adv.6.t": "Premium Georgian Chacha",
+        "adv.6.d": "Alongside the wines, a traditional Georgian chacha — a strong, characterful spirit at the heart of Georgian hospitality.",
+        "adv.7.t": "Tradition Meets Modern Standards",
+        "adv.7.d": "Centuries-old craft, natural terroir, and modern quality standards united in products that proudly represent Georgia.",
+        "wines.eyebrow": "Our Collection",
+        "wines.title": "Wines",
+        "chacha.eyebrow": "Georgian Spirit",
+        "chacha.title": "Chacha",
+        "prod.eyebrow": "Award Winning Georgian Wine",
+        "prod.grape": "Grape Variety",
+        "prod.origin": "Origin",
+        "prod.muk.name": "Mukuzani",
+        "prod.muk.type": "Red Dry Wine",
+        "prod.muk.grape": "Saperavi",
+        "prod.muk.origin": "Mukuzani, Kakheti, Georgia",
+        "award.gold": "Gold",
+        "award.silver": "Silver",
+        "award.bronze": "Bronze",
+        "award.points": "Points",
+        "foot.tagline": "Rooted in Kakheti — crafted in qvevri, shaped by nature, and passed down through generations.",
+        "foot.explore": "Explore",
+        "foot.legal": "Legal",
+        "foot.terms": "Terms & Conditions",
+        "foot.privacy": "Privacy Policy",
+        "foot.contact": "Contact",
+        "foot.follow": "Follow Us",
+        "foot.rights": "All rights reserved.",
+        "foot.region": "Akhmeta · Kakheti · Georgia"
+      },
+      ru: {
+        "nav.menu": "Меню",
+        "nav.awards": "Награды",
+        "nav.visit": "Визит",
+        "nav.shop": "Магазин вин",
+        "cover.title": "Ахметели",
+        "cover.tagline": "Наследие грузинского вина",
+        "cover.text": "Уходящая корнями в сердце Кахетии, Ахметели верна вечным традициям грузинского виноделия. Создано в квеври, сформировано природой и передаётся из поколения в поколение.",
+        "cover.cta": "Открыть наши вина",
+        "about.eyebrow": "О компании",
+        "about.title": "Традиция, что живёт в глине",
+        "about.text": "Ахметели родилась в сердце Кахетии, где искусство виноделия передаётся из поколения в поколение. Мы продолжаем древнюю традицию квеври — глиняные сосуды, закопанные в землю, в которых вино созревает естественно, как делали наши предки тысячелетиями. Каждая бутылка — плод солнца, почвы и мастерства Алазанской долины.",
+        "about.cta": "Наша история",
+        "place.eyebrow": "Место",
+        "place.title": "Ахмета — сердце Алазанской долины",
+        "place.text": "В Ахметском крае, где заснеженный Кавказ встречается с плодородной Алазанской долиной, виноградники возделывают тысячелетиями. Древние монастыри хранят долину, и та же почва и солнце, что создали эту землю, создают каждое вино Ахметели.",
+        "place.cta": "Посетите нас",
+        "adv.eyebrow": "Преимущества",
+        "adv.title": "Почему Ахметели",
+        "adv.1.t": "Высочайшее качество",
+        "adv.1.d": "Строгий контроль качества от лозы до бутылки. Каждый этап оберегает чистоту, постоянство и природный характер вина.",
+        "adv.2.t": "Международное признание",
+        "adv.2.d": "Отмеченные наградами вина, отвечающие высочайшим международным стандартам, — достойное представление грузинского виноделия на мировой сцене.",
+        "adv.3.t": "Исключительная земля и климат",
+        "adv.3.d": "Виноградники в одном из лучших винодельческих регионов Грузии, где плодородная почва, щедрое солнце и мягкий климат рождают виноград редкой глубины и аромата.",
+        "adv.4.t": "Отборные грузинские сорта",
+        "adv.4.d": "Создано из благороднейших сортов Грузии — Саперави, Ркацители, Киси, Кахури Мцване и других, — каждый придаёт свой характер и вкус.",
+        "adv.5.t": "Традиционное вино в квеври",
+        "adv.5.d": "Сделано древним грузинским способом, в закопанных глиняных квеври, что сохраняют природную структуру, глубокий аромат и истинную суть вина.",
+        "adv.6.t": "Премиальная грузинская чача",
+        "adv.6.d": "Наряду с винами — традиционная грузинская чача, крепкий и характерный напиток в сердце грузинского гостеприимства.",
+        "adv.7.t": "Традиции и современные стандарты",
+        "adv.7.d": "Вековое мастерство, природный терруар и современные стандарты качества — в продуктах, которые с гордостью представляют Грузию.",
+        "wines.eyebrow": "Наша коллекция",
+        "wines.title": "Вина",
+        "chacha.eyebrow": "Грузинский напиток",
+        "chacha.title": "Чача",
+        "prod.eyebrow": "Отмеченное наградами грузинское вино",
+        "prod.grape": "Сорт",
+        "prod.origin": "Регион",
+        "prod.muk.name": "Мукузани",
+        "prod.muk.type": "Красное сухое вино",
+        "prod.muk.grape": "Саперави",
+        "prod.muk.origin": "Мукузани, Кахети, Грузия",
+        "award.gold": "Золото",
+        "award.silver": "Серебро",
+        "award.bronze": "Бронза",
+        "award.points": "баллов",
+        "foot.tagline": "Корнями в Кахетии — создано в квеври, сформировано природой и передаётся из поколения в поколение.",
+        "foot.explore": "Навигация",
+        "foot.legal": "Правовая информация",
+        "foot.terms": "Условия и положения",
+        "foot.privacy": "Политика конфиденциальности",
+        "foot.contact": "Контакты",
+        "foot.follow": "Мы в соцсетях",
+        "foot.rights": "Все права защищены.",
+        "foot.region": "Ахмета · Кахети · Грузия"
+      }
+    };
+
+    function getLang() {
+      const saved = localStorage.getItem(KEY);
+      return SUPPORTED.includes(saved) ? saved : "ka";
+    }
+    function apply(lang) {
+      const dict = DICT[lang] || DICT.ka;
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const v = dict[el.getAttribute("data-i18n")];
+        if (v !== undefined) el.textContent = v;
+      });
+      document.querySelectorAll(".lang-switch button").forEach(b => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll(".lang-switch button").forEach(b => {
+      b.addEventListener("click", () => {
+        localStorage.setItem(KEY, b.dataset.lang);
+        apply(b.dataset.lang);
+      });
+    });
+    apply(getLang());
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* =============================================================
+   SHOP v2 — light marketplace layout (matches catalogue design)
+   Scoped under .shop2 so it never touches the dark site theme.
+   ============================================================= */
+
+.shop2-page { background: #fff; }
+/* dark-theme decorations that are invisible on black but show on white */
+.shop2-page .vine-line { display: none; }
+/* keep the fixed nav legible over the white catalogue */
+.shop2-page .nav.scrolled { background: #14100e; backdrop-filter: none; -webkit-backdrop-filter: none; }
+
+.shop2 {
+  --m: #9d1f3a;           /* brand wine — primary buttons, prices, year */
+  --m-dark: #7a142b;
+  --gold: #c9a24a;        /* brand gold — accents, borders, hovers */
+  --gold-deep: #9a7526;
+  --s2-ink: #1c1714;      /* near-black text */
+  --s2-mut: #8c857d;      /* muted producer / labels */
+  --s2-line: #e3ddd4;     /* hairline dividers */
+  --badge-bg: #f0d488;    /* brand gold sale badge */
+  --badge-ink: #6f1c29;
+
+  background: #fff;
+  color: var(--s2-ink);
+  /* clears the fixed nav, then a small, even gap to the store */
+  padding: 116px clamp(1.2rem, 4vw, 3.5rem) 5rem;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.shop2__wrap {
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  gap: clamp(1.5rem, 3.5vw, 3.5rem);
+  max-width: 1320px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ---------------- SIDEBAR ---------------- */
+/* pinned filter panel — stays put while only the product grid changes.
+   capped to the viewport so a long filter list scrolls inside the panel. */
+.s2-aside {
+  position: sticky; top: 110px; align-self: start;
+  max-height: calc(100vh - 130px); overflow-y: auto;
+}
+
+/* top category text-links */
+.s2-cat {
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+.s2-cat button {
+  font: 500 .9rem/1 "Inter", sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--s2-ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: color .25s, letter-spacing .25s;
+}
+.s2-cat button:hover { color: var(--m); }
+.s2-cat button.is-active { color: var(--m); letter-spacing: .2em; font-weight: 600; }
+
+/* accordion groups + price share this header look */
+.s2-group { border-bottom: 1px solid var(--s2-line); }
+.s2-group__head {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font: 500 1rem/1 "Inter", sans-serif;
+  color: var(--s2-ink);
+}
+.s2-group__head .s2-chev {
+  width: 11px; height: 11px;
+  border-right: 1.6px solid #9a938a;
+  border-bottom: 1.6px solid #9a938a;
+  transform: rotate(45deg);          /* points down = collapsed */
+  transition: transform .3s ease;
+  margin-bottom: 3px;
+}
+.s2-group.open .s2-group__head .s2-chev { transform: rotate(-135deg); } /* points up */
+
+.s2-group__body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.s2-group.open .s2-group__body { max-height: 420px; padding-bottom: 1rem; overflow-y: auto; }
+
+/* checkbox option rows */
+.s2-opt {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .4rem 0;
+  font-size: .92rem;
+  color: #4a443d;
+  cursor: pointer;
+}
+.s2-opt input { accent-color: var(--m); width: 15px; height: 15px; cursor: pointer; }
+.s2-opt:hover { color: var(--m); }
+
+/* ----- price ----- */
+.s2-price { padding-bottom: 1.3rem; }
+.s2-price__inputs {
+  display: flex; align-items: center; gap: .5rem; margin: .2rem 0 1.1rem;
+}
+.s2-price__field { position: relative; flex: 1; }
+.s2-price__field input {
+  width: 100%;
+  border: 1px solid var(--s2-line);
+  border-radius: 4px;
+  padding: .5rem 1.6rem .5rem .6rem;
+  font: 600 .9rem "Inter", sans-serif;
+  color: var(--m);
+}
+.s2-price__field input:focus { outline: none; border-color: var(--m); }
+.s2-price__field .lari { position: absolute; right: .5rem; top: 50%; transform: translateY(-50%); color: #b7b0a7; font-size: .85rem; }
+.s2-price__sep { color: #b7b0a7; }
+
+/* dual range slider */
+.s2-slider { position: relative; height: 26px; }
+.s2-slider__track {
+  position: absolute; top: 50%; left: 4px; right: 4px; height: 3px;
+  transform: translateY(-50%); background: #e3ddd4; border-radius: 3px;
+}
+.s2-slider__fill { position: absolute; height: 100%; background: var(--m); border-radius: 3px; }
+.s2-slider input[type="range"] {
+  position: absolute; top: 0; left: 0; width: 100%; height: 26px;
+  -webkit-appearance: none; appearance: none; background: none; pointer-events: none; margin: 0;
+}
+.s2-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--m); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  pointer-events: auto; cursor: pointer;
+}
+.s2-slider input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--m); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  pointer-events: auto; cursor: pointer;
+}
+.s2-slider__minmax { display: flex; justify-content: space-between; font-size: .82rem; color: var(--m); margin-top: .35rem; }
+
+.s2-reset {
+  margin-top: 1.6rem;
+  width: 100%;
+  background: var(--m);
+  color: #fff;
+  font: 500 .92rem "Inter", sans-serif;
+  letter-spacing: .03em;
+  padding: .85rem;
+  border-radius: 40px;
+  transition: background .25s;
+}
+.s2-reset:hover { background: var(--m-dark); }
+
+/* ---------------- MAIN ---------------- */
+/* a modest min-height avoids a cramped page on small result sets without
+   forcing the layout taller than the viewport (the scroll guard in shop2.js
+   handles keeping the pinned sidebar in view) */
+.s2-main { min-width: 0; min-height: 55vh; }
+.s2-toolbar {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: .7rem; margin-bottom: 2.4rem;
+}
+.s2-toolbar label { color: var(--s2-mut); font-size: .95rem; }
+.s2-sort {
+  border: none; background: none;
+  font: 500 1rem "Inter", sans-serif; color: var(--s2-ink);
+  padding-right: 1.2rem; cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231c1714' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right center;
+}
+
+.s2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.6rem 2rem;
+}
+
+/* ---------------- CARD ---------------- */
+.s2-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.1rem;
+  align-items: center;
+}
+.s2-card__media {
+  position: relative;
+  height: 270px;
+  display: flex; align-items: center; justify-content: center;
+}
+.s2-card__media svg { height: 100%; width: auto; filter: drop-shadow(0 12px 22px rgba(0,0,0,.14)); }
+.s2-card__photo { height: 100%; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 12px 22px rgba(0,0,0,.14)); transition: transform .5s cubic-bezier(.16,.8,.3,1); }
+.s2-card:hover .s2-card__photo { transform: translateY(-6px) scale(1.03); }
+
+.s2-badge {
+  position: absolute; top: 4px; right: -6px; z-index: 2;
+  width: 50px; height: 50px;
+  display: grid; place-items: center;
+  font: 600 .72rem "Inter", sans-serif; color: var(--badge-ink);
+  background: var(--badge-bg);
+  clip-path: polygon(50% 0,61% 8%,75% 4%,79% 19%,94% 22%,90% 37%,100% 50%,90% 63%,94% 78%,79% 81%,75% 96%,61% 92%,50% 100%,39% 92%,25% 96%,21% 81%,6% 78%,10% 63%,0 50%,10% 37%,6% 22%,21% 19%,25% 4%,39% 8%);
+}
+
+.s2-card__info { min-width: 0; }
+.s2-card__name {
+  font: 500 1.04rem/1.2 "Inter", sans-serif;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--s2-ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.s2-card__year { display: block; color: var(--m); font-size: .95rem; margin-top: .15rem; }
+.s2-card__rule { display: block; height: 1px; background: var(--s2-line); margin: .7rem 0; }
+.s2-card__icons { display: flex; gap: .4rem; margin-bottom: .5rem; min-height: 18px; }
+.s2-card__icons svg { width: 15px; height: 19px; fill: #1c1714; }
+.s2-card__style { display: block; font-style: italic; color: var(--s2-ink); font-size: .98rem; margin-bottom: .15rem; }
+.s2-card__producer { display: block; color: var(--s2-mut); font-size: .92rem; margin-bottom: .9rem; }
+
+.s2-card__price { font-weight: 600; font-size: 1.05rem; color: var(--s2-ink); margin-bottom: .9rem; }
+.s2-card__price .was { color: #b7b0a7; font-weight: 400; text-decoration: line-through; margin-right: .45rem; font-size: .92rem; }
+.s2-card__price .lari { font-weight: 400; }
+
+.s2-card__buy { display: flex; align-items: stretch; flex-wrap: wrap; gap: .55rem; }
+/* Buy + Add to Cart share one size: equal width (flex) and identical box metrics */
+.s2-buy, .s2-add {
+  flex: 1 1 120px;
+  text-align: center;
+  font: 500 .88rem "Inter", sans-serif;
+  padding: .62rem 1rem; border-radius: 40px;
+  border: 1.5px solid var(--m);
+}
+/* primary — Buy: filled brand wine, gold-lift on hover */
+.s2-buy {
+  background: var(--m); color: #fff; font-weight: 600; letter-spacing: .02em;
+  transition: background .25s, border-color .25s, box-shadow .25s, transform .2s;
+}
+.s2-buy:hover {
+  background: var(--m-dark); border-color: var(--m-dark);
+  box-shadow: 0 6px 16px rgba(157,31,58,.28); transform: translateY(-1px);
+}
+/* secondary — Add to Cart: outlined, fills wine on hover */
+.s2-add {
+  background: #fff; color: var(--m);
+  transition: background .25s, color .25s, border-color .25s;
+}
+.s2-add:hover { background: var(--m); color: #fff; }
+.s2-add.added { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
+
+.s2-empty { grid-column: 1/-1; padding: 4rem 0; text-align: center; color: var(--s2-mut); }
+
+/* ---------------- RESPONSIVE ---------------- */
+/* filter toggle + drawer close: hidden on desktop, shown on mobile */
+.s2-filter-toggle { display: none; }
+.s2-aside__close { display: none; }
+
+@media (max-width: 1080px) { .s2-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 880px) {
+  .shop2__wrap { grid-template-columns: 1fr; }
+
+  /* products come first; filters become an off-canvas drawer */
+  .s2-toolbar { justify-content: flex-end; gap: 1rem; }
+  .s2-filter-toggle {
+    display: inline-flex; align-items: center; gap: .5rem; margin-right: auto;
+    font: 500 .92rem "Inter", sans-serif; color: var(--s2-ink);
+    background: #fff; border: 1px solid var(--s2-line); border-radius: 40px;
+    padding: .55rem 1.1rem; cursor: pointer;
+  }
+  .s2-filter-toggle:hover { border-color: var(--m); color: var(--m); }
+
+  .s2-aside {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 120;
+    width: min(330px, 88vw); margin: 0;
+    background: #fff; padding: 4.5rem 1.3rem 2rem; overflow-y: auto;
+    box-shadow: 0 0 50px rgba(0,0,0,.35);
+    transform: translateX(-102%); transition: transform .35s cubic-bezier(.16,.8,.3,1);
+  }
+  .s2-aside.is-open { transform: translateX(0); }
+  .s2-aside__close {
+    display: grid; place-items: center; position: absolute; top: 1rem; right: 1rem;
+    width: 38px; height: 38px; border-radius: 50%; font-size: 1.6rem; line-height: 1;
+    color: var(--s2-ink); background: #f3efe9; cursor: pointer;
+  }
+  .s2-filter-backdrop {
+    position: fixed; inset: 0; z-index: 110; background: rgba(20,16,14,.45);
+    opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease;
+  }
+  .s2-filter-backdrop.is-open { opacity: 1; visibility: visible; }
+}
+@media (max-width: 520px) {
+  .s2-grid { grid-template-columns: 1fr; }
+  .s2-card { grid-template-columns: 110px 1fr; gap: .9rem; }
+  .s2-card__media { height: 200px; }
+  .s2-card__name { font-size: 1.15rem; }
+}

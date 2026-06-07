@@ -1,0 +1,1 @@
+Akhmeteli product elements. Each product folder contains transparent PNG files: grape.png, bottle.png, information.png, background.png. Background is a transparent ornament/overlay layer, not a flattened nontransparent image.

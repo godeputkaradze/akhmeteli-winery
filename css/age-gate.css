@@ -1,0 +1,152 @@
+/* ================= 18+ AGE GATE ================= */
+/* Self-contained verification overlay shown on entry. Palette + fonts
+   mirror cover.css so it reads as part of the site. */
+
+.age-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(120% 90% at 50% 35%, rgba(20,15,12,.82) 0%, rgba(7,5,4,.97) 72%),
+    #070504;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #f2e8d6;
+  font-family: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+.age-gate--hiding { opacity: 0; }
+
+.age-gate__card {
+  width: min(520px, 100%);
+  text-align: center;
+  padding: clamp(1.75rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid rgba(202,164,90,.45);
+  background: linear-gradient(180deg, rgba(18,13,11,.85), rgba(10,7,6,.9));
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  position: relative;
+}
+
+/* corner ticks, echoing the dev-block frame motif of the site */
+.age-gate__card::before,
+.age-gate__card::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #f5cf76;
+}
+.age-gate__card::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.age-gate__card::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.age-gate__logo {
+  height: 54px;
+  width: auto;
+  margin: 0 auto 1.25rem;
+  display: block;
+  opacity: .95;
+}
+
+.age-gate__age {
+  font-family: "Eagle Lake", cursive;
+  font-size: clamp(2.4rem, 9vw, 3.4rem);
+  line-height: 1;
+  color: #e7cd8d;
+  margin: 0 0 .5rem;
+}
+
+.age-gate__title {
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: .01em;
+  margin: 0 0 .65rem;
+}
+
+.age-gate__text {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #cdbfa6;
+  margin: 0 auto 1.75rem;
+  max-width: 38ch;
+}
+
+.age-gate__actions {
+  display: flex;
+  gap: .9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.age-gate__btn {
+  font: inherit;
+  font-size: 1.05rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .7rem 1.9rem;
+  cursor: pointer;
+  border: 1px solid rgba(202,164,90,.55);
+  background: transparent;
+  color: #f2e8d6;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.age-gate__btn:hover { transform: translateY(-2px); }
+.age-gate__btn--yes:hover { background: #caa45a; border-color: #caa45a; color: #1a1206; }
+.age-gate__btn--no:hover  { border-color: #c25a44; color: #e7cd8d; }
+
+.age-gate__langs {
+  display: flex;
+  gap: .25rem;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+.age-gate__langs button {
+  font: inherit;
+  font-size: .85rem;
+  letter-spacing: .14em;
+  padding: .25rem .6rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #cdbfa6;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease;
+}
+.age-gate__langs button:hover { color: #e7cd8d; }
+.age-gate__langs button.active { background: #caa45a; color: #1a1206; }
+
+.age-gate__legal {
+  margin-top: 1.6rem;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  color: rgba(205,191,166,.55);
+}
+
+/* denial state */
+.age-gate__leave {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: .95rem;
+  letter-spacing: .08em;
+  color: #cdbfa6;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.age-gate__leave:hover { color: #e7cd8d; }
+
+/* lock the page behind the gate */
+html.age-locked, html.age-locked body { overflow: hidden !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .age-gate { transition: none; }
+  .age-gate__btn { transition: none; }
+  .age-gate__btn:hover { transform: none; }
+}

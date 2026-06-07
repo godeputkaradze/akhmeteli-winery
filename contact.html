@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Akhmeteli Winery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <!-- 18+ age gate (runs before paint to avoid a flash of content) -->
+  <link rel="stylesheet" href="css/age-gate.css" />
+  <script src="js/age-gate.js"></script>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <a href="index.html" class="nav-brand"><img src="img/logo-light.png" alt="Akhmeteli" class="brand-logo" /></a>
+        <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.home"></a></li>
+      <li><a href="index.html#wines" data-i18n="nav.wines"></a></li>
+      <li><a href="index.html#winery" data-i18n="nav.winery"></a></li>
+      <li><a href="index.html#awards" data-i18n="nav.awards"></a></li>
+      <li><a href="shop.html" data-i18n="nav.shop"></a></li>
+      <li><a href="index.html#blog" data-i18n="nav.blog"></a></li>
+      <li><a href="contact.html" data-i18n="nav.contact"></a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-switch">
+        <button data-lang="ka">KA</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ru">RU</button>
+      </div>
+      <button class="cart-btn"><span data-i18n="nav.cart"></span><span class="cart-count"></span></button>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+  <div class="vine-line" aria-hidden="true">
+    <svg viewBox="0 0 60 800" preserveAspectRatio="none">
+      <path class="vine-path" d="M30 0 C 10 80, 50 160, 30 240 C 10 320, 50 400, 30 480 C 10 560, 50 640, 30 720 L 30 800" />
+    </svg>
+  </div>
+
+  <section class="contact-page">
+    <div class="container">
+      <span class="eyebrow">AKHMETA · KAKHETI</span>
+      <h1 data-i18n="contact.title"></h1>
+      <p style="color:var(--ink-soft); max-width:600px;" data-i18n="contact.subtitle"></p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block reveal">
+            <span class="ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+            </span>
+            <h4 data-i18n="contact.address"></h4>
+            <p data-i18n="contact.address.value"></p>
+          </div>
+          <div class="contact-block reveal reveal-delay-1">
+            <span class="ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1.2 4.5a1 1 0 0 1-.27 1L7.21 11.12a16 16 0 0 0 6 6l1.87-1.87a1 1 0 0 1 1-.27l4.5 1.2a1 1 0 0 1 .75 1z"/></svg>
+            </span>
+            <h4 data-i18n="contact.phone"></h4>
+            <p><a href="tel:+995577080525">+995 577 08 05 25</a></p>
+          </div>
+          <div class="contact-block reveal reveal-delay-2">
+            <span class="ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <h4 data-i18n="contact.email"></h4>
+            <p><a href="mailto:gwc.akhmeteli@gmail.com">gwc.akhmeteli@gmail.com</a></p>
+          </div>
+          <div class="contact-block reveal reveal-delay-3">
+            <span class="ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h4 data-i18n="contact.hours"></h4>
+            <p data-i18n="contact.hours.value"></p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-x" id="contact-form" onsubmit="return false;">
+          <h3 data-i18n="contact.form.title"></h3>
+          <div class="field">
+            <label data-i18n="contact.form.name"></label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="field">
+            <label data-i18n="contact.form.email"></label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="field">
+            <label data-i18n="contact.form.message"></label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit" data-i18n="contact.form.send"></button>
+          <div class="form-success" hidden data-i18n="contact.form.sent"></div>
+        </form>
+      </div>
+
+      <div class="map-block reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Akhmeta,+Kakheti,+Georgia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Akhmeta map"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+            <div class="footer-grid footer-grid--4">
+        <div class="footer-brand">
+          <span class="nav-brand"><img src="img/logo-light.png" alt="Akhmeteli" class="brand-logo" /></span>
+          <p data-i18n="footer.tagline"></p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.main"></h4>
+          <a href="index.html" data-i18n="nav.home"></a>
+          <a href="index.html#wines" data-i18n="footer.wines"></a>
+          <a href="index.html#chacha" data-i18n="footer.chacha"></a>
+          <a href="index.html#winery" data-i18n="nav.winery"></a>
+          <a href="shop.html" data-i18n="nav.shop"></a>
+          <a href="index.html#blog" data-i18n="footer.blog"></a>
+          <a href="contact.html" data-i18n="nav.contact"></a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal"></h4>
+          <a href="#" data-i18n="footer.terms"></a>
+          <a href="#" data-i18n="footer.privacy"></a>
+          <a href="#" data-i18n="footer.delivery"></a>
+          <a href="#" data-i18n="footer.return"></a>
+          <a href="#" data-i18n="footer.payment"></a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.social"></h4>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">YouTube</a>
+          <a href="#" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Akhmeteli Winery.</span>
+        <span>Akhmeta · Kakheti · Georgia</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-head"><h3 data-i18n="cart.title"></h3><button class="cart-close">×</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-foot"></div>
+  </aside>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("contact-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const ok = e.target.querySelector(".form-success");
+      ok.hidden = false;
+      e.target.reset();
+      setTimeout(() => ok.hidden = true, 5000);
+    });
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-extra.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

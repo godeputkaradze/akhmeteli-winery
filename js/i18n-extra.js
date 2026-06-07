@@ -1,0 +1,200 @@
+// Extra UI strings for the redesigned homepage sections.
+// Merged into the base I18N_DICT (loaded right after i18n.js, before DOMContentLoaded apply()).
+(function () {
+  if (!window.I18N_DICT) return;
+  const EXTRA = {
+    en: {
+      "nav.winery": "Winery",
+      "nav.awards": "Awards",
+      "nav.blog": "Blog",
+
+      "hero.discover": "Discover our story",
+      "hero.s1.text": "Akhmeteli Winery — authentic Georgian wine, born of native grape varieties and rooted in Akhmeta's eight-thousand-year tradition.",
+      "hero.s2.text": "Fermented in clay qvevri buried in the earth, the way Kakheti has made wine since the dawn of winemaking itself.",
+      "hero.s3.text": "Skin-contact amber wines of striking depth — apricot, dried fruit and quince, structured by gentle tannins.",
+      "coll.all": "All",
+
+      "hero2.eyebrow": "Authentic Georgian Wine",
+      "hero2.title": "Akhmeteli Winery",
+      "hero2.sub": "Authentic Georgian Wine from Kakheti",
+      "hero2.text": "Crafted from Georgian grape varieties, rooted in Akhmeta and Kakheti's winemaking tradition.",
+      "hero2.cta1": "Explore Wines",
+      "hero2.cta2": "Shop Now",
+
+      "story.eyebrow": "The Collection · 12 Labels",
+      "story.title": "The Wine Story",
+      "story.hint": "Scroll to explore",
+      "story.grape": "Grape",
+      "story.region": "Region",
+      "story.serve": "Serving",
+      "story.shop": "Add to cart",
+
+      "chacha.eyebrow": "Stronger Spirit",
+      "chacha.title": "Chacha",
+      "chacha.text": "Traditional Georgian grape distillate — clean, warming, and bold.",
+
+      "awards.eyebrow": "Trust & Recognition",
+      "awards.title": "International Recognition",
+      "awards.text": "Our wines have been recognised at international competitions and exhibitions.",
+
+      "blog.eyebrow": "Journal",
+      "blog.title": "Stories from Akhmeteli Winery",
+      "blog.text": "Georgian wine culture, qvevri tradition, food pairings and life in Kakheti.",
+      "blog.read": "Read more",
+      "blog.post1": "What is Qvevri wine?",
+      "blog.post1.x": "8,000 years of winemaking sealed in clay beneath the earth.",
+      "blog.post2": "Saperavi, explained",
+      "blog.post2.x": "Georgia's flagship red grape — deep, ruby and age-worthy.",
+      "blog.post3": "Wine tourism in Kakheti",
+      "blog.post3.x": "Cellars, supra tables and vineyards across the Alazani Valley.",
+
+      "visit.eyebrow": "Find Us",
+      "visit.title": "Visit Akhmeteli",
+      "visit.call": "Call Now",
+      "visit.directions": "Get Directions",
+      "visit.whatsapp": "WhatsApp",
+      "visit.book": "Book Wine Tasting",
+
+      "footer.main": "Main",
+      "footer.legal": "Legal",
+      "footer.social": "Social",
+      "footer.wines": "Wines",
+      "footer.chacha": "Chacha",
+      "footer.blog": "Blog",
+      "footer.terms": "Terms & Conditions",
+      "footer.privacy": "Privacy Policy",
+      "footer.delivery": "Delivery Policy",
+      "footer.return": "Return Policy",
+      "footer.payment": "Payment Policy"
+    },
+    ka: {
+      "nav.winery": "მარანი",
+      "nav.awards": "ჯილდოები",
+      "nav.blog": "ბლოგი",
+
+      "hero.discover": "გაიგე ჩვენი ისტორია",
+      "hero.s1.text": "ახმეტელის მარანი — ნამდვილი ქართული ღვინო, ადგილობრივი ჯიშებიდან, ახმეტის რვაათასწლოვანი ტრადიციით.",
+      "hero.s2.text": "დადუღებული მიწაში ჩაფლულ ქვევრში — ისე, როგორც კახეთი ღვინოს მეღვინეობის გარიჟრაჟიდან აყენებს.",
+      "hero.s3.text": "ქარვისფერი ღვინოები განსაკუთრებული სიღრმით — გარგარი, ჩირი და კომში, ნაზი ტანინებით.",
+      "coll.all": "ყველა",
+
+      "hero2.eyebrow": "ნამდვილი ქართული ღვინო",
+      "hero2.title": "ახმეტელი მარანი",
+      "hero2.sub": "ნამდვილი ქართული ღვინო კახეთიდან",
+      "hero2.text": "დაყენებული ქართული ჯიშის ყურძნისგან, ახმეტისა და კახეთის მეღვინეობის ტრადიციით.",
+      "hero2.cta1": "აღმოაჩინე ღვინოები",
+      "hero2.cta2": "შეიძინე",
+
+      "story.eyebrow": "კოლექცია · 12 ეტიკეტი",
+      "story.title": "ღვინის ისტორია",
+      "story.hint": "გადააფურცლე",
+      "story.grape": "ჯიში",
+      "story.region": "რეგიონი",
+      "story.serve": "სერვირება",
+      "story.shop": "კალათაში",
+
+      "chacha.eyebrow": "ძლიერი ხასიათი",
+      "chacha.title": "ჭაჭა",
+      "chacha.text": "ტრადიციული ქართული ყურძნის დისტილატი — სუფთა, გამათბობელი, ძლიერი.",
+
+      "awards.eyebrow": "ნდობა და აღიარება",
+      "awards.title": "საერთაშორისო აღიარება",
+      "awards.text": "ჩვენი ღვინოები აღიარებულია საერთაშორისო კონკურსებსა და გამოფენებზე.",
+
+      "blog.eyebrow": "ჟურნალი",
+      "blog.title": "ისტორიები ახმეტელის მარნიდან",
+      "blog.text": "ქართული ღვინის კულტურა, ქვევრის ტრადიცია, კერძებთან შერჩევა და კახეთის ცხოვრება.",
+      "blog.read": "ვრცლად",
+      "blog.post1": "რა არის ქვევრის ღვინო?",
+      "blog.post1.x": "8000 წლის მეღვინეობა, მიწაში ჩაფლულ თიხაში დაბეჭდილი.",
+      "blog.post2": "საფერავი — ახსნილი",
+      "blog.post2.x": "საქართველოს მთავარი წითელი ჯიში — ღრმა, ლალისფერი, დასავარგებელი.",
+      "blog.post3": "ღვინის ტურიზმი კახეთში",
+      "blog.post3.x": "მარნები, სუფრა და ვენახები ალაზნის ველზე.",
+
+      "visit.eyebrow": "გვიპოვე",
+      "visit.title": "ეწვიე ახმეტელს",
+      "visit.call": "დარეკვა",
+      "visit.directions": "მარშრუტი",
+      "visit.whatsapp": "WhatsApp",
+      "visit.book": "დააჯავშნე დეგუსტაცია",
+
+      "footer.main": "მთავარი",
+      "footer.legal": "სამართლებრივი",
+      "footer.social": "სოციალური",
+      "footer.wines": "ღვინოები",
+      "footer.chacha": "ჭაჭა",
+      "footer.blog": "ბლოგი",
+      "footer.terms": "წესები და პირობები",
+      "footer.privacy": "კონფიდენციალურობა",
+      "footer.delivery": "მიწოდების პოლიტიკა",
+      "footer.return": "დაბრუნების პოლიტიკა",
+      "footer.payment": "გადახდის პოლიტიკა"
+    },
+    ru: {
+      "nav.winery": "Винодельня",
+      "nav.awards": "Награды",
+      "nav.blog": "Блог",
+
+      "hero.discover": "Узнать нашу историю",
+      "hero.s1.text": "Винодельня Ахметели — настоящее грузинское вино из местных сортов, в традициях восьмитысячелетней Ахметы.",
+      "hero.s2.text": "Сброжено в глиняных квеври, закопанных в землю — так, как Кахетия делает вино с самого зарождения виноделия.",
+      "hero.s3.text": "Янтарные вина мацерации поразительной глубины — абрикос, сухофрукты и айва, с мягкими танинами.",
+      "coll.all": "Все",
+
+      "hero2.eyebrow": "Настоящее грузинское вино",
+      "hero2.title": "Винодельня Ахметели",
+      "hero2.sub": "Настоящее грузинское вино из Кахетии",
+      "hero2.text": "Создано из грузинских сортов винограда, в традициях виноделия Ахметы и Кахетии.",
+      "hero2.cta1": "Открыть вина",
+      "hero2.cta2": "В магазин",
+
+      "story.eyebrow": "Коллекция · 12 этикеток",
+      "story.title": "История вина",
+      "story.hint": "Листайте",
+      "story.grape": "Сорт",
+      "story.region": "Регион",
+      "story.serve": "Подача",
+      "story.shop": "В корзину",
+
+      "chacha.eyebrow": "Крепкий характер",
+      "chacha.title": "Чача",
+      "chacha.text": "Традиционный грузинский виноградный дистиллят — чистый, согревающий, дерзкий.",
+
+      "awards.eyebrow": "Доверие и признание",
+      "awards.title": "Международное признание",
+      "awards.text": "Наши вина отмечены на международных конкурсах и выставках.",
+
+      "blog.eyebrow": "Журнал",
+      "blog.title": "Истории винодельни Ахметели",
+      "blog.text": "Грузинская винная культура, традиция квеври, сочетания с едой и жизнь Кахетии.",
+      "blog.read": "Читать",
+      "blog.post1": "Что такое вино квеври?",
+      "blog.post1.x": "8000 лет виноделия, запечатанные в глине под землёй.",
+      "blog.post2": "Саперави: главное",
+      "blog.post2.x": "Флагманский красный сорт Грузии — глубокий, рубиновый, выдержанный.",
+      "blog.post3": "Винный туризм в Кахетии",
+      "blog.post3.x": "Марани, застолья-супра и виноградники Алазанской долины.",
+
+      "visit.eyebrow": "Найти нас",
+      "visit.title": "Посетите Ахметели",
+      "visit.call": "Позвонить",
+      "visit.directions": "Маршрут",
+      "visit.whatsapp": "WhatsApp",
+      "visit.book": "Записаться на дегустацию",
+
+      "footer.main": "Главное",
+      "footer.legal": "Правовое",
+      "footer.social": "Соцсети",
+      "footer.wines": "Вина",
+      "footer.chacha": "Чача",
+      "footer.blog": "Блог",
+      "footer.terms": "Условия и положения",
+      "footer.privacy": "Политика конфиденциальности",
+      "footer.delivery": "Политика доставки",
+      "footer.return": "Политика возврата",
+      "footer.payment": "Политика оплаты"
+    }
+  };
+  ["en", "ka", "ru"].forEach(l => Object.assign(window.I18N_DICT[l], EXTRA[l]));
+})();
