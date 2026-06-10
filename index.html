@@ -7,7 +7,7 @@
   <meta name="description" content="Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Eagle+Lake&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Eagle+Lake&family=Great+Vibes&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js")</script>
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/cover.css" />
@@ -15,18 +15,13 @@
   <link rel="stylesheet" href="css/age-gate.css" />
   <script src="js/age-gate.js"></script>
 </head>
-<body class="dev-blocks">
+<body>
 
   <!-- ================= MENU ================= -->
   <nav class="nav">
     <span class="block-tag">B0 · Menu</span>
     <div class="nav__left">
       <a class="nav__logo" href="index.html"><img src="img/logo-gold.png" alt="Akhmeteli Winery" /></a>
-
-      <button class="nav__menu" aria-label="Menu">
-        <span class="bars"><i></i><i></i></span>
-        <span data-i18n="nav.menu">Menu</span>
-      </button>
 
       <div class="lang-switch" role="group" aria-label="Language">
         <button data-lang="ka">KA</button>
@@ -38,8 +33,6 @@
     <div class="nav__right">
       <div class="nav__links">
         <a href="#awards" data-i18n="nav.awards">Awards</a>
-        <span class="div"></span>
-        <a href="#visit" data-i18n="nav.visit">Visit Us</a>
       </div>
       <a class="nav__shop" href="shop.html" data-i18n="nav.shop">Wine Shop</a>
     </div>
@@ -65,38 +58,67 @@
       </div>
     </div>
 
-    <!-- awards bar -->
-    <div class="awards-bar">
-      <div class="award">
-        <span class="medal medal--gold"></span>
-        <div class="award__txt">
-          <div class="t">IWSC <span data-i18n="award.gold">Gold</span></div>
-          <div class="w">Kakhuri Mtsvane 2023</div>
-          <div class="p">95 <span data-i18n="award.points">Points</span></div>
-        </div>
-      </div>
-      <span class="sep"></span>
-      <div class="award">
-        <span class="medal medal--silver"></span>
-        <div class="award__txt">
-          <div class="t">IWSC <span data-i18n="award.silver">Silver</span></div>
-          <div class="w">Rkatsiteli 2023</div>
-          <div class="p">92 <span data-i18n="award.points">Points</span></div>
-        </div>
-      </div>
-      <span class="sep"></span>
-      <div class="award">
-        <span class="medal medal--bronze"></span>
-        <div class="award__txt">
-          <div class="t">IWSC <span data-i18n="award.bronze">Bronze</span></div>
-          <div class="w">Saperavi 2023</div>
-          <div class="p">89 <span data-i18n="award.points">Points</span></div>
-        </div>
+    <!-- partner logos marquee (bottom of hero) -->
+    <div class="cover__partners reveal" aria-label="Partners">
+      <div class="partners__viewport">
+        <ul class="partners__track">
+          <li><img src="assets/partners/clean/senate.png" alt="Senate" /></li>
+          <li><img src="assets/partners/clean/bern.png" alt="Bern" /></li>
+          <li><img src="assets/partners/clean/kultura.png" alt="Kultura" /></li>
+          <li><img src="assets/partners/clean/saperavi.png" alt="Saperavi Restaurant" /></li>
+          <li><img src="assets/partners/clean/bk.png" alt="BK Restaurant" /></li>
+          <li><img src="assets/partners/clean/brand-a.png" alt="Partner" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/senate.png" alt="" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/bern.png" alt="" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/kultura.png" alt="" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/saperavi.png" alt="" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/bk.png" alt="" /></li>
+          <li aria-hidden="true"><img src="assets/partners/clean/brand-a.png" alt="" /></li>
+        </ul>
       </div>
     </div>
   </header>
 
-  <!-- ================= #2 · ABOUT THE COMPANY ================= -->
+  <!-- ================= #2 · AWARDS ================= -->
+  <section class="awards" id="awards">
+    <span class="block-tag">B2 · Awards</span>
+    <div class="awards__inner">
+      <header class="awards__head reveal reveal--up">
+        <p class="awards__eyebrow uc" data-i18n="awards.eyebrow">International Recognition</p>
+        <h2 class="awards__title" data-i18n="awards.title">Awards &amp; Distinctions</h2>
+      </header>
+      <div class="awards-bar">
+        <div class="award reveal reveal--up">
+          <span class="medal medal--gold"></span>
+          <div class="award__txt">
+            <div class="t">IWSC <span data-i18n="award.gold">Gold</span></div>
+            <div class="w">Kakhuri Mtsvane 2023</div>
+            <div class="p">95 <span data-i18n="award.points">Points</span></div>
+          </div>
+        </div>
+        <span class="sep"></span>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--silver"></span>
+          <div class="award__txt">
+            <div class="t">IWSC <span data-i18n="award.silver">Silver</span></div>
+            <div class="w">Rkatsiteli 2023</div>
+            <div class="p">92 <span data-i18n="award.points">Points</span></div>
+          </div>
+        </div>
+        <span class="sep"></span>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--bronze"></span>
+          <div class="award__txt">
+            <div class="t">IWSC <span data-i18n="award.bronze">Bronze</span></div>
+            <div class="w">Saperavi 2023</div>
+            <div class="p">89 <span data-i18n="award.points">Points</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= #3 · ABOUT THE COMPANY ================= -->
   <section class="about" id="about">
     <span class="block-tag">B2 · About the Company</span>
     <div class="about__bg"></div>
@@ -211,23 +233,18 @@
       <p class="wines__eyebrow uc" data-i18n="wines.eyebrow">Our Collection</p>
       <h2 class="wines__title" data-i18n="wines.title">Wines</h2>
     </header>
-    <div class="wslider" id="wslider">
-      <div class="wslider__viewport">
-        <img class="wslide is-active" src="assets/wines/01-saperavi.png" alt="Saperavi 2023 — Red Dry Wine" />
-        <img class="wslide" src="assets/wines/02-kindzmarauli.png" alt="Kindzmarauli 2023 — Red Semi-Sweet" loading="lazy" />
-        <img class="wslide" src="assets/wines/03-pirosmani.png" alt="Pirosmani 2023 — Red Semi-Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/04-alazani-valley.png" alt="Alazani Valley 2023 — Red Semi-Sweet" loading="lazy" />
-        <img class="wslide" src="assets/wines/05-kisi.png" alt="Kisi 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/06-rkatsiteli.png" alt="Rkatsiteli 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/07-tsarapi.png" alt="Tsarapi 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/08-tibaani.png" alt="Tibaani 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/09-kakhuri-mtsvane.png" alt="Kakhuri Mtsvane 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/10-gurjaani.png" alt="Gurjaani 2023 — Amber Dry" loading="lazy" />
-        <img class="wslide" src="assets/wines/11-tsinandali.png" alt="Tsinandali 2023 — White Dry" loading="lazy" />
-      </div>
-      <button class="wslider__nav wslider__prev" aria-label="Previous wine">‹</button>
-      <button class="wslider__nav wslider__next" aria-label="Next wine">›</button>
-      <div class="wslider__dots" id="wdots"></div>
+    <div class="wstack" id="wstack">
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/01-saperavi.png" alt="Saperavi 2023 — Red Dry Wine" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/02-kindzmarauli.png" alt="Kindzmarauli 2023 — Red Semi-Sweet" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/03-pirosmani.png" alt="Pirosmani 2023 — Red Semi-Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/04-alazani-valley.png" alt="Alazani Valley 2023 — Red Semi-Sweet" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/05-kisi.png" alt="Kisi 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/06-rkatsiteli.png" alt="Rkatsiteli 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/07-tsarapi.png" alt="Tsarapi 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/08-tibaani.png" alt="Tibaani 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/09-kakhuri-mtsvane.png" alt="Kakhuri Mtsvane 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/10-gurjaani.png" alt="Gurjaani 2023 — Amber Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/11-tsinandali.png" alt="Tsinandali 2023 — White Dry" loading="lazy" />
     </div>
   </section>
 
@@ -238,15 +255,134 @@
       <p class="wines__eyebrow uc" data-i18n="chacha.eyebrow">Georgian Spirit</p>
       <h2 class="wines__title" data-i18n="chacha.title">Chacha</h2>
     </header>
-    <div class="wslider" id="cslider">
-      <div class="wslider__viewport">
-        <img class="wslide is-active" src="assets/chacha/classic.png" alt="Akhmeteli Chacha Classic" />
-        <img class="wslide" src="assets/chacha/gold.png" alt="Akhmeteli Chacha Gold" loading="lazy" />
-        <img class="wslide" src="assets/chacha/silver.png" alt="Akhmeteli Chacha Silver" loading="lazy" />
+    <div class="wstack" id="cstack">
+      <img class="wstack__pic reveal reveal--up" src="assets/chacha/classic.png" alt="Akhmeteli Chacha Classic" />
+      <img class="wstack__pic reveal reveal--up" src="assets/chacha/gold.png" alt="Akhmeteli Chacha Gold" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/chacha/silver.png" alt="Akhmeteli Chacha Silver" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="testi" id="testimonials">
+    <span class="block-tag">B7 · Testimonials</span>
+    <div class="testi__inner">
+      <header class="testi__head reveal reveal--up">
+        <p class="testi__eyebrow uc" data-i18n="testi.eyebrow">In Their Words</p>
+        <h2 class="testi__title" data-i18n="testi.title">What customers say about Akhmeteli</h2>
+      </header>
+      <div class="testi__grid">
+        <figure class="testi__card reveal reveal--up">
+          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="testi__quote" data-i18n="testi.1.text">"Every bottle tells the story of Kakheti. The Saperavi is rich, deep and unforgettable — the closest I've come to drinking history."</blockquote>
+          <figcaption class="testi__by">
+            <span class="testi__name" data-i18n="testi.1.name">Nino Tatishvili</span>
+            <span class="testi__role" data-i18n="testi.1.role">Wine Collector</span>
+          </figcaption>
+        </figure>
+        <figure class="testi__card reveal reveal--up">
+          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="testi__quote" data-i18n="testi.2.text">"We've poured Akhmeteli wines at our restaurant for two years. Guests always ask about the amber Rkatsiteli — qvevri winemaking at its finest."</blockquote>
+          <figcaption class="testi__by">
+            <span class="testi__name" data-i18n="testi.2.name">Luca Romano</span>
+            <span class="testi__role" data-i18n="testi.2.role">Sommelier</span>
+          </figcaption>
+        </figure>
+        <figure class="testi__card reveal reveal--up">
+          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="testi__quote" data-i18n="testi.3.text">"Visiting the winery in Akhmeta was the highlight of our trip. Warm people, honest wine, and a tradition you can taste in every glass."</blockquote>
+          <figcaption class="testi__by">
+            <span class="testi__name" data-i18n="testi.3.name">Sarah Müller</span>
+            <span class="testi__role" data-i18n="testi.3.role">Visitor</span>
+          </figcaption>
+        </figure>
       </div>
-      <button class="wslider__nav wslider__prev" aria-label="Previous chacha">‹</button>
-      <button class="wslider__nav wslider__next" aria-label="Next chacha">›</button>
-      <div class="wslider__dots"></div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <span class="block-tag">B8 · FAQ</span>
+    <div class="faq__inner">
+      <header class="faq__head reveal reveal--up">
+        <p class="faq__eyebrow uc" data-i18n="faq.eyebrow">Good to Know</p>
+        <h2 class="faq__title" data-i18n="faq.title">Frequently Asked Questions</h2>
+      </header>
+      <div class="faq__list">
+        <details class="faq__item reveal reveal--up">
+          <summary class="faq__q"><span data-i18n="faq.q1">Where are Akhmeteli wines made?</span><i class="faq__chev" aria-hidden="true"></i></summary>
+          <div class="faq__a"><p data-i18n="faq.a1">In the Akhmeta district of Kakheti, eastern Georgia — in the heart of the Alazani Valley, where our grapes are grown and the wine matures in traditional qvevri.</p></div>
+        </details>
+        <details class="faq__item reveal reveal--up">
+          <summary class="faq__q"><span data-i18n="faq.q2">What is qvevri wine?</span><i class="faq__chev" aria-hidden="true"></i></summary>
+          <div class="faq__a"><p data-i18n="faq.a2">Qvevri are large clay vessels buried in the earth, used in Georgia for over 8,000 years. Wine ferments and ages in them naturally, giving our amber wines their depth and character — a UNESCO-listed heritage.</p></div>
+        </details>
+        <details class="faq__item reveal reveal--up">
+          <summary class="faq__q"><span data-i18n="faq.q3">Do you ship and deliver?</span><i class="faq__chev" aria-hidden="true"></i></summary>
+          <div class="faq__a"><p data-i18n="faq.a3">Yes. We deliver across Georgia and arrange international shipping on request. Contact us for wholesale and export enquiries.</p></div>
+        </details>
+        <details class="faq__item reveal reveal--up">
+          <summary class="faq__q"><span data-i18n="faq.q4">Can I visit the winery for a tasting?</span><i class="faq__chev" aria-hidden="true"></i></summary>
+          <div class="faq__a"><p data-i18n="faq.a4">Absolutely. We welcome guests for tastings and cellar tours by appointment. Call or message us to book your visit to Akhmeta.</p></div>
+        </details>
+        <details class="faq__item reveal reveal--up">
+          <summary class="faq__q"><span data-i18n="faq.q5">Are your wines natural?</span><i class="faq__chev" aria-hidden="true"></i></summary>
+          <div class="faq__a"><p data-i18n="faq.a5">Our wines are made the traditional way — native Georgian grapes, spontaneous fermentation in qvevri, and minimal intervention, so the true character of the vineyard speaks.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <header class="contact__head reveal reveal--up">
+        <p class="contact__eyebrow uc" data-i18n="contact.eyebrow">Get in Touch</p>
+        <h2 class="contact__title" data-i18n="contact.title">Contact Us</h2>
+        <p class="contact__text" data-i18n="contact.text">Have a question, a wholesale enquiry, or planning a visit? Send us a message and we'll get back to you shortly.</p>
+      </header>
+
+      <div class="contact__grid">
+        <ul class="contact__info reveal reveal--left">
+          <li>
+            <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg></span>
+            <div><h4 data-i18n="contact.addr">Address</h4><p data-i18n="contact.addr.val">Akhmeta, Kakheti, Georgia</p></div>
+          </li>
+          <li>
+            <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1.2 4.5a1 1 0 0 1-.27 1L7.21 11.12a16 16 0 0 0 6 6l1.87-1.87a1 1 0 0 1 1-.27l4.5 1.2a1 1 0 0 1 .75 1z"/></svg></span>
+            <div><h4 data-i18n="contact.tel">Phone</h4><p><a href="tel:+995577080525">+995 577 08 05 25</a></p></div>
+          </li>
+          <li>
+            <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><h4 data-i18n="contact.mail">Email</h4><p><a href="mailto:gwc.akhmeteli@gmail.com">gwc.akhmeteli@gmail.com</a></p></div>
+          </li>
+        </ul>
+
+        <form class="contact__form reveal reveal--right" id="home-contact-form" novalidate>
+          <div class="contact__row">
+            <label class="field">
+              <span data-i18n="contact.f.name">Name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span data-i18n="contact.f.phone">Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+          </div>
+          <label class="field">
+            <span data-i18n="contact.f.email">Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span data-i18n="contact.f.message">Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="cover__cta contact__send" type="submit">
+            <span data-i18n="contact.f.send">Send Message</span>
+            <span class="arw"></span>
+          </button>
+          <p class="contact__ok" hidden data-i18n="contact.f.sent">Thank you! We'll be in touch soon.</p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -275,7 +411,6 @@
         <a href="shop.html" data-i18n="nav.shop">Shop Wines</a>
         <a href="#advantages" data-i18n="adv.eyebrow">Why Akhmeteli</a>
         <a href="#awards" data-i18n="nav.awards">Awards</a>
-        <a href="#visit" data-i18n="nav.visit">Visit Us</a>
       </nav>
 
       <!-- legal + contact -->
@@ -314,35 +449,21 @@
   </footer>
   <script>document.getElementById("foot-year").textContent = new Date().getFullYear();</script>
 
-  <!-- ================= SLIDERS (wines + chacha) ================= -->
+  <!-- ================= CONTACT FORM ================= -->
   <script>
   (function () {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    document.querySelectorAll(".wslider").forEach((slider) => {
-      const slides = Array.prototype.slice.call(slider.querySelectorAll(".wslide"));
-      const dotsWrap = slider.querySelector(".wslider__dots");
-      if (!slides.length || !dotsWrap) return;
-      let i = 0, timer = null;
-      slides.forEach((_, n) => {
-        const b = document.createElement("button");
-        b.setAttribute("aria-label", "Go to slide " + (n + 1));
-        b.addEventListener("click", () => go(n));
-        dotsWrap.appendChild(b);
-      });
-      const dots = Array.prototype.slice.call(dotsWrap.children);
-      function paint() {
-        slides.forEach((s, n) => s.classList.toggle("is-active", n === i));
-        dots.forEach((d, n) => d.classList.toggle("is-active", n === i));
+    const form = document.getElementById("home-contact-form");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const ok = form.querySelector(".contact__ok");
+      form.reset();
+      if (ok) {
+        ok.hidden = false;
+        clearTimeout(ok._t);
+        ok._t = setTimeout(function () { ok.hidden = true; }, 6000);
       }
-      function go(n) { i = (n + slides.length) % slides.length; paint(); restart(); }
-      function next() { go(i + 1); }
-      function prev() { go(i - 1); }
-      const nextBtn = slider.querySelector(".wslider__next");
-      const prevBtn = slider.querySelector(".wslider__prev");
-      if (nextBtn) nextBtn.addEventListener("click", next);
-      if (prevBtn) prevBtn.addEventListener("click", prev);
-      function restart() { clearInterval(timer); if (!reduce) timer = setInterval(next, 4500); }
-      paint(); restart();
     });
   })();
   </script>
@@ -441,6 +562,7 @@
         "cover.tagline": "ქართული ღვინის მემკვიდრეობა",
         "cover.text": "კახეთის გულში დაბადებული, ახმეტელი ერთგულია ქართული მეღვინეობის უძველესი ტრადიციებისა. დამზადებული ქვევრში, ბუნებით ნაკვები და თაობიდან თაობას გადაცემული.",
         "cover.cta": "აღმოაჩინე ჩვენი ღვინოები",
+        "partners.label": "ჩვენი პარტნიორები",
         "about.eyebrow": "კომპანიის შესახებ",
         "about.title": "ტრადიცია, რომელიც ქვევრში ცოცხლობს",
         "about.text": "ახმეტელი დაიბადა კახეთის გულში, სადაც ღვინის დაყენების ხელოვნება თაობიდან თაობას გადაეცემა. ჩვენ ვაგრძელებთ ქვევრის უძველეს ტრადიციას — მიწაში ჩაფლული თიხის ჭურჭელი, რომელშიც ღვინო ბუნებრივად მწიფდება, ისე როგორც ჩვენი წინაპრები აკეთებდნენ ათასწლეულების მანძილზე. თითოეული ბოთლი ალაზნის ველის მზის, ნიადაგისა და ხელოსნობის ნაყოფია.",
@@ -488,7 +610,20 @@
         "foot.contact": "კონტაქტი",
         "foot.follow": "გამოგვყევით",
         "foot.rights": "ყველა უფლება დაცულია.",
-        "foot.region": "ახმეტა · კახეთი · საქართველო"
+        "foot.region": "ახმეტა · კახეთი · საქართველო",
+        "contact.eyebrow": "დაგვიკავშირდით",
+        "contact.title": "კონტაქტი",
+        "contact.text": "გაქვთ შეკითხვა, საბითუმო შეკვეთა ან გსურთ ვიზიტი? მოგვწერეთ და მალე დაგიკავშირდებით.",
+        "contact.addr": "მისამართი",
+        "contact.addr.val": "ახმეტა, კახეთი, საქართველო",
+        "contact.tel": "ტელეფონი",
+        "contact.mail": "ელ. ფოსტა",
+        "contact.f.name": "სახელი",
+        "contact.f.phone": "ტელეფონი",
+        "contact.f.email": "ელ. ფოსტა",
+        "contact.f.message": "შეტყობინება",
+        "contact.f.send": "გაგზავნა",
+        "contact.f.sent": "მადლობა! მალე დაგიკავშირდებით."
       },
       en: {
         "nav.menu": "Menu",
@@ -499,6 +634,7 @@
         "cover.tagline": "Georgian Wine Heritage",
         "cover.text": "Rooted in the heart of Kakheti, Akhmeteli is dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri, shaped by nature, and passed down through generations.",
         "cover.cta": "Discover Our Wines",
+        "partners.label": "Our Partners",
         "about.eyebrow": "About the Company",
         "about.title": "A tradition that lives in clay",
         "about.text": "Akhmeteli was born in the heart of Kakheti, where the art of winemaking passes from one generation to the next. We carry on the ancient qvevri tradition — clay vessels buried in the earth, in which wine matures naturally, just as our ancestors did for millennia. Every bottle is the fruit of the Alazani Valley's sun, soil, and craft.",
@@ -546,7 +682,20 @@
         "foot.contact": "Contact",
         "foot.follow": "Follow Us",
         "foot.rights": "All rights reserved.",
-        "foot.region": "Akhmeta · Kakheti · Georgia"
+        "foot.region": "Akhmeta · Kakheti · Georgia",
+        "contact.eyebrow": "Get in Touch",
+        "contact.title": "Contact Us",
+        "contact.text": "Have a question, a wholesale enquiry, or planning a visit? Send us a message and we'll get back to you shortly.",
+        "contact.addr": "Address",
+        "contact.addr.val": "Akhmeta, Kakheti, Georgia",
+        "contact.tel": "Phone",
+        "contact.mail": "Email",
+        "contact.f.name": "Name",
+        "contact.f.phone": "Phone",
+        "contact.f.email": "Email",
+        "contact.f.message": "Message",
+        "contact.f.send": "Send Message",
+        "contact.f.sent": "Thank you! We'll be in touch soon."
       },
       ru: {
         "nav.menu": "Меню",
@@ -557,6 +706,7 @@
         "cover.tagline": "Наследие грузинского вина",
         "cover.text": "Уходящая корнями в сердце Кахетии, Ахметели верна вечным традициям грузинского виноделия. Создано в квеври, сформировано природой и передаётся из поколения в поколение.",
         "cover.cta": "Открыть наши вина",
+        "partners.label": "Наши партнёры",
         "about.eyebrow": "О компании",
         "about.title": "Традиция, что живёт в глине",
         "about.text": "Ахметели родилась в сердце Кахетии, где искусство виноделия передаётся из поколения в поколение. Мы продолжаем древнюю традицию квеври — глиняные сосуды, закопанные в землю, в которых вино созревает естественно, как делали наши предки тысячелетиями. Каждая бутылка — плод солнца, почвы и мастерства Алазанской долины.",
@@ -604,7 +754,20 @@
         "foot.contact": "Контакты",
         "foot.follow": "Мы в соцсетях",
         "foot.rights": "Все права защищены.",
-        "foot.region": "Ахмета · Кахети · Грузия"
+        "foot.region": "Ахмета · Кахети · Грузия",
+        "contact.eyebrow": "Свяжитесь с нами",
+        "contact.title": "Контакты",
+        "contact.text": "Есть вопрос, оптовый заказ или планируете визит? Напишите нам, и мы скоро ответим.",
+        "contact.addr": "Адрес",
+        "contact.addr.val": "Ахмета, Кахетия, Грузия",
+        "contact.tel": "Телефон",
+        "contact.mail": "Эл. почта",
+        "contact.f.name": "Имя",
+        "contact.f.phone": "Телефон",
+        "contact.f.email": "Эл. почта",
+        "contact.f.message": "Сообщение",
+        "contact.f.send": "Отправить",
+        "contact.f.sent": "Спасибо! Мы скоро свяжемся с вами."
       }
     };
 
