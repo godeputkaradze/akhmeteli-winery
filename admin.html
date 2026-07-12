@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Akhmeteli — Shop Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <!-- ===================== LOGIN GATE ===================== -->
+  <section id="login" class="login">
+    <div class="login__card">
+      <div class="login__brand">Akhmeteli <span>Admin</span></div>
+      <p class="login__lead">Sign in with a GitHub access token to edit the shop. Changes are saved to your repository and the live site updates automatically.</p>
+
+      <label class="field">
+        <span class="field__label">GitHub access token</span>
+        <input id="tokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_… or ghp_…" />
+      </label>
+
+      <label class="checkline">
+        <input id="rememberToken" type="checkbox" checked />
+        <span>Remember me on this device</span>
+      </label>
+
+      <button id="loginBtn" class="btn btn--primary btn--full">Sign in</button>
+      <div id="loginMsg" class="login__msg" hidden></div>
+
+      <details class="login__help">
+        <summary>How do I get a token?</summary>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → Fine-grained tokens → Generate new</a>.</li>
+          <li>Under <b>Repository access</b> choose <b>Only select repositories</b> → <code>akhmeteli-winery</code>.</li>
+          <li>Under <b>Permissions → Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b>.</li>
+          <li>Generate, copy the token, and paste it above.</li>
+        </ol>
+      </details>
+    </div>
+    <p class="login__foot">Owner access only · <a href="index.html">← back to site</a></p>
+  </section>
+
+  <!-- ===================== APP ===================== -->
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <div class="topbar__brand">Akhmeteli <span>Admin</span></div>
+      <div class="topbar__meta">
+        <span id="repoLabel" class="topbar__repo"></span>
+        <span id="dirtyDot" class="dirty" hidden title="Unsaved changes">●</span>
+      </div>
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="shop.html" target="_blank" rel="noopener">View shop ↗</a>
+        <button id="saveBtn" class="btn btn--primary" disabled>Save &amp; publish</button>
+        <button id="logoutBtn" class="btn btn--ghost">Sign out</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- wine list -->
+      <aside class="sidebar">
+        <div class="sidebar__head">
+          <input id="search" class="sidebar__search" type="search" placeholder="Search wines…" />
+          <button id="addBtn" class="btn btn--sm btn--primary" title="Add new wine">+ New</button>
+        </div>
+        <ul id="wineList" class="winelist"></ul>
+      </aside>
+
+      <!-- editor -->
+      <section id="editor" class="editor">
+        <div class="editor__empty">Select a wine on the left, or create a new one.</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -54,7 +54,7 @@
     const aroma = window.I18N.tField(p.aroma);
     const taste = window.I18N.tField(p.taste);
 
-    const awards = (p.awards || []).map(a => `<span class="award-chip">${a}</span>`).join("");
+    const awards = window.AKH.awardBadges(p.awards || []);
 
     root.innerHTML = `
       <div class="container">

@@ -177,6 +177,7 @@
           <img class="s2-card__photo" src="assets/Products/${p.id}/${imgFile}" alt="${tf(p.name)}" loading="lazy"
                onerror="this.onerror=null;this.outerHTML=window.AKH.bottleSVG('${p.color}', '#c9a24a')" />
           ${onSale ? `<span class="s2-badge">−${p.sale}%</span>` : ""}
+          ${window.AKH && window.AKH.awardBadges ? window.AKH.awardBadges(p.awards) : ""}
         </a>
         <div class="s2-card__info">
           <h3 class="s2-card__name">${tf(p.name)}</h3>

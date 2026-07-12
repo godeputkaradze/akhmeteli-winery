@@ -310,3 +310,24 @@
   .s2-card__media { height: 200px; }
   .s2-card__name { font-size: 1.15rem; }
 }
+
+/* award badges overlaid on the card image (top-left, stacked) */
+.s2-card__media .award-badges {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  max-width: 70%;
+}
+.s2-card__media .award-badge {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  background: color-mix(in srgb, var(--medal) 16%, rgba(255,255,255,0.82));
+  backdrop-filter: blur(2px);
+}
+.s2-card__media .award-badge__medal { width: 0.65rem; height: 0.65rem; }
+.s2-card__media .award-badge--img img { height: 40px; }

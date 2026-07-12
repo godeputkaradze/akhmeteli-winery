@@ -2,6 +2,30 @@
 
 window.AKH = window.AKH || {};
 
+// --------- Award badges (IWSC / Gold / Silver / Bronze, optional uploaded picture) ---------
+// awards: [{ tier:"iwsc"|"gold"|"silver"|"bronze", title:"...", image:"assets/medals/x.png" }]
+window.AKH.TIER_LABEL = { iwsc: "IWSC", gold: "Gold", silver: "Silver", bronze: "Bronze" };
+window.AKH.awardBadge = function (a) {
+  if (!a) return "";
+  // Back-compat: a plain string award still renders as a neutral chip.
+  if (typeof a === "string") return `<span class="award-badge award-badge--iwsc"><span class="award-badge__text">${a}</span></span>`;
+  const tier = (a.tier || "iwsc").toLowerCase();
+  const title = a.title || window.AKH.TIER_LABEL[tier] || "";
+  if (a.image) {
+    return `<span class="award-badge award-badge--img" title="${title.replace(/"/g, "&quot;")}">
+      <img src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" />
+    </span>`;
+  }
+  return `<span class="award-badge award-badge--${tier}">
+    <span class="award-badge__medal" aria-hidden="true"></span>
+    <span class="award-badge__text">${title}</span>
+  </span>`;
+};
+window.AKH.awardBadges = function (awards) {
+  if (!Array.isArray(awards) || !awards.length) return "";
+  return `<div class="award-badges">${awards.map(window.AKH.awardBadge).join("")}</div>`;
+};
+
 // --------- Bottle SVG (re-tinted per product color) ---------
 window.AKH.bottleSVG = function (color, accent) {
   color = color || "#6b1a2c";
