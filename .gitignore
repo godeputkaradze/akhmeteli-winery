@@ -10,3 +10,6 @@ node_modules/
 *.log
 
 .vercel
+
+# Claude Code local config
+.claude/
