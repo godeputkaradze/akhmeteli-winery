@@ -106,44 +106,6 @@ p { margin: 0 0 1rem; }
 }
 
 /* ============================================================
-   Custom cursor
-   ============================================================ */
-
-@media (pointer: fine) {
-  body { cursor: none; }
-  a, button, input, textarea, select, label { cursor: none; }
-  .cursor-dot, .cursor-ring {
-    position: fixed;
-    top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    will-change: transform;
-    mix-blend-mode: difference;
-  }
-  .cursor-dot {
-    width: 6px; height: 6px;
-    background: #f5cf76;
-    border-radius: 50%;
-    margin: -3px 0 0 -3px;
-    transition: opacity .2s var(--easing);
-  }
-  .cursor-ring {
-    width: 36px; height: 36px;
-    border: 1px solid #f5cf76;
-    border-radius: 50%;
-    margin: -18px 0 0 -18px;
-    transition: width .35s var(--easing), height .35s var(--easing),
-                margin .35s var(--easing), background .35s var(--easing),
-                border-color .35s var(--easing);
-  }
-  .cursor-ring.hover {
-    width: 72px; height: 72px;
-    margin: -36px 0 0 -36px;
-    background: rgba(245, 207, 118, 0.1);
-  }
-}
-
-/* ============================================================
    Navigation
    ============================================================ */
 

@@ -37,8 +37,8 @@ To animate something new, prefer adding a hook to the markup over writing fresh 
 | `.horizontal-showcase` + `.horizontal-track` | Pinned horizontal scroll gallery |
 
 Anchor links (`a[href*="#"]`) on the same page are auto-hijacked for smooth Lenis
-scroll. A custom cursor (`.cursor-dot` / `.cursor-ring`) is injected on fine-pointer
-devices and reacts to `a, button, .magnetic, .p-card, [data-cursor="hover"]`.
+scroll. There is **no custom cursor** — the site uses the normal OS pointer. The
+`data-cursor="hover"` attributes left in `site.js` / `winestory.js` are inert.
 
 ## Conventions (match these)
 
@@ -48,7 +48,7 @@ devices and reacts to `a, button, .magnetic, .p-card, [data-cursor="hover"]`.
 - **Accessibility is non-negotiable.** Every motion path checks
   `prefers-reduced-motion` (the `reduceMotion` flag at the top of `animations.js`) and
   CSS has reduced-motion blocks (`css/style.css`). When reduced motion is on: no Lenis,
-  no cursor, no magnetic, and `.reveal*` elements get `.visible` immediately. Any new
+  no magnetic, and `.reveal*` elements get `.visible` immediately. Any new
   effect MUST have a static fallback on the same code path.
 - **No-GSAP fallback:** code guards on `hasGSAP`; if GSAP fails to load, content must
   still be visible (reveals add `.visible`, counters jump to final value).

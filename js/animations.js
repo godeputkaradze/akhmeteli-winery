@@ -1,4 +1,4 @@
-// Heavy lifting: smooth scroll, scroll-driven animations, cursor, magnetic, split text.
+// Heavy lifting: smooth scroll, scroll-driven animations, magnetic, split text.
 // Loaded after gsap, ScrollTrigger, and Lenis from CDN.
 
 (function () {
@@ -49,43 +49,6 @@
         else target.scrollIntoView({ behavior: "smooth" });
       });
     });
-  }
-
-  // ---------- Custom cursor ----------
-  function initCursor() {
-    if (reduceMotion) return;
-    if (window.matchMedia("(pointer: coarse)").matches) return;
-    const dot = document.createElement("div");
-    const ring = document.createElement("div");
-    dot.className = "cursor-dot";
-    ring.className = "cursor-ring";
-    document.body.appendChild(dot);
-    document.body.appendChild(ring);
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-    let rx = mx, ry = my;
-    window.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; });
-    function tick() {
-      rx += (mx - rx) * 0.18;
-      ry += (my - ry) * 0.18;
-      dot.style.transform = `translate3d(${mx}px, ${my}px, 0)`;
-      ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
-      requestAnimationFrame(tick);
-    }
-    tick();
-    document.addEventListener("mouseenter", e => {
-      const t = e.target;
-      if (t.nodeType !== 1) return;
-      if (t.matches("a, button, .magnetic, .p-card, [data-cursor='hover']")) {
-        ring.classList.add("hover");
-      }
-    }, true);
-    document.addEventListener("mouseleave", e => {
-      const t = e.target;
-      if (t.nodeType !== 1) return;
-      if (t.matches("a, button, .magnetic, .p-card, [data-cursor='hover']")) {
-        ring.classList.remove("hover");
-      }
-    }, true);
   }
 
   // ---------- Magnetic ----------
@@ -317,7 +280,6 @@
   // ---------- Boot ----------
   document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
-    initCursor();
     initMagnetic();
     initHero();
     initReveals();
