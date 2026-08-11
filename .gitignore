@@ -15,3 +15,6 @@ package-lock.json
 
 # Claude Code local config
 .claude/
+
+# FTP deploy credentials
+.deploy.json

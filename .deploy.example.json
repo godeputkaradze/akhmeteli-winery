@@ -1,0 +1,7 @@
+{
+  "hostCandidates": ["ftp.akhmeteli.ge", "akhmeteli.ge", "<server-ip-or-hostname-from-domenebi.ge>"],
+  "port": 21,
+  "user": "<cpanel-or-ftp-username>",
+  "password": "<ftp-password>",
+  "docroot": "public_html"
+}

@@ -1,0 +1,55 @@
+# Akhmeteli Winery — Apache config for cPanel shared hosting.
+# Mirrors what vercel.json does on Vercel (/admin rewrite + no-cache on the
+# product catalogue) and adds clean URLs, compression and asset caching.
+
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS — enable AFTER the SSL certificate is issued for the domain.
+  # RewriteCond %{HTTPS} !=on
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # /admin -> admin.html (same rewrite vercel.json declares)
+  RewriteRule ^admin/?$ admin.html [L]
+
+  # Clean URLs: /shop serves shop.html. Internal rewrite, not a redirect, so the
+  # existing .html links keep working unchanged.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType model/gltf-binary         "access plus 1 year"
+  ExpiresByType text/css                  "access plus 7 days"
+  ExpiresByType application/javascript    "access plus 7 days"
+  ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+# The admin panel rewrites this file, so it must never be served stale.
+<Files "products.js">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </IfModule>
+</Files>
+
+<IfModule mod_mime.c>
+  AddType model/gltf-binary .glb
+  AddType font/woff2 .woff2
+</IfModule>
