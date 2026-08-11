@@ -1,5 +1,6 @@
 // Akhmeteli Winery — FTP/FTPS upload to cPanel shared hosting (domenebi.ge).
 //
+//   node deploy.js files    offline: list exactly what would be uploaded
 //   node deploy.js test     read-only: connect and list the remote root
 //   node deploy.js upload   mirror the site into the remote docroot
 //   node deploy.js upload js/products.js css/style.css   push only these files
@@ -9,9 +10,12 @@ const ftp = require("basic-ftp");
 const fs = require("fs");
 const path = require("path");
 
-const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, ".deploy.json"), "utf8"));
 const ROOT = __dirname;
 const MODE = process.argv[2] || "test";
+// `files` is offline, so it must not require credentials to exist yet.
+const cfg = MODE === "files"
+  ? {}
+  : JSON.parse(fs.readFileSync(path.join(__dirname, ".deploy.json"), "utf8"));
 const ONLY = process.argv.slice(3);
 
 // Never uploaded: local tooling, VCS, and the two dev-only asset dumps that
@@ -57,7 +61,19 @@ function walk(dir, base = "") {
   return out;
 }
 
+function summarize(files) {
+  const total = files.reduce((n, f) => n + fs.statSync(path.join(ROOT, f)).size, 0);
+  return `${files.length} files, ${(total / 1048576).toFixed(1)} MB`;
+}
+
 (async () => {
+  if (MODE === "files") {
+    const files = walk(ROOT);
+    files.forEach(f => console.log("  " + f));
+    console.log(`\nWould upload ${summarize(files)}.`);
+    return;
+  }
+
   const client = await connect();
   try {
     const docroot = cfg.docroot || "public_html";
