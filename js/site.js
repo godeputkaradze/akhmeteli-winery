@@ -10,7 +10,7 @@
   const wines   = (window.PRODUCTS || []).filter(p => p.type === "wine");
   const chachas = (window.PRODUCTS || []).filter(p => p.type === "chacha");
   const byId = (id) => (window.PRODUCTS || []).find(p => p.id === id);
-  const money = (p) => "$" + Number(p).toFixed(1);
+  const money = (p) => window.AKH.money(p);
 
   /* ---------------- HERO SLIDER ---------------- */
   const SLIDES = [

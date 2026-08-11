@@ -44,7 +44,7 @@
           <h3 class="p-name">${name}</h3>
           <p class="p-region">${region}</p>
           <div class="p-foot">
-            <span class="p-price">$${p.price.toFixed(2)}</span>
+            <span class="p-price">${window.AKH.money(p.price)}</span>
             <div class="p-actions">
               <a href="product.html?id=${p.id}">${window.I18N.t("card.view")}</a>
               <button data-add="${p.id}">${window.I18N.t("card.add")}</button>

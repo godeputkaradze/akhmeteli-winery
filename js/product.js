@@ -26,7 +26,7 @@
           <span class="p-style">${style}</span>
           <h3 class="p-name">${name}</h3>
           <div class="p-foot">
-            <span class="p-price">$${p.price.toFixed(2)}</span>
+            <span class="p-price">${window.AKH.money(p.price)}</span>
             <div class="p-actions">
               <button data-add="${p.id}">${window.I18N.t("card.add")}</button>
             </div>
@@ -71,7 +71,7 @@
             <div class="product-style">${style}</div>
             <p class="product-region">${region}</p>
             <div class="product-price-line">
-              <span class="product-price">$${p.price.toFixed(2)}</span>
+              <span class="product-price">${window.AKH.money(p.price)}</span>
               <span class="product-volume">${p.volume} ${window.I18N.t("unit.ml")} · ${p.abv}% ${window.I18N.t("unit.abv")}</span>
             </div>
             <div class="hero-actions" style="display:flex; gap:1rem; flex-wrap:wrap;">

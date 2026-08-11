@@ -11,6 +11,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/legal.css" />
   <!-- 18+ age gate (runs before paint to avoid a flash of content) -->
   <link rel="stylesheet" href="css/age-gate.css" />
   <script src="js/age-gate.js"></script>
@@ -452,8 +453,11 @@
       <!-- legal + contact -->
       <nav class="foot__col">
         <h4 class="foot__h" data-i18n="foot.legal">Legal</h4>
-        <a href="#" data-i18n="foot.terms">Terms &amp; Conditions</a>
-        <a href="#" data-i18n="foot.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="foot.terms">Terms &amp; Conditions</a>
+        <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a>
+        <a href="delivery.html" data-i18n="foot.delivery">Delivery Policy</a>
+        <a href="refund.html" data-i18n="foot.refund">Refund Policy</a>
+        <a href="payment.html" data-i18n="foot.payment">Payment Policy</a>
         <a href="contact.html" data-i18n="foot.contact">Contact</a>
       </nav>
 
@@ -477,6 +481,8 @@
       </div>
 
     </div>
+
+    <div class="company-block" data-company></div>
 
     <div class="foot__bar">
       <span>&copy; <span id="foot-year">2026</span> <span data-i18n="brand.producer">Akhmeteli Winery</span>. <span data-i18n="foot.rights">All rights reserved.</span></span>
@@ -679,6 +685,9 @@
         "foot.legal": "სამართლებრივი",
         "foot.terms": "წესები და პირობები",
         "foot.privacy": "კონფიდენციალურობის პოლიტიკა",
+        "foot.delivery": "მიწოდების პოლიტიკა",
+        "foot.refund": "თანხის დაბრუნება",
+        "foot.payment": "გადახდის პოლიტიკა",
         "foot.contact": "კონტაქტი",
         "foot.follow": "გამოგვყევით",
         "foot.rights": "ყველა უფლება დაცულია.",
@@ -787,6 +796,9 @@
         "foot.legal": "Legal",
         "foot.terms": "Terms & Conditions",
         "foot.privacy": "Privacy Policy",
+        "foot.delivery": "Delivery Policy",
+        "foot.refund": "Refund Policy",
+        "foot.payment": "Payment Policy",
         "foot.contact": "Contact",
         "foot.follow": "Follow Us",
         "foot.rights": "All rights reserved.",
@@ -895,6 +907,9 @@
         "foot.legal": "Правовая информация",
         "foot.terms": "Условия и положения",
         "foot.privacy": "Политика конфиденциальности",
+        "foot.delivery": "Политика доставки",
+        "foot.refund": "Возврат средств",
+        "foot.payment": "Политика оплаты",
         "foot.contact": "Контакты",
         "foot.follow": "Мы в соцсетях",
         "foot.rights": "Все права защищены.",
@@ -959,5 +974,6 @@
   })();
   </script>
 
+  <script src="js/company.js"></script>
 </body>
 </html>

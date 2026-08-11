@@ -28,6 +28,13 @@ window.AKH.awardBadges = function (awards) {
   return `<div class="award-badges">${awards.map(window.AKH.awardBadge).join("")}</div>`;
 };
 
+// --------- Money ---------
+// The shop charges in Georgian Lari, so every price on the site must read in
+// GEL — the cart and product page used to print "$" against the shop's "₾".
+window.AKH.money = function (n) {
+  return Number(n).toFixed(2) + " ₾";
+};
+
 // --------- Product bottle photo ---------
 // One source of truth for the packshot path (shop cards, cart thumbs, …).
 window.AKH.productPhoto = function (p) {

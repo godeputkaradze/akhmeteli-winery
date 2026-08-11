@@ -24,7 +24,7 @@ const SKIP = new Set([
   "node_modules", ".git", ".claude", ".vercel", ".deploy.json",
   ".deploy.example.json", "package.json", "package-lock.json", "vercel.json",
   "deploy.js", "assets-gallery.html", "PRODUCTS 2", "New folder", ".gitignore",
-  "CLAUDE.md", "README.md"
+  "CLAUDE.md", "README.md", "_shot.html"
 ]);
 
 async function connect() {
@@ -40,6 +40,8 @@ async function connect() {
           secure, secureOptions: { rejectUnauthorized: false }
         });
         console.log(`CONNECTED host=${host} secure=${secure}`);
+        // The host drops idle control sockets mid-transfer without this.
+        client.ftp.socket.setKeepAlive(true, 10000);
         return client;
       } catch (e) {
         errors.push(`  ${host} secure=${secure} -> ${e.message}`);
@@ -74,11 +76,13 @@ function summarize(files) {
     return;
   }
 
-  const client = await connect();
+  let client = await connect();
   try {
     const docroot = cfg.docroot || "public_html";
+    // ensureDir leaves the client INSIDE the directory it created/found, so
+    // don't cd into it again — cd absolutely to be explicit about where we are.
     await client.ensureDir(docroot);
-    await client.cd(docroot);
+    await client.cd("/" + docroot);
 
     if (MODE === "test") {
       console.log(`\nRemote ${docroot}:`);
@@ -95,20 +99,48 @@ function summarize(files) {
     const total = files.reduce((n, f) => n + fs.statSync(path.join(ROOT, f)).size, 0);
     console.log(`\nUploading ${files.length} files (${(total / 1048576).toFixed(1)} MB) -> ${docroot}\n`);
 
-    let done = 0, bytes = 0;
+    // A 50 MB run over FTPS reliably outlives at least one control-socket
+    // reset, so every file gets retried on a fresh connection, and files whose
+    // remote size already matches are skipped — making a re-run a cheap resume.
+    async function reconnect() {
+      try { client.close(); } catch (_) { /* already dead */ }
+      client = await connect();
+      await client.cd("/" + docroot);
+    }
+    async function remoteSize(rel) {
+      try {
+        return await client.size(rel);
+      } catch (e) {
+        if (typeof e.code === "number") return -1; // 550: not there yet
+        throw e;                                   // socket died — let it retry
+      }
+    }
+
+    let done = 0, skipped = 0, bytes = 0;
     for (const rel of files) {
       const local = path.join(ROOT, rel);
-      const dir = path.posix.dirname(rel);
-      if (dir !== ".") {
-        await client.ensureDir(dir);
-        await client.cd("/" + docroot);
+      const size = fs.statSync(local).size;
+      for (let attempt = 1; ; attempt++) {
+        try {
+          if (await remoteSize(rel) === size) { skipped++; break; }
+          const dir = path.posix.dirname(rel);
+          if (dir !== ".") {
+            await client.ensureDir(dir);
+            await client.cd("/" + docroot);
+          }
+          await client.uploadFrom(local, rel);
+          done++;
+          bytes += size;
+          break;
+        } catch (e) {
+          if (attempt > 4) throw e;
+          console.log(`  ! ${rel} — ${e.message}; reconnecting (attempt ${attempt})`);
+          await reconnect();
+        }
       }
-      await client.uploadFrom(local, rel);
-      done++;
-      bytes += fs.statSync(local).size;
-      console.log(`  [${String(done).padStart(3)}/${files.length}] ${rel}  (${(bytes / 1048576).toFixed(1)} MB)`);
+      console.log(`  [${String(done + skipped).padStart(3)}/${files.length}] ${rel}  (${(bytes / 1048576).toFixed(1)} MB)`);
     }
-    console.log(`\nDone — ${done} files, ${(bytes / 1048576).toFixed(1)} MB.`);
+    console.log(`\nDone — ${done} uploaded (${(bytes / 1048576).toFixed(1)} MB), ${skipped} already current.`);
   } finally {
     client.close();
   }

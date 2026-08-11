@@ -2,8 +2,12 @@
 
 (function () {
   const KEY = "akhmeteli.cart";
-  const DELIVERY_FEE = 5;             // USD
-  const FREE_THRESHOLD = 50;          // USD — free above this
+  // Read from js/company.js so the cart, the delivery policy and the footer can
+  // never quote different numbers. Fallbacks keep the cart working if a page
+  // has not loaded company.js.
+  const D = (window.COMPANY && window.COMPANY.delivery) || {};
+  const DELIVERY_FEE = D.fee != null ? D.fee : 5;            // GEL
+  const FREE_THRESHOLD = D.freeOver != null ? D.freeOver : 50; // GEL — free above this
 
   function read() {
     try { return JSON.parse(localStorage.getItem(KEY)) || []; }
@@ -81,7 +85,7 @@
     });
   }
 
-  function fmt(n) { return `$${n.toFixed(2)}`; }
+  function fmt(n) { return window.AKH.money(n); }
 
   function renderDrawer() {
     const body = document.querySelector(".cart-body");
@@ -130,7 +134,7 @@
         <span>${window.I18N.t("cart.delivery")}</span>
         <span>${ship === 0 ? window.I18N.t("cart.delivery.free") : fmt(ship)}</span>
       </div>
-      <p class="cart-note">${window.I18N.t("cart.delivery.note")}</p>
+      <p class="cart-note">${window.I18N.t("cart.delivery.note").replace("{freeOver}", fmt(FREE_THRESHOLD))}</p>
       <div class="cart-line total"><span>${window.I18N.t("cart.total")}</span><strong>${fmt(total())}</strong></div>
       <button class="btn cart-checkout">${window.I18N.t("cart.checkout")}</button>
     `;
