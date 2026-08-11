@@ -4,27 +4,43 @@
 // document (js/legal.js) read from here, so a value changed in this file
 // changes everywhere, in all three languages, at once.
 //
-// ⚠ FIELDS MARKED "CONFIRM" ARE PLACEHOLDERS — they must be replaced with the
-//   winery's real registry data before the UniPay application is submitted.
-//   A wrong identification code or legal address will fail their review.
+// The legal identity below is the winery's registry record (Public Registry,
+// 13/09/2021). Fields still marked "CONFIRM" are commercial terms the owner
+// has not confirmed yet — they show as ordinary numbers on the site.
 
 window.COMPANY = {
   // ---- 1. Legal identity (UniPay requirement 1) -----------------------------
   legalName: {
-    ka: "შპს „ჯორჯიან ვაინ ქომფანი ახმეტელი“",   // CONFIRM exact registered name
-    en: "Georgian Wine Company Akhmeteli LLC",     // CONFIRM
-    ru: "ООО «Джорджиан Вайн Компани Ахметели»"    // CONFIRM
+    ka: "შპს ქართული ღვინის კომპანია ახმეტელი",
+    en: "Georgian Wine Company Akhmeteli LLC",
+    ru: "ООО «Грузинская винная компания Ахметели»"
+  },
+  legalForm: {
+    ka: "შეზღუდული პასუხისმგებლობის საზოგადოება",
+    en: "Limited Liability Company",
+    ru: "Общество с ограниченной ответственностью"
   },
   tradeName: {
     ka: "ახმეტელის მარანი",
     en: "Akhmeteli Winery",
     ru: "Винодельня Ахметели"
   },
-  idCode: "CONFIRM — 9-digit identification code (ს/კ)",
+  idCode: "424618079",
+  registrationDate: "13/09/2021",
+  registrar: {
+    ka: "სსიპ საჯარო რეესტრის ეროვნული სააგენტო",
+    en: "LEPL National Agency of Public Registry of Georgia",
+    ru: "ППЮЛ Национальное агентство публичного реестра Грузии"
+  },
+  director: {
+    ka: "კახა ბერაძე",
+    en: "Kakha Beradze",
+    ru: "Каха Берадзе"
+  },
   legalAddress: {
-    ka: "CONFIRM — იურიდიული მისამართი (ქუჩა, ნომერი, ქალაქი, საფოსტო ინდექსი)",
-    en: "CONFIRM — registered address (street, number, city, postal code)",
-    ru: "CONFIRM — юридический адрес (улица, номер, город, индекс)"
+    ka: "საქართველო, ახმეტის რაიონი, სოფ. კოღოთო",
+    en: "Koghoto village, Akhmeta municipality, Georgia",
+    ru: "Грузия, Ахметский муниципалитет, с. Когото"
   },
 
   // ---- 2. Contact (UniPay requirement 2) ------------------------------------

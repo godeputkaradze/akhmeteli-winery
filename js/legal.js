@@ -15,8 +15,12 @@
     const c = C(), d = c.delivery || {}, r = c.refund || {};
     return {
       legalName: f(c.legalName),
+      legalForm: f(c.legalForm),
       tradeName: f(c.tradeName),
       idCode: c.idCode,
+      regDate: c.registrationDate,
+      registrar: f(c.registrar),
+      director: f(c.director),
       legalAddress: f(c.legalAddress),
       visitAddress: f(c.visitAddress),
       phone: c.phone,
@@ -49,9 +53,13 @@
         intro: "წინამდებარე წესები და პირობები არეგულირებს {legalName}-ის (შემდგომში „კომპანია“) ვებგვერდით სარგებლობას და მასზე განთავსებული პროდუქციის შეძენას. ვებგვერდით სარგებლობით თქვენ ეთანხმებით აღნიშნულ პირობებს.",
         sections: [
           { h: "1. ინფორმაცია კომპანიის შესახებ", p: [
-            "დასახელება: {legalName}",
-            "საიდენტიფიკაციო კოდი: {idCode}",
+            "საფირმო სახელწოდება: {legalName}",
+            "სამართლებრივი ფორმა: {legalForm}",
+            "საიდენტიფიკაციო ნომერი: {idCode}",
+            "რეგისტრაციის თარიღი: {regDate}",
+            "მარეგისტრირებელი ორგანო: {registrar}",
             "იურიდიული მისამართი: {legalAddress}",
+            "დირექტორი: {director}",
             "სავაჭრო სახელწოდება: {tradeName}",
             "ტელეფონი: {phone} · ელ-ფოსტა: {email}",
             "სამუშაო საათები: {hours}"
@@ -99,8 +107,12 @@
         sections: [
           { h: "1. Company information", p: [
             "Legal name: {legalName}",
-            "Identification code: {idCode}",
+            "Legal form: {legalForm}",
+            "Identification number: {idCode}",
+            "Date of registration: {regDate}",
+            "Registering authority: {registrar}",
             "Registered address: {legalAddress}",
+            "Director: {director}",
             "Trade name: {tradeName}",
             "Phone: {phone} · Email: {email}",
             "Working hours: {hours}"
@@ -147,9 +159,13 @@
         intro: "Настоящие условия регулируют использование веб-сайта {legalName} (далее «Компания») и покупку размещённой на нём продукции. Пользуясь сайтом, вы принимаете эти условия.",
         sections: [
           { h: "1. Информация о компании", p: [
-            "Наименование: {legalName}",
-            "Идентификационный код: {idCode}",
+            "Фирменное наименование: {legalName}",
+            "Организационно-правовая форма: {legalForm}",
+            "Идентификационный номер: {idCode}",
+            "Дата регистрации: {regDate}",
+            "Регистрирующий орган: {registrar}",
             "Юридический адрес: {legalAddress}",
+            "Директор: {director}",
             "Торговое наименование: {tradeName}",
             "Телефон: {phone} · Эл. почта: {email}",
             "Рабочие часы: {hours}"
