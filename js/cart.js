@@ -102,10 +102,13 @@
       const style = window.I18N.tField(p.style);
       return `
         <div class="cart-item" data-id="${p.id}">
-          <div class="cart-item-thumb">${window.AKH.bottleSVG(p.color, "#c9a24a")}</div>
+          <div class="cart-item-thumb">
+            <img src="${window.AKH.productPhoto(p)}" alt="${name}" loading="lazy"
+                 onerror="this.onerror=null;this.outerHTML=window.AKH.bottleSVG('${p.color}', '#c9a24a')" />
+          </div>
           <div>
             <h4 class="cart-item-name">${name}</h4>
-            <p class="cart-item-meta">${style} · ${p.volume} ml</p>
+            <p class="cart-item-meta">${style} · ${p.volume} ${window.I18N.t("unit.ml")}</p>
             <div class="cart-item-qty">
               <button data-act="dec" aria-label="−">−</button>
               <span>${i.qty}</span>

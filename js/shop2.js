@@ -3,13 +3,7 @@
 //  Renders window.PRODUCTS into the .shop2 catalogue layout.
 // =============================================================
 (function () {
-  const PRODUCER = "Akhmeteli Winery";
   const LARI = "₾"; // ₾
-
-  // ---- label maps ----
-  const CAT = { red: "Red", white: "White", amber: "Amber", spirit: "Spirit" };
-  const SWEET = { dry: "Dry", "semi-dry": "Semi-Dry", "semi-sweet": "Semi-Sweet", "n/a": "" };
-  const TECH = { qvevri: "Qvevri", european: "European", distilled: "Distilled" };
 
   // ---- method icons ----
   const ICON = {
@@ -23,11 +17,15 @@
   const tf = (f) => (window.I18N ? window.I18N.tField(f) : (f && f.en) || f || "");
   const P = () => window.PRODUCTS || [];
 
+  // ---- label maps (resolved per render, so they follow the active language) ----
+  const CAT = (c) => t("shop.cat." + c);
+  const SWEET = (s) => (s && s !== "n/a" ? t("shop.sweet." + s) : "");
+  const TECH = (m) => t("shop.method." + m);
+  const GRAPE = (g) => (window.I18N && window.I18N.grape ? window.I18N.grape(g) : g);
+
   function styleLabel(p) {
-    if (p.category === "spirit") return "Chacha";
-    const c = CAT[p.category] || "";
-    const s = SWEET[p.sweetness] || "";
-    return (c + " " + s).trim();
+    if (p.category === "spirit") return t("shop.cat.spirit");
+    return (CAT(p.category) + " " + SWEET(p.sweetness)).trim();
   }
   function salePrice(p) { return p.sale ? p.price * (1 - p.sale / 100) : p.price; }
   function money(n) { return n.toFixed(2) + " " + LARI; }
@@ -49,7 +47,7 @@
     // top category links
     const cats = distinct(p => p.category);
     $("#s2-cat").innerHTML = cats.map(c =>
-      `<li><button data-cat="${c}">${(CAT[c] || c).toUpperCase()}</button></li>`).join("");
+      `<li><button data-cat="${c}">${(CAT(c) || c).toUpperCase()}</button></li>`).join("");
     $("#s2-cat").querySelectorAll("button").forEach(b => {
       b.addEventListener("click", () => {
         const c = b.dataset.cat;
@@ -72,11 +70,11 @@
 
     // accordion groups
     const groups = [
-      { key: "abv", title: "Alcohol %", opts: distinct(p => p.abv).sort((a, b) => a - b).map(v => ({ v, label: v + "%" })) },
-      { key: "vintage", title: "Vintage Year", opts: distinct(p => p.vintage).sort((a, b) => b - a).map(v => ({ v, label: String(v) })) },
-      { key: "tech", title: "Technology", opts: distinct(p => p.method).map(v => ({ v, label: TECH[v] || v })) },
-      { key: "grape", title: "Grape", opts: distinct(p => p.grape).map(v => ({ v, label: v })) },
-      { key: "origin", title: "Origin", opts: distinct(p => tf(p.region)).map(v => ({ v, label: v })) }
+      { key: "abv", title: t("shop.f.abv"), opts: distinct(p => p.abv).sort((a, b) => a - b).map(v => ({ v, label: v + "%" })) },
+      { key: "vintage", title: t("shop.f.vintage"), opts: distinct(p => p.vintage).sort((a, b) => b - a).map(v => ({ v, label: String(v) })) },
+      { key: "tech", title: t("shop.f.tech"), opts: distinct(p => p.method).map(v => ({ v, label: TECH(v) || v })) },
+      { key: "grape", title: t("shop.f.grape"), opts: distinct(p => p.grape).map(v => ({ v, label: GRAPE(v) })) },
+      { key: "origin", title: t("shop.f.origin"), opts: distinct(p => tf(p.region)).map(v => ({ v, label: v })) }
     ];
     $("#s2-groups").innerHTML = groups.map(g => `
       <div class="s2-group" data-group="${g.key}">
@@ -170,26 +168,25 @@
     const priceHTML = onSale
       ? `<span class="was">${money(p.price)}</span><span>${money(salePrice(p))}</span>`
       : `<span>${p.price.toFixed(2)}</span> <span class="lari">${LARI}</span>`;
-    const imgFile = p.id === "mukuzani" ? "bottle-trim.png" : "bottle.png";
     return `
       <article class="s2-card" data-id="${p.id}">
         <a class="s2-card__media" href="product.html#${p.id}">
-          <img class="s2-card__photo" src="assets/Products/${p.id}/${imgFile}" alt="${tf(p.name)}" loading="lazy"
+          <img class="s2-card__photo" src="${window.AKH.productPhoto(p)}" alt="${tf(p.name)}" loading="lazy"
                onerror="this.onerror=null;this.outerHTML=window.AKH.bottleSVG('${p.color}', '#c9a24a')" />
           ${onSale ? `<span class="s2-badge">−${p.sale}%</span>` : ""}
           ${window.AKH && window.AKH.awardBadges ? window.AKH.awardBadges(p.awards) : ""}
         </a>
         <div class="s2-card__info">
           <h3 class="s2-card__name">${tf(p.name)}</h3>
-          <span class="s2-card__year">${p.vintage}</span>
+          <span class="s2-card__year">${p.vintage || ""}</span>
           <span class="s2-card__rule"></span>
           <div class="s2-card__icons">${ICON[p.method] || ""}</div>
           <em class="s2-card__style">${styleLabel(p)}</em>
-          <span class="s2-card__producer">${PRODUCER}</span>
+          <span class="s2-card__producer">${t("brand.producer")}</span>
           <div class="s2-card__price">${priceHTML}</div>
           <div class="s2-card__buy">
-            <button class="s2-buy" data-buy="${p.id}">Buy</button>
-            <button class="s2-add" data-add="${p.id}">Add to Cart</button>
+            <button class="s2-buy" data-buy="${p.id}">${t("shop.buy")}</button>
+            <button class="s2-add" data-add="${p.id}">${t("card.add")}</button>
           </div>
         </div>
       </article>`;
@@ -201,7 +198,7 @@
     const items = sorted(filtered());
     grid.innerHTML = items.length
       ? items.map(cardHTML).join("")
-      : `<div class="s2-empty">No wines match these filters.</div>`;
+      : `<div class="s2-empty">${t("shop.empty")}</div>`;
 
     // Only the product grid changes — the filter sidebar stays put. If a shorter
     // list left us scrolled past the shop area (into the footer below), pull the
@@ -225,7 +222,7 @@
       btn.addEventListener("click", e => {
         e.preventDefault();
         if (window.CART) window.CART.add(btn.dataset.add, 1);
-        btn.classList.add("added"); const txt = btn.textContent; btn.textContent = "Added";
+        btn.classList.add("added"); const txt = btn.textContent; btn.textContent = t("card.added");
         setTimeout(() => { btn.classList.remove("added"); btn.textContent = txt; }, 1300);
       });
     });

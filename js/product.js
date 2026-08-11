@@ -41,11 +41,11 @@
     if (!root) return;
     const p = window.PRODUCTS.find(x => x.id === id);
     if (!p) {
-      root.innerHTML = `<div class="container"><a class="product-back" href="shop.html">${window.I18N.t("product.back")}</a><h1>Not found.</h1></div>`;
+      root.innerHTML = `<div class="container"><a class="product-back" href="shop.html">${window.I18N.t("product.back")}</a><h1>${window.I18N.t("product.notfound")}</h1></div>`;
       return;
     }
 
-    document.title = `${window.I18N.tField(p.name)} — Akhmeteli Winery`;
+    document.title = `${window.I18N.tField(p.name)} — ${window.I18N.t("brand.producer")}`;
     root.style.setProperty("--p-glow", `${p.color}40`);
 
     const name = window.I18N.tField(p.name);
@@ -72,7 +72,7 @@
             <p class="product-region">${region}</p>
             <div class="product-price-line">
               <span class="product-price">$${p.price.toFixed(2)}</span>
-              <span class="product-volume">${p.volume} ml · ${p.abv}% ABV</span>
+              <span class="product-volume">${p.volume} ${window.I18N.t("unit.ml")} · ${p.abv}% ${window.I18N.t("unit.abv")}</span>
             </div>
             <div class="hero-actions" style="display:flex; gap:1rem; flex-wrap:wrap;">
               <button class="btn" data-add="${p.id}">${window.I18N.t("card.add")}</button>
@@ -94,11 +94,11 @@
         </section>
 
         <section class="product-specs reveal">
-          <div class="spec"><div class="spec-label">${window.I18N.t("product.grape")}</div><div class="spec-value">${p.grape}</div></div>
+          <div class="spec"><div class="spec-label">${window.I18N.t("product.grape")}</div><div class="spec-value">${window.I18N.grape(p.grape)}</div></div>
           ${p.vintage ? `<div class="spec"><div class="spec-label">${window.I18N.t("product.vintage")}</div><div class="spec-value">${p.vintage}</div></div>` : ""}
           <div class="spec"><div class="spec-label">${window.I18N.t("product.abv")}</div><div class="spec-value">${p.abv}%</div></div>
-          <div class="spec"><div class="spec-label">${window.I18N.t("product.volume")}</div><div class="spec-value">${p.volume} ml</div></div>
-          <div class="spec"><div class="spec-label">${window.I18N.t("product.serve")}</div><div class="spec-value">${p.serve}</div></div>
+          <div class="spec"><div class="spec-label">${window.I18N.t("product.volume")}</div><div class="spec-value">${p.volume} ${window.I18N.t("unit.ml")}</div></div>
+          <div class="spec"><div class="spec-label">${window.I18N.t("product.serve")}</div><div class="spec-value">${window.I18N.serve(p.serve)}</div></div>
           <div class="spec"><div class="spec-label">${window.I18N.t("product.method")}</div><div class="spec-value">${window.I18N.t("shop.method." + p.method)}</div></div>
         </section>
 

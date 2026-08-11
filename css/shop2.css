@@ -330,4 +330,15 @@
   backdrop-filter: blur(2px);
 }
 .s2-card__media .award-badge__medal { width: 0.65rem; height: 0.65rem; }
-.s2-card__media .award-badge--img img { height: 40px; }
+/* the card image column is too narrow for the text chips (they spill into the
+   info column), so cards show the medal artwork only — product.html lists all
+   awards in full */
+.s2-card__media .award-badge:not(.award-badge--img) { display: none; }
+/* the medal seals are artwork, not chips — undo the pill treatment above */
+.s2-card__media .award-badge--img {
+  padding: 0;
+  border: none;
+  background: none;
+  backdrop-filter: none;
+}
+.s2-card__media .award-badge--img img { height: 58px; }

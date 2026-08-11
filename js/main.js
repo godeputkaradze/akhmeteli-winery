@@ -10,7 +10,9 @@ window.AKH.awardBadge = function (a) {
   // Back-compat: a plain string award still renders as a neutral chip.
   if (typeof a === "string") return `<span class="award-badge award-badge--iwsc"><span class="award-badge__text">${a}</span></span>`;
   const tier = (a.tier || "iwsc").toLowerCase();
-  const title = a.title || window.AKH.TIER_LABEL[tier] || "";
+  const raw = a.title || window.AKH.TIER_LABEL[tier] || "";
+  // Award titles are stored as English strings; translate the tier word in them.
+  const title = window.I18N && window.I18N.awardTitle ? window.I18N.awardTitle(raw) : raw;
   if (a.image) {
     return `<span class="award-badge award-badge--img" title="${title.replace(/"/g, "&quot;")}">
       <img src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" />
@@ -24,6 +26,13 @@ window.AKH.awardBadge = function (a) {
 window.AKH.awardBadges = function (awards) {
   if (!Array.isArray(awards) || !awards.length) return "";
   return `<div class="award-badges">${awards.map(window.AKH.awardBadge).join("")}</div>`;
+};
+
+// --------- Product bottle photo ---------
+// One source of truth for the packshot path (shop cards, cart thumbs, …).
+window.AKH.productPhoto = function (p) {
+  if (!p) return "";
+  return "assets/Products/" + p.id + "/" + (p.id === "mukuzani" ? "bottle-trim.png" : "bottle.png");
 };
 
 // --------- Bottle SVG (re-tinted per product color) ---------

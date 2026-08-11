@@ -6,276 +6,6 @@
 window.PRODUCTS =
 [
   {
-    "id": "saperavi",
-    "slug": "saperavi",
-    "category": "red",
-    "type": "wine",
-    "sweetness": "dry",
-    "method": "european",
-    "grape": "Saperavi",
-    "vintage": 2023,
-    "abv": 13,
-    "volume": 750,
-    "price": 3.5,
-    "awards": [
-      {
-        "tier": "bronze",
-        "title": "IWSC Bronze 2025",
-        "image": ""
-      }
-    ],
-    "color": "#6b1a2c",
-    "region": {
-      "en": "Akhmeta district, Kistauri village",
-      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
-      "ru": "Ахметский район, с. Кистаури"
-    },
-    "name": {
-      "en": "Saperavi",
-      "ka": "საფერავი",
-      "ru": "Саперави"
-    },
-    "style": {
-      "en": "Red Dry Wine",
-      "ka": "წითელი მშრალი ღვინო",
-      "ru": "Красное сухое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with gentle pleasant tones of varietal fruits, cherry and red berry.",
-      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული ჯიშური ხილის, ალუბლის და წითელი კენკრის ნაზი სასიამოვნო ტონებით.",
-      "ru": "Средней интенсивности с мягкими приятными тонами сортовых фруктов, вишни и красных ягод."
-    },
-    "taste": {
-      "en": "Harmonious, velvety, bodied, soft, with light tannins and a long finish.",
-      "ka": "ჰარმონიული, ხავერდოვანი, სხეულიანი, რბილი ტანინებით, ხანგრძლივი დაბოლოებით.",
-      "ru": "Гармоничное, бархатистое, телистое, мягкое, с лёгкими танинами и долгим послевкусием."
-    },
-    "serve": "14-18°C"
-  },
-  {
-    "id": "mukuzani",
-    "slug": "mukuzani",
-    "category": "red",
-    "type": "wine",
-    "sweetness": "dry",
-    "method": "european",
-    "grape": "Saperavi",
-    "vintage": 2023,
-    "abv": 12,
-    "volume": 750,
-    "price": 3.5,
-    "awards": [
-      {
-        "tier": "bronze",
-        "title": "IWSC Bronze 2025",
-        "image": ""
-      }
-    ],
-    "color": "#4a0d1a",
-    "region": {
-      "en": "Right bank of Alazani, Mukuzani village",
-      "ka": "მდინარე ალაზნის მარჯვენა სანაპირო, სოფ. მუკუზანი",
-      "ru": "Правый берег Алазани, с. Мукузани"
-    },
-    "name": {
-      "en": "Mukuzani",
-      "ka": "მუკუზანი",
-      "ru": "Мукузани"
-    },
-    "style": {
-      "en": "Red Dry Wine",
-      "ka": "წითელი მშრალი ღვინო",
-      "ru": "Красное сухое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with gentle pleasant tones of varietal fruits, cherry, cornel and vanilla.",
-      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული ჯიშური ხილის, ალუბლის, შინდისა და ვანილის სასიამოვნო ტონებით.",
-      "ru": "Средней интенсивности с тонами сортовых фруктов, вишни, кизила и ванили."
-    },
-    "taste": {
-      "en": "Harmonious, velvety, bodied, soft, with vanilla tones and a long finish.",
-      "ka": "ჰარმონიული, ხავერდოვანი, ვანილის ტონებით, ხანგრძლივი დაბოლოებით.",
-      "ru": "Гармоничное, бархатистое, телистое, с ванильными тонами и долгим послевкусием."
-    },
-    "serve": "14-18°C"
-  },
-  {
-    "id": "kindzmarauli",
-    "slug": "kindzmarauli",
-    "category": "red",
-    "type": "wine",
-    "sweetness": "semi-sweet",
-    "method": "european",
-    "grape": "Saperavi",
-    "vintage": 2023,
-    "abv": 12,
-    "volume": 750,
-    "price": 4,
-    "awards": [],
-    "color": "#5a1426",
-    "region": {
-      "en": "Near Kvareli, Kindzmarauli zone",
-      "ka": "ყვარლის მახლობლად, ყინძმარაულის ზონა",
-      "ru": "Близ Кварели, зона Киндзмараули"
-    },
-    "name": {
-      "en": "Kindzmarauli",
-      "ka": "ყინძმარაული",
-      "ru": "Киндзмараули"
-    },
-    "style": {
-      "en": "Red Semi-Sweet Wine",
-      "ka": "წითელი ნახევრადტკბილი ღვინო",
-      "ru": "Красное полусладкое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with pleasant tones of varietal fruits, blackberry and berry.",
-      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის, მაყვლის და კენკრის სასიამოვნო ტონებით.",
-      "ru": "Средней интенсивности с тонами сортовых фруктов, ежевики и ягод."
-    },
-    "taste": {
-      "en": "Harmonious, velvety, light-bodied, soft.",
-      "ka": "ჰარმონიული, ხავერდოვანი, მსუბუქი სხეულიანი, რბილი.",
-      "ru": "Гармоничное, бархатистое, лёгкое, мягкое."
-    },
-    "serve": "14-18°C"
-  },
-  {
-    "id": "alazani-valley",
-    "slug": "alazani-valley",
-    "category": "red",
-    "type": "wine",
-    "sweetness": "semi-sweet",
-    "method": "european",
-    "grape": "Saperavi",
-    "vintage": 2023,
-    "abv": 12.5,
-    "volume": 750,
-    "price": 3,
-    "awards": [],
-    "color": "#1f3a2e",
-    "region": {
-      "en": "Akhmeta district, Kistauri village",
-      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
-      "ru": "Ахметский район, с. Кистаури"
-    },
-    "name": {
-      "en": "Alazani Valley",
-      "ka": "ალაზნის ველი",
-      "ru": "Алазанская долина"
-    },
-    "style": {
-      "en": "Red Semi-Sweet Wine",
-      "ka": "წითელი ნახევრადტკბილი ღვინო",
-      "ru": "Красное полусладкое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with pleasant tones of varietal fruits, currant and red berry.",
-      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის, მოცხარის და წითელი კენკრის სასიამოვნო ტონებით.",
-      "ru": "Средней интенсивности с тонами сортовых фруктов, смородины и красных ягод."
-    },
-    "taste": {
-      "en": "Harmonious, velvety, with red berry tones and a long finish.",
-      "ka": "ჰარმონიული, ხავერდოვანი, წითელი კენკრის ტონებით, ხანგრძლივი დაბოლოებით.",
-      "ru": "Гармоничное, бархатистое, с тонами красных ягод и долгим послевкусием."
-    },
-    "serve": "14-18°C"
-  },
-  {
-    "id": "pirosmani",
-    "slug": "pirosmani",
-    "category": "red",
-    "type": "wine",
-    "sweetness": "semi-dry",
-    "method": "european",
-    "grape": "Saperavi",
-    "vintage": 2023,
-    "abv": 12.5,
-    "volume": 750,
-    "price": 3,
-    "awards": [],
-    "color": "#1a2747",
-    "region": {
-      "en": "Akhmeta district, Kistauri village",
-      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
-      "ru": "Ахметский район, с. Кистаури"
-    },
-    "name": {
-      "en": "Pirosmani",
-      "ka": "ფიროსმანი",
-      "ru": "Пиросмани"
-    },
-    "style": {
-      "en": "Red Semi-Dry Wine",
-      "ka": "წითელი ნახევრად მშრალი ღვინო",
-      "ru": "Красное полусухое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with pleasant tones of red berry fruits, currant and blueberry.",
-      "ka": "საშუალო ინტენსივობის, წითელი კენკროვანი ხილის, მოცხარისა და მოცვის ნაზი ტონებით.",
-      "ru": "Средней интенсивности с тонами красных ягод, смородины и черники."
-    },
-    "taste": {
-      "en": "Harmonious, velvety, with red berry tones and a long finish.",
-      "ka": "ჰარმონიული, ხავერდოვანი, წითელი კენკრის ტონებით, ხანგრძლივი დაბოლოებით.",
-      "ru": "Гармоничное, бархатистое, с тонами красных ягод и долгим послевкусием."
-    },
-    "serve": "14-18°C"
-  },
-  {
-    "id": "kisi",
-    "slug": "kisi",
-    "category": "amber",
-    "type": "wine",
-    "sweetness": "dry",
-    "method": "qvevri",
-    "grape": "Kisi",
-    "vintage": 2023,
-    "abv": 11.5,
-    "volume": 750,
-    "price": 3.5,
-    "sale": 20,
-    "awards": [
-      {
-        "tier": "bronze",
-        "title": "IWSC Bronze 2025",
-        "image": ""
-      },
-      {
-        "tier": "silver",
-        "title": "Qvevri Wine Silver 2024",
-        "image": ""
-      }
-    ],
-    "color": "#c89b3c",
-    "region": {
-      "en": "Kistauri village",
-      "ka": "სოფ. ქისტაური",
-      "ru": "с. Кистаури"
-    },
-    "name": {
-      "en": "Kisi",
-      "ka": "ქისი",
-      "ru": "Киси"
-    },
-    "style": {
-      "en": "Amber Dry Wine",
-      "ka": "ქარვისფერი მშრალი ღვინო",
-      "ru": "Янтарное сухое вино"
-    },
-    "aroma": {
-      "en": "Medium intensity with varietal fruits of apricots and dried fruits, gentle pleasant tones.",
-      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის — ჭერმისა და გამხმარი ხილის — ნაზი სასიამოვნო ტონებით.",
-      "ru": "Средней интенсивности, с сортовыми фруктами, абрикосом и сухофруктами."
-    },
-    "taste": {
-      "en": "Harmoniously pleasant, with ripe fruit, medium-bodied, with less aggressive tannins.",
-      "ka": "ჰარმონიული, მწიფე ხილით, საშუალო სხეულიანი, ნაკლებად აგრესიული ტანინებით.",
-      "ru": "Гармоничное, со зрелыми фруктами, средней плотности, с мягкими танинами."
-    },
-    "serve": "12-14°C"
-  },
-  {
     "id": "tsinandali",
     "slug": "tsinandali",
     "category": "white",
@@ -317,6 +47,162 @@ window.PRODUCTS =
     "serve": "10-12°C"
   },
   {
+    "id": "kakhuri-mtsvane",
+    "slug": "kakhuri-mtsvane",
+    "category": "amber",
+    "type": "wine",
+    "sweetness": "dry",
+    "method": "qvevri",
+    "grape": "Kakhuri Mtsvane",
+    "vintage": 2023,
+    "abv": 12,
+    "volume": 750,
+    "price": 4,
+    "awards": [
+      {
+        "tier": "gold",
+        "title": "IWSC Gold 2026",
+        "image": "assets/medals/iwsc-gold-2026.png"
+      },
+      {
+        "tier": "silver",
+        "title": "Qvevri Wine Silver 2024",
+        "image": ""
+      }
+    ],
+    "color": "#8e9b6a",
+    "region": {
+      "en": "Manavi village",
+      "ka": "სოფ. მანავი",
+      "ru": "с. Манави"
+    },
+    "name": {
+      "en": "Kakhuri Mtsvane",
+      "ka": "კახური მწვანე",
+      "ru": "Кахури Мцване"
+    },
+    "style": {
+      "en": "Amber Dry Wine",
+      "ka": "ქარვისფერი მშრალი ღვინო",
+      "ru": "Янтарное сухое вино"
+    },
+    "aroma": {
+      "en": "High intensity with well-expressed white fruit, honey and nut tones.",
+      "ka": "მაღალი ინტენსივობის, კარგად გამოხატული თეთრი ხილის, თაფლის და ნიგვზის ტონებით.",
+      "ru": "Высокой интенсивности с тонами белых фруктов, мёда и ореха."
+    },
+    "taste": {
+      "en": "Harmonious, ripe white fruit with pleasant acidity, full-bodied.",
+      "ka": "ჰარმონიული, მწიფე თეთრი ხილით, სასიამოვნო სიმჟავით, სრული სხეულით.",
+      "ru": "Гармоничное, спелые белые фрукты с приятной кислотностью, полнотелое."
+    },
+    "serve": "12-14°C"
+  },
+  {
+    "id": "rkatsiteli",
+    "slug": "rkatsiteli",
+    "category": "amber",
+    "type": "wine",
+    "sweetness": "dry",
+    "method": "qvevri",
+    "grape": "Rkatsiteli",
+    "vintage": 2023,
+    "abv": 12,
+    "volume": 750,
+    "price": 3,
+    "awards": [
+      {
+        "tier": "silver",
+        "title": "IWSC Silver 2026",
+        "image": "assets/medals/iwsc-silver-2026.png"
+      },
+      {
+        "tier": "silver",
+        "title": "Qvevri Wine Silver 2024",
+        "image": ""
+      }
+    ],
+    "color": "#caa14a",
+    "region": {
+      "en": "Velistsikhe village",
+      "ka": "სოფ. ველისციხე",
+      "ru": "с. Велисцихе"
+    },
+    "name": {
+      "en": "Rkatsiteli",
+      "ka": "რქაწითელი",
+      "ru": "Ркацители"
+    },
+    "style": {
+      "en": "Amber Dry Wine",
+      "ka": "ქარვისფერი მშრალი ღვინო",
+      "ru": "Янтарное сухое вино"
+    },
+    "aroma": {
+      "en": "Medium intensity with varietal fruits of apricots and dried fruits, gentle pleasant tones.",
+      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის — ჭერმისა და გამხმარი ხილის — ნაზი ტონებით.",
+      "ru": "Средней интенсивности с сортовыми фруктами, абрикосом и сухофруктами."
+    },
+    "taste": {
+      "en": "Harmonious, velvety, medium-bodied, with less aggressive tannins.",
+      "ka": "ჰარმონიული, ხავერდოვანი, საშუალო სხეულიანი, ნაკლებად აგრესიული ტანინებით.",
+      "ru": "Гармоничное, бархатистое, средней плотности, с мягкими танинами."
+    },
+    "serve": "12-14°C"
+  },
+  {
+    "id": "tsarapi",
+    "slug": "tsarapi",
+    "category": "amber",
+    "type": "wine",
+    "sweetness": "dry",
+    "method": "qvevri",
+    "grape": "Rkatsiteli",
+    "vintage": 2023,
+    "abv": 12,
+    "volume": 750,
+    "price": 4,
+    "awards": [
+      {
+        "tier": "silver",
+        "title": "IWSC Silver 2026",
+        "image": "assets/medals/iwsc-silver-2026.png"
+      },
+      {
+        "tier": "bronze",
+        "title": "Qvevri Wine Bronze 2024",
+        "image": ""
+      }
+    ],
+    "color": "#a78a36",
+    "region": {
+      "en": "Near Kardenakhi village",
+      "ka": "სოფ. კარდენახის მახლობლად",
+      "ru": "Близ с. Карденахи"
+    },
+    "name": {
+      "en": "Tsarapi",
+      "ka": "წარაფი",
+      "ru": "Царапи"
+    },
+    "style": {
+      "en": "Amber Dry Wine",
+      "ka": "ქარვისფერი მშრალი ღვინო",
+      "ru": "Янтарное сухое вино"
+    },
+    "aroma": {
+      "en": "Medium intensity with well-expressed white dried fruit, with gentle tones of ceiling.",
+      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული თეთრი ჩირის და შერგის ნაზი ტონებით.",
+      "ru": "Средней интенсивности с выраженными тонами белых сухофруктов."
+    },
+    "taste": {
+      "en": "Harmonious, velvety, medium-bodied, with dried fruit taste and less aggressive tannins.",
+      "ka": "ჰარმონიული, ხავერდოვანი, საშუალო სხეულიანი, ჩირის გემოთი, ნაკლები ტანინებით.",
+      "ru": "Гармоничное, бархатистое, средней плотности, со вкусом сухофруктов."
+    },
+    "serve": "12-14°C"
+  },
+  {
     "id": "tibaani",
     "slug": "tibaani",
     "category": "amber",
@@ -332,7 +218,7 @@ window.PRODUCTS =
       {
         "tier": "bronze",
         "title": "IWSC Bronze 2025",
-        "image": ""
+        "image": "assets/medals/iwsc-bronze-2025.png"
       },
       {
         "tier": "bronze",
@@ -411,34 +297,40 @@ window.PRODUCTS =
     "serve": "12-14°C"
   },
   {
-    "id": "rkatsiteli",
-    "slug": "rkatsiteli",
+    "id": "kisi",
+    "slug": "kisi",
     "category": "amber",
     "type": "wine",
     "sweetness": "dry",
     "method": "qvevri",
-    "grape": "Rkatsiteli",
+    "grape": "Kisi",
     "vintage": 2023,
-    "abv": 12,
+    "abv": 11.5,
     "volume": 750,
-    "price": 3,
+    "price": 3.5,
+    "sale": 20,
     "awards": [
+      {
+        "tier": "bronze",
+        "title": "IWSC Bronze 2026",
+        "image": "assets/medals/iwsc-bronze-2026.png"
+      },
       {
         "tier": "silver",
         "title": "Qvevri Wine Silver 2024",
         "image": ""
       }
     ],
-    "color": "#caa14a",
+    "color": "#c89b3c",
     "region": {
-      "en": "Velistsikhe village",
-      "ka": "სოფ. ველისციხე",
-      "ru": "с. Велисцихе"
+      "en": "Kistauri village",
+      "ka": "სოფ. ქისტაური",
+      "ru": "с. Кистаури"
     },
     "name": {
-      "en": "Rkatsiteli",
-      "ka": "რქაწითელი",
-      "ru": "Ркацители"
+      "en": "Kisi",
+      "ka": "ქისი",
+      "ru": "Киси"
     },
     "style": {
       "en": "Amber Dry Wine",
@@ -447,109 +339,232 @@ window.PRODUCTS =
     },
     "aroma": {
       "en": "Medium intensity with varietal fruits of apricots and dried fruits, gentle pleasant tones.",
-      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის — ჭერმისა და გამხმარი ხილის — ნაზი ტონებით.",
-      "ru": "Средней интенсивности с сортовыми фруктами, абрикосом и сухофруктами."
+      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის — ჭერმისა და გამხმარი ხილის — ნაზი სასიამოვნო ტონებით.",
+      "ru": "Средней интенсивности, с сортовыми фруктами, абрикосом и сухофруктами."
     },
     "taste": {
-      "en": "Harmonious, velvety, medium-bodied, with less aggressive tannins.",
-      "ka": "ჰარმონიული, ხავერდოვანი, საშუალო სხეულიანი, ნაკლებად აგრესიული ტანინებით.",
-      "ru": "Гармоничное, бархатистое, средней плотности, с мягкими танинами."
+      "en": "Harmoniously pleasant, with ripe fruit, medium-bodied, with less aggressive tannins.",
+      "ka": "ჰარმონიული, მწიფე ხილით, საშუალო სხეულიანი, ნაკლებად აგრესიული ტანინებით.",
+      "ru": "Гармоничное, со зрелыми фруктами, средней плотности, с мягкими танинами."
     },
     "serve": "12-14°C"
   },
   {
-    "id": "tsarapi",
-    "slug": "tsarapi",
-    "category": "amber",
+    "id": "saperavi",
+    "slug": "saperavi",
+    "category": "red",
     "type": "wine",
     "sweetness": "dry",
-    "method": "qvevri",
-    "grape": "Rkatsiteli",
+    "method": "european",
+    "grape": "Saperavi",
     "vintage": 2023,
-    "abv": 12,
+    "abv": 13,
     "volume": 750,
-    "price": 4,
+    "price": 3.5,
     "awards": [
       {
         "tier": "bronze",
-        "title": "Qvevri Wine Bronze 2024",
-        "image": ""
+        "title": "IWSC Bronze 2026",
+        "image": "assets/medals/iwsc-bronze-2026.png"
       }
     ],
-    "color": "#a78a36",
+    "color": "#6b1a2c",
     "region": {
-      "en": "Near Kardenakhi village",
-      "ka": "სოფ. კარდენახის მახლობლად",
-      "ru": "Близ с. Карденахи"
+      "en": "Akhmeta district, Kistauri village",
+      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
+      "ru": "Ахметский район, с. Кистаури"
     },
     "name": {
-      "en": "Tsarapi",
-      "ka": "წარაფი",
-      "ru": "Царапи"
+      "en": "Saperavi",
+      "ka": "საფერავი",
+      "ru": "Саперави"
     },
     "style": {
-      "en": "Amber Dry Wine",
-      "ka": "ქარვისფერი მშრალი ღვინო",
-      "ru": "Янтарное сухое вино"
+      "en": "Red Dry Wine",
+      "ka": "წითელი მშრალი ღვინო",
+      "ru": "Красное сухое вино"
     },
     "aroma": {
-      "en": "Medium intensity with well-expressed white dried fruit, with gentle tones of ceiling.",
-      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული თეთრი ჩირის და შერგის ნაზი ტონებით.",
-      "ru": "Средней интенсивности с выраженными тонами белых сухофруктов."
+      "en": "Medium intensity with gentle pleasant tones of varietal fruits, cherry and red berry.",
+      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული ჯიშური ხილის, ალუბლის და წითელი კენკრის ნაზი სასიამოვნო ტონებით.",
+      "ru": "Средней интенсивности с мягкими приятными тонами сортовых фруктов, вишни и красных ягод."
     },
     "taste": {
-      "en": "Harmonious, velvety, medium-bodied, with dried fruit taste and less aggressive tannins.",
-      "ka": "ჰარმონიული, ხავერდოვანი, საშუალო სხეულიანი, ჩირის გემოთი, ნაკლები ტანინებით.",
-      "ru": "Гармоничное, бархатистое, средней плотности, со вкусом сухофруктов."
+      "en": "Harmonious, velvety, bodied, soft, with light tannins and a long finish.",
+      "ka": "ჰარმონიული, ხავერდოვანი, სხეულიანი, რბილი ტანინებით, ხანგრძლივი დაბოლოებით.",
+      "ru": "Гармоничное, бархатистое, телистое, мягкое, с лёгкими танинами и долгим послевкусием."
     },
-    "serve": "12-14°C"
+    "serve": "14-18°C"
   },
   {
-    "id": "kakhuri-mtsvane",
-    "slug": "kakhuri-mtsvane",
-    "category": "amber",
+    "id": "kindzmarauli",
+    "slug": "kindzmarauli",
+    "category": "red",
     "type": "wine",
-    "sweetness": "dry",
-    "method": "qvevri",
-    "grape": "Kakhuri Mtsvane",
+    "sweetness": "semi-sweet",
+    "method": "european",
+    "grape": "Saperavi",
     "vintage": 2023,
     "abv": 12,
     "volume": 750,
     "price": 4,
-    "awards": [
-      {
-        "tier": "silver",
-        "title": "Qvevri Wine Silver 2024",
-        "image": ""
-      }
-    ],
-    "color": "#8e9b6a",
+    "awards": [],
+    "color": "#5a1426",
     "region": {
-      "en": "Manavi village",
-      "ka": "სოფ. მანავი",
-      "ru": "с. Манави"
+      "en": "Near Kvareli, Kindzmarauli zone",
+      "ka": "ყვარლის მახლობლად, ყინძმარაულის ზონა",
+      "ru": "Близ Кварели, зона Киндзмараули"
     },
     "name": {
-      "en": "Kakhuri Mtsvane",
-      "ka": "კახური მწვანე",
-      "ru": "Кахури Мцване"
+      "en": "Kindzmarauli",
+      "ka": "ყინძმარაული",
+      "ru": "Киндзмараули"
     },
     "style": {
-      "en": "Amber Dry Wine",
-      "ka": "ქარვისფერი მშრალი ღვინო",
-      "ru": "Янтарное сухое вино"
+      "en": "Red Semi-Sweet Wine",
+      "ka": "წითელი ნახევრადტკბილი ღვინო",
+      "ru": "Красное полусладкое вино"
     },
     "aroma": {
-      "en": "High intensity with well-expressed white fruit, honey and nut tones.",
-      "ka": "მაღალი ინტენსივობის, კარგად გამოხატული თეთრი ხილის, თაფლის და ნიგვზის ტონებით.",
-      "ru": "Высокой интенсивности с тонами белых фруктов, мёда и ореха."
+      "en": "Medium intensity with pleasant tones of varietal fruits, blackberry and berry.",
+      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის, მაყვლის და კენკრის სასიამოვნო ტონებით.",
+      "ru": "Средней интенсивности с тонами сортовых фруктов, ежевики и ягод."
     },
     "taste": {
-      "en": "Harmonious, ripe white fruit with pleasant acidity, full-bodied.",
-      "ka": "ჰარმონიული, მწიფე თეთრი ხილით, სასიამოვნო სიმჟავით, სრული სხეულით.",
-      "ru": "Гармоничное, спелые белые фрукты с приятной кислотностью, полнотелое."
+      "en": "Harmonious, velvety, light-bodied, soft.",
+      "ka": "ჰარმონიული, ხავერდოვანი, მსუბუქი სხეულიანი, რბილი.",
+      "ru": "Гармоничное, бархатистое, лёгкое, мягкое."
     },
-    "serve": "12-14°C"
+    "serve": "14-18°C"
+  },
+  {
+    "id": "mukuzani",
+    "slug": "mukuzani",
+    "category": "red",
+    "type": "wine",
+    "sweetness": "dry",
+    "method": "european",
+    "grape": "Saperavi",
+    "vintage": 2023,
+    "abv": 12,
+    "volume": 750,
+    "price": 3.5,
+    "awards": [
+      {
+        "tier": "bronze",
+        "title": "IWSC Bronze 2025",
+        "image": "assets/medals/iwsc-bronze-2025.png"
+      }
+    ],
+    "color": "#4a0d1a",
+    "region": {
+      "en": "Right bank of Alazani, Mukuzani village",
+      "ka": "მდინარე ალაზნის მარჯვენა სანაპირო, სოფ. მუკუზანი",
+      "ru": "Правый берег Алазани, с. Мукузани"
+    },
+    "name": {
+      "en": "Mukuzani",
+      "ka": "მუკუზანი",
+      "ru": "Мукузани"
+    },
+    "style": {
+      "en": "Red Dry Wine",
+      "ka": "წითელი მშრალი ღვინო",
+      "ru": "Красное сухое вино"
+    },
+    "aroma": {
+      "en": "Medium intensity with gentle pleasant tones of varietal fruits, cherry, cornel and vanilla.",
+      "ka": "საშუალო ინტენსივობის, კარგად გამოხატული ჯიშური ხილის, ალუბლის, შინდისა და ვანილის სასიამოვნო ტონებით.",
+      "ru": "Средней интенсивности с тонами сортовых фруктов, вишни, кизила и ванили."
+    },
+    "taste": {
+      "en": "Harmonious, velvety, bodied, soft, with vanilla tones and a long finish.",
+      "ka": "ჰარმონიული, ხავერდოვანი, ვანილის ტონებით, ხანგრძლივი დაბოლოებით.",
+      "ru": "Гармоничное, бархатистое, телистое, с ванильными тонами и долгим послевкусием."
+    },
+    "serve": "14-18°C"
+  },
+  {
+    "id": "pirosmani",
+    "slug": "pirosmani",
+    "category": "red",
+    "type": "wine",
+    "sweetness": "semi-dry",
+    "method": "european",
+    "grape": "Saperavi",
+    "vintage": 2023,
+    "abv": 12.5,
+    "volume": 750,
+    "price": 3,
+    "awards": [],
+    "color": "#1a2747",
+    "region": {
+      "en": "Akhmeta district, Kistauri village",
+      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
+      "ru": "Ахметский район, с. Кистаури"
+    },
+    "name": {
+      "en": "Pirosmani",
+      "ka": "ფიროსმანი",
+      "ru": "Пиросмани"
+    },
+    "style": {
+      "en": "Red Semi-Dry Wine",
+      "ka": "წითელი ნახევრად მშრალი ღვინო",
+      "ru": "Красное полусухое вино"
+    },
+    "aroma": {
+      "en": "Medium intensity with pleasant tones of red berry fruits, currant and blueberry.",
+      "ka": "საშუალო ინტენსივობის, წითელი კენკროვანი ხილის, მოცხარისა და მოცვის ნაზი ტონებით.",
+      "ru": "Средней интенсивности с тонами красных ягод, смородины и черники."
+    },
+    "taste": {
+      "en": "Harmonious, velvety, with red berry tones and a long finish.",
+      "ka": "ჰარმონიული, ხავერდოვანი, წითელი კენკრის ტონებით, ხანგრძლივი დაბოლოებით.",
+      "ru": "Гармоничное, бархатистое, с тонами красных ягод и долгим послевкусием."
+    },
+    "serve": "14-18°C"
+  },
+  {
+    "id": "alazani-valley",
+    "slug": "alazani-valley",
+    "category": "red",
+    "type": "wine",
+    "sweetness": "semi-sweet",
+    "method": "european",
+    "grape": "Saperavi",
+    "vintage": 2023,
+    "abv": 12.5,
+    "volume": 750,
+    "price": 3,
+    "awards": [],
+    "color": "#1f3a2e",
+    "region": {
+      "en": "Akhmeta district, Kistauri village",
+      "ka": "ახმეტის რაიონი, სოფ. ქისტაური",
+      "ru": "Ахметский район, с. Кистаури"
+    },
+    "name": {
+      "en": "Alazani Valley",
+      "ka": "ალაზნის ველი",
+      "ru": "Алазанская долина"
+    },
+    "style": {
+      "en": "Red Semi-Sweet Wine",
+      "ka": "წითელი ნახევრადტკბილი ღვინო",
+      "ru": "Красное полусладкое вино"
+    },
+    "aroma": {
+      "en": "Medium intensity with pleasant tones of varietal fruits, currant and red berry.",
+      "ka": "საშუალო ინტენსივობის, ჯიშური ხილის, მოცხარის და წითელი კენკრის სასიამოვნო ტონებით.",
+      "ru": "Средней интенсивности с тонами сортовых фруктов, смородины и красных ягод."
+    },
+    "taste": {
+      "en": "Harmonious, velvety, with red berry tones and a long finish.",
+      "ka": "ჰარმონიული, ხავერდოვანი, წითელი კენკრის ტონებით, ხანგრძლივი დაბოლოებით.",
+      "ru": "Гармоничное, бархатистое, с тонами красных ягод и долгим послевкусием."
+    },
+    "serve": "14-18°C"
   },
   {
     "id": "chacha-classic",

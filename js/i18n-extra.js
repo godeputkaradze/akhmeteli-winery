@@ -90,7 +90,29 @@
       "footer.privacy": "Privacy Policy",
       "footer.delivery": "Delivery Policy",
       "footer.return": "Return Policy",
-      "footer.payment": "Payment Policy"
+      "footer.payment": "Payment Policy",
+
+      "meta.title.shop": "Shop — Akhmeteli Winery",
+      "meta.title.product": "Product — Akhmeteli Winery",
+      "meta.title.gallery": "Gallery — Akhmeteli Winery",
+      "meta.title.contact": "Contact — Akhmeteli Winery",
+      "page.eyebrow": "AKHMETA · KAKHETI",
+      "foot.region": "Akhmeta · Kakheti · Georgia",
+
+      "shop.filter.reset": "Reset filter",
+      "shop.sort.label": "Sort by:",
+      "shop.sort.newest": "Newest",
+      "shop.f.abv": "Alcohol %",
+      "shop.f.vintage": "Vintage Year",
+      "shop.f.tech": "Technology",
+      "shop.f.grape": "Grape",
+      "shop.f.origin": "Origin",
+      "shop.buy": "Buy",
+
+      "unit.ml": "ml",
+      "unit.abv": "ABV",
+      "brand.producer": "Akhmeteli Winery",
+      "product.notfound": "Not found."
     },
     ka: {
       "nav.winery": "მარანი",
@@ -179,7 +201,29 @@
       "footer.privacy": "კონფიდენციალურობა",
       "footer.delivery": "მიწოდების პოლიტიკა",
       "footer.return": "დაბრუნების პოლიტიკა",
-      "footer.payment": "გადახდის პოლიტიკა"
+      "footer.payment": "გადახდის პოლიტიკა",
+
+      "meta.title.shop": "მაღაზია — ახმეტელის მარანი",
+      "meta.title.product": "პროდუქტი — ახმეტელის მარანი",
+      "meta.title.gallery": "გალერეა — ახმეტელის მარანი",
+      "meta.title.contact": "კონტაქტი — ახმეტელის მარანი",
+      "page.eyebrow": "ახმეტა · კახეთი",
+      "foot.region": "ახმეტა · კახეთი · საქართველო",
+
+      "shop.filter.reset": "ფილტრის გასუფთავება",
+      "shop.sort.label": "დახარისხება:",
+      "shop.sort.newest": "უახლესი",
+      "shop.f.abv": "ალკოჰოლი %",
+      "shop.f.vintage": "მოსავლის წელი",
+      "shop.f.tech": "ტექნოლოგია",
+      "shop.f.grape": "ჯიში",
+      "shop.f.origin": "წარმოშობა",
+      "shop.buy": "ყიდვა",
+
+      "unit.ml": "მლ",
+      "unit.abv": "ალკ.",
+      "brand.producer": "ახმეტელის მარანი",
+      "product.notfound": "ვერ მოიძებნა."
     },
     ru: {
       "nav.winery": "Винодельня",
@@ -268,8 +312,73 @@
       "footer.privacy": "Политика конфиденциальности",
       "footer.delivery": "Политика доставки",
       "footer.return": "Политика возврата",
-      "footer.payment": "Политика оплаты"
+      "footer.payment": "Политика оплаты",
+
+      "meta.title.shop": "Магазин — Винодельня Ахметели",
+      "meta.title.product": "Товар — Винодельня Ахметели",
+      "meta.title.gallery": "Галерея — Винодельня Ахметели",
+      "meta.title.contact": "Контакты — Винодельня Ахметели",
+      "page.eyebrow": "АХМЕТА · КАХЕТИЯ",
+      "foot.region": "Ахмета · Кахетия · Грузия",
+
+      "shop.filter.reset": "Сбросить фильтр",
+      "shop.sort.label": "Сортировка:",
+      "shop.sort.newest": "Новинки",
+      "shop.f.abv": "Алкоголь %",
+      "shop.f.vintage": "Год урожая",
+      "shop.f.tech": "Технология",
+      "shop.f.grape": "Сорт",
+      "shop.f.origin": "Происхождение",
+      "shop.buy": "Купить",
+
+      "unit.ml": "мл",
+      "unit.abv": "об.",
+      "brand.producer": "Винодельня Ахметели",
+      "product.notfound": "Не найдено."
     }
   };
   ["en", "ka", "ru"].forEach(l => Object.assign(window.I18N_DICT[l], EXTRA[l]));
+
+  // ---------------------------------------------------------------------
+  //  Catalogue terms. products.js stores grape / serve / award titles as
+  //  single English strings (the admin panel writes that shape), so they
+  //  can't use tField(). These maps translate the known values instead.
+  // ---------------------------------------------------------------------
+  const GRAPE = {
+    "Saperavi":        { en: "Saperavi",        ka: "საფერავი",       ru: "Саперави" },
+    "Rkatsiteli":      { en: "Rkatsiteli",      ka: "რქაწითელი",      ru: "Ркацители" },
+    "Kakhuri Mtsvane": { en: "Kakhuri Mtsvane", ka: "კახური მწვანე",  ru: "Кахури Мцване" },
+    "Kisi":            { en: "Kisi",            ka: "ქისი",           ru: "Киси" },
+    "Multi-grape":     { en: "Multi-grape",     ka: "სხვადასხვა ჯიში", ru: "Несколько сортов" },
+    "Grapefruit":      { en: "Grapefruit",      ka: "გრეიპფრუტი",     ru: "Грейпфрут" },
+    "Mango":           { en: "Mango",           ka: "მანგო",          ru: "Манго" }
+  };
+  const SERVE = {
+    "Chilled":         { en: "Chilled",         ka: "გაცივებული",             ru: "Охлаждённой" },
+    "Chilled or neat": { en: "Chilled or neat", ka: "გაცივებული ან სუფთა",    ru: "Охлаждённой или чистой" }
+  };
+  const TIER = {
+    Gold:   { en: "Gold",   ka: "ოქრო",     ru: "Золото" },
+    Silver: { en: "Silver", ka: "ვერცხლი",  ru: "Серебро" },
+    Bronze: { en: "Bronze", ka: "ბრინჯაო",  ru: "Бронза" }
+  };
+
+  const tf = f => (window.I18N ? window.I18N.tField(f) : (f && f.en) || "");
+
+  // "Rkatsiteli / Kakhuri Mtsvane" and "Multi-grape · Mango" keep their separators.
+  window.I18N.grape = function (str) {
+    if (!str) return "";
+    return String(str).split(/\s*([/·])\s*/).map(part =>
+      part === "/" ? " / " : part === "·" ? " · " : (GRAPE[part] ? tf(GRAPE[part]) : part)
+    ).join("");
+  };
+  // Temperature ranges ("12-14°C") pass through untouched.
+  window.I18N.serve = function (str) {
+    return SERVE[str] ? tf(SERVE[str]) : (str || "");
+  };
+  // "Qvevri Wine Silver 2024" — competition name and year stay, the tier is translated.
+  window.I18N.awardTitle = function (str) {
+    if (!str) return "";
+    return String(str).replace(/\b(Gold|Silver|Bronze)\b/g, m => tf(TIER[m]));
+  };
 })();

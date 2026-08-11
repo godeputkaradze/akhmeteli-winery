@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akhmeteli Winery — Georgian Wine Heritage</title>
-  <meta name="description" content="Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri." />
+  <title data-i18n="meta.title">Akhmeteli Winery — Georgian Wine Heritage</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Eagle+Lake&family=Great+Vibes&display=swap" rel="stylesheet" />
@@ -89,32 +89,65 @@
       </header>
       <div class="awards-bar">
         <div class="award reveal reveal--up">
-          <span class="medal medal--gold"></span>
+          <span class="medal medal--gold" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.gold">GOLD</span>
+              <span class="medal__year">2026</span>
+            </span>
+          </span>
           <div class="award__txt">
             <div class="t">IWSC <span data-i18n="award.gold">Gold</span></div>
-            <div class="w">Kakhuri Mtsvane 2023</div>
+            <div class="w"><span data-i18n="award.w.mtsvane">Kakhuri Mtsvane</span> 2023</div>
             <div class="p">95 <span data-i18n="award.points">Points</span></div>
           </div>
         </div>
         <span class="sep"></span>
         <div class="award reveal reveal--up">
-          <span class="medal medal--silver"></span>
+          <span class="medal medal--silver" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.silver">SILVER</span>
+              <span class="medal__year">2026</span>
+            </span>
+          </span>
           <div class="award__txt">
             <div class="t">IWSC <span data-i18n="award.silver">Silver</span></div>
-            <div class="w">Rkatsiteli 2023</div>
+            <div class="w"><span data-i18n="award.w.rkatsiteli">Rkatsiteli</span> 2023</div>
             <div class="p">92 <span data-i18n="award.points">Points</span></div>
           </div>
         </div>
         <span class="sep"></span>
         <div class="award reveal reveal--up">
-          <span class="medal medal--bronze"></span>
+          <span class="medal medal--bronze" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.bronze">BRONZE</span>
+              <span class="medal__year">2026</span>
+            </span>
+          </span>
           <div class="award__txt">
             <div class="t">IWSC <span data-i18n="award.bronze">Bronze</span></div>
-            <div class="w">Saperavi 2023</div>
+            <div class="w"><span data-i18n="award.w.saperavi">Saperavi</span> 2023</div>
             <div class="p">89 <span data-i18n="award.points">Points</span></div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= FULL-SCREEN VIDEO ================= -->
+  <section class="video-full" id="video">
+    <div class="video-full__frame">
+      <video
+        src="assets/video/Qvevri%20wine.mp4"
+        title="Akhmeteli Winery"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="metadata"></video>
     </div>
   </section>
 
@@ -234,17 +267,24 @@
       <h2 class="wines__title" data-i18n="wines.title">Wines</h2>
     </header>
     <div class="wstack" id="wstack">
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/01-saperavi.png" alt="Saperavi 2023 — Red Dry Wine" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/02-kindzmarauli.png" alt="Kindzmarauli 2023 — Red Semi-Sweet" loading="lazy" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/03-pirosmani.png" alt="Pirosmani 2023 — Red Semi-Dry" loading="lazy" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/04-alazani-valley.png" alt="Alazani Valley 2023 — Red Semi-Sweet" loading="lazy" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/05-kisi.png" alt="Kisi 2023 — Amber Dry" loading="lazy" />
+      <!-- White -->
+      <h3 class="wstack__group reveal reveal--up" data-i18n="wines.g.white">White Wine</h3>
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/11-tsinandali.png" alt="Tsinandali 2023 — White Dry" />
+      <!-- Amber -->
+      <h3 class="wstack__group reveal reveal--up" data-i18n="wines.g.amber">Amber Wine</h3>
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/09-kakhuri-mtsvane.png" alt="Kakhuri Mtsvane 2023 — Amber Dry" loading="lazy" />
       <img class="wstack__pic reveal reveal--up" src="assets/wines/06-rkatsiteli.png" alt="Rkatsiteli 2023 — Amber Dry" loading="lazy" />
       <img class="wstack__pic reveal reveal--up" src="assets/wines/07-tsarapi.png" alt="Tsarapi 2023 — Amber Dry" loading="lazy" />
       <img class="wstack__pic reveal reveal--up" src="assets/wines/08-tibaani.png" alt="Tibaani 2023 — Amber Dry" loading="lazy" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/09-kakhuri-mtsvane.png" alt="Kakhuri Mtsvane 2023 — Amber Dry" loading="lazy" />
       <img class="wstack__pic reveal reveal--up" src="assets/wines/10-gurjaani.png" alt="Gurjaani 2023 — Amber Dry" loading="lazy" />
-      <img class="wstack__pic reveal reveal--up" src="assets/wines/11-tsinandali.png" alt="Tsinandali 2023 — White Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/05-kisi.png" alt="Kisi 2023 — Amber Dry" loading="lazy" />
+      <!-- Red -->
+      <h3 class="wstack__group reveal reveal--up" data-i18n="wines.g.red">Red Wine</h3>
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/01-saperavi.png" alt="Saperavi 2023 — Red Dry Wine" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/02-kindzmarauli.png" alt="Kindzmarauli 2023 — Red Semi-Sweet" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/12-mukuzani.jpg" alt="Mukuzani 2023 — Red Dry Wine" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/03-pirosmani.png" alt="Pirosmani 2023 — Red Semi-Dry" loading="lazy" />
+      <img class="wstack__pic reveal reveal--up" src="assets/wines/04-alazani-valley.png" alt="Alazani Valley 2023 — Red Semi-Sweet" loading="lazy" />
     </div>
   </section>
 
@@ -394,10 +434,6 @@
       <!-- brand + phone -->
       <div class="foot__brand reveal reveal--up">
         <a class="foot__logo" href="index.html"><img src="img/logo-gold.png" alt="Akhmeteli Winery" /></a>
-        <p class="foot__tagline" data-i18n="foot.tagline">
-          Rooted in Kakheti — crafted in qvevri, shaped by nature, and passed down
-          through generations.
-        </p>
         <a class="foot__phone" href="tel:+995577080525">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1.2 4.5a1 1 0 0 1-.27 1L7.21 11.12a16 16 0 0 0 6 6l1.87-1.87a1 1 0 0 1 1-.27l4.5 1.2a1 1 0 0 1 .75 1z"/></svg>
           <span>+995 577 08 05 25</span>
@@ -443,7 +479,7 @@
     </div>
 
     <div class="foot__bar">
-      <span>&copy; <span id="foot-year">2026</span> Akhmeteli Winery. <span data-i18n="foot.rights">All rights reserved.</span></span>
+      <span>&copy; <span id="foot-year">2026</span> <span data-i18n="brand.producer">Akhmeteli Winery</span>. <span data-i18n="foot.rights">All rights reserved.</span></span>
       <span class="foot__region" data-i18n="foot.region">Akhmeta · Kakheti · Georgia</span>
     </div>
   </footer>
@@ -589,6 +625,9 @@
         "adv.7.d": "საუკუნოვანი ხელოვნება, ბუნებრივი ტერუარი და თანამედროვე ხარისხის სტანდარტები — გაერთიანებული პროდუქტებში, რომლებიც ამაყად წარმოადგენენ საქართველოს.",
         "wines.eyebrow": "ჩვენი კოლექცია",
         "wines.title": "ღვინოები",
+        "wines.g.white": "თეთრი ღვინო",
+        "wines.g.amber": "ქარვისფერი ღვინო",
+        "wines.g.red": "წითელი ღვინო",
         "chacha.eyebrow": "ქართული სასმელი",
         "chacha.title": "ჭაჭა",
         "prod.eyebrow": "ჯილდოსმფლობელი ქართული ღვინო",
@@ -602,7 +641,40 @@
         "award.silver": "ვერცხლი",
         "award.bronze": "ბრინჯაო",
         "award.points": "ქულა",
-        "foot.tagline": "კახეთში ფესვგადგმული — დამზადებული ქვევრში, ბუნებით ნაკვები და თაობიდან თაობას გადაცემული.",
+        "brand.producer": "ახმეტელის მარანი",
+        "meta.title": "ახმეტელის მარანი — ქართული ღვინის მემკვიდრეობა",
+        "meta.desc": "ახმეტელის მარანი — კახეთის გულში ფესვგადგმული, ერთგული ქართული მეღვინეობის უძველესი ტრადიციებისა. დაყენებული ქვევრში.",
+        "awards.eyebrow": "საერთაშორისო აღიარება",
+        "awards.title": "ჯილდოები და აღიარება",
+        "medal.gold": "ოქრო",
+        "medal.silver": "ვერცხლი",
+        "medal.bronze": "ბრინჯაო",
+        "award.w.mtsvane": "კახური მწვანე",
+        "award.w.rkatsiteli": "რქაწითელი",
+        "award.w.saperavi": "საფერავი",
+        "testi.eyebrow": "მათი სიტყვებით",
+        "testi.title": "რას ამბობენ ახმეტელზე",
+        "testi.1.text": "„ყოველი ბოთლი კახეთის ისტორიას ჰყვება. საფერავი მდიდარი, ღრმა და დაუვიწყარია — თითქოს ისტორიას სვამ.“",
+        "testi.1.name": "ნინო ტატიშვილი",
+        "testi.1.role": "ღვინის კოლექციონერი",
+        "testi.2.text": "„ორი წელია ჩვენს რესტორანში ახმეტელის ღვინოს ვასხამთ. სტუმრები ყოველთვის ქარვისფერ რქაწითელზე გვეკითხებიან — ქვევრის მეღვინეობა საუკეთესო სახით.“",
+        "testi.2.name": "ლუკა რომანო",
+        "testi.2.role": "სომელიე",
+        "testi.3.text": "„ახმეტაში მარნის მონახულება ჩვენი მოგზაურობის მთავარი მოვლენა იყო. თბილი ხალხი, გულწრფელი ღვინო და ტრადიცია, რომელიც ყველა ჭიქაში იგრძნობა.“",
+        "testi.3.name": "სარა მიულერი",
+        "testi.3.role": "სტუმარი",
+        "faq.eyebrow": "სასარგებლო ინფორმაცია",
+        "faq.title": "ხშირად დასმული კითხვები",
+        "faq.q1": "სად მზადდება ახმეტელის ღვინო?",
+        "faq.a1": "კახეთში, ახმეტის მუნიციპალიტეტში — ალაზნის ველის გულში, სადაც ვაშენებთ ვენახს და ღვინო ტრადიციულ ქვევრში მწიფდება.",
+        "faq.q2": "რა არის ქვევრის ღვინო?",
+        "faq.a2": "ქვევრი დიდი თიხის ჭურჭელია, მიწაში ჩაფლული, რომელსაც საქართველოში 8000 წელზე მეტია იყენებენ. ღვინო მასში ბუნებრივად დუღს და მწიფდება — აქედანაა ქარვისფერი ღვინის სიღრმე და ხასიათი. UNESCO-ს მემკვიდრეობა.",
+        "faq.q3": "ახორციელებთ მიწოდებას?",
+        "faq.a3": "დიახ. ვაწვდით მთელ საქართველოში და მოთხოვნისამებრ ვაწყობთ საერთაშორისო გაგზავნას. დაგვიკავშირდით საბითუმო და საექსპორტო შეკითხვებისთვის.",
+        "faq.q4": "შესაძლებელია მარნის მონახულება დეგუსტაციით?",
+        "faq.a4": "რა თქმა უნდა. სტუმრებს ვიღებთ დეგუსტაციასა და მარნის ტურზე წინასწარი შეთანხმებით. დაგვირეკეთ ან მოგვწერეთ ვიზიტის დასაჯავშნად.",
+        "faq.q5": "ნატურალურია თქვენი ღვინო?",
+        "faq.a5": "ჩვენი ღვინო ტრადიციულად მზადდება — ქართული ჯიშები, სპონტანური დადუღება ქვევრში და მინიმალური ჩარევა, რომ ვენახის ნამდვილი ხასიათი ალაპარაკდეს.",
         "foot.explore": "ნავიგაცია",
         "foot.legal": "სამართლებრივი",
         "foot.terms": "წესები და პირობები",
@@ -661,6 +733,9 @@
         "adv.7.d": "Centuries-old craft, natural terroir, and modern quality standards united in products that proudly represent Georgia.",
         "wines.eyebrow": "Our Collection",
         "wines.title": "Wines",
+        "wines.g.white": "White Wine",
+        "wines.g.amber": "Amber Wine",
+        "wines.g.red": "Red Wine",
         "chacha.eyebrow": "Georgian Spirit",
         "chacha.title": "Chacha",
         "prod.eyebrow": "Award Winning Georgian Wine",
@@ -674,7 +749,40 @@
         "award.silver": "Silver",
         "award.bronze": "Bronze",
         "award.points": "Points",
-        "foot.tagline": "Rooted in Kakheti — crafted in qvevri, shaped by nature, and passed down through generations.",
+        "brand.producer": "Akhmeteli Winery",
+        "meta.title": "Akhmeteli Winery — Georgian Wine Heritage",
+        "meta.desc": "Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri.",
+        "awards.eyebrow": "International Recognition",
+        "awards.title": "Awards & Distinctions",
+        "medal.gold": "GOLD",
+        "medal.silver": "SILVER",
+        "medal.bronze": "BRONZE",
+        "award.w.mtsvane": "Kakhuri Mtsvane",
+        "award.w.rkatsiteli": "Rkatsiteli",
+        "award.w.saperavi": "Saperavi",
+        "testi.eyebrow": "In Their Words",
+        "testi.title": "What customers say about Akhmeteli",
+        "testi.1.text": "“Every bottle tells the story of Kakheti. The Saperavi is rich, deep and unforgettable — the closest I’ve come to drinking history.”",
+        "testi.1.name": "Nino Tatishvili",
+        "testi.1.role": "Wine Collector",
+        "testi.2.text": "“We’ve poured Akhmeteli wines at our restaurant for two years. Guests always ask about the amber Rkatsiteli — qvevri winemaking at its finest.”",
+        "testi.2.name": "Luca Romano",
+        "testi.2.role": "Sommelier",
+        "testi.3.text": "“Visiting the winery in Akhmeta was the highlight of our trip. Warm people, honest wine, and a tradition you can taste in every glass.”",
+        "testi.3.name": "Sarah Müller",
+        "testi.3.role": "Visitor",
+        "faq.eyebrow": "Good to Know",
+        "faq.title": "Frequently Asked Questions",
+        "faq.q1": "Where are Akhmeteli wines made?",
+        "faq.a1": "In the Akhmeta district of Kakheti, eastern Georgia — in the heart of the Alazani Valley, where our grapes are grown and the wine matures in traditional qvevri.",
+        "faq.q2": "What is qvevri wine?",
+        "faq.a2": "Qvevri are large clay vessels buried in the earth, used in Georgia for over 8,000 years. Wine ferments and ages in them naturally, giving our amber wines their depth and character — a UNESCO-listed heritage.",
+        "faq.q3": "Do you ship and deliver?",
+        "faq.a3": "Yes. We deliver across Georgia and arrange international shipping on request. Contact us for wholesale and export enquiries.",
+        "faq.q4": "Can I visit the winery for a tasting?",
+        "faq.a4": "Absolutely. We welcome guests for tastings and cellar tours by appointment. Call or message us to book your visit to Akhmeta.",
+        "faq.q5": "Are your wines natural?",
+        "faq.a5": "Our wines are made the traditional way — native Georgian grapes, spontaneous fermentation in qvevri, and minimal intervention, so the true character of the vineyard speaks.",
         "foot.explore": "Explore",
         "foot.legal": "Legal",
         "foot.terms": "Terms & Conditions",
@@ -733,6 +841,9 @@
         "adv.7.d": "Вековое мастерство, природный терруар и современные стандарты качества — в продуктах, которые с гордостью представляют Грузию.",
         "wines.eyebrow": "Наша коллекция",
         "wines.title": "Вина",
+        "wines.g.white": "Белое вино",
+        "wines.g.amber": "Янтарное вино",
+        "wines.g.red": "Красное вино",
         "chacha.eyebrow": "Грузинский напиток",
         "chacha.title": "Чача",
         "prod.eyebrow": "Отмеченное наградами грузинское вино",
@@ -746,7 +857,40 @@
         "award.silver": "Серебро",
         "award.bronze": "Бронза",
         "award.points": "баллов",
-        "foot.tagline": "Корнями в Кахетии — создано в квеври, сформировано природой и передаётся из поколения в поколение.",
+        "brand.producer": "Винодельня Ахметели",
+        "meta.title": "Винодельня Ахметели — наследие грузинского вина",
+        "meta.desc": "Винодельня Ахметели — корнями в сердце Кахетии, верна вечным традициям грузинского виноделия. Создано в квеври.",
+        "awards.eyebrow": "Международное признание",
+        "awards.title": "Награды и отличия",
+        "medal.gold": "ЗОЛОТО",
+        "medal.silver": "СЕРЕБРО",
+        "medal.bronze": "БРОНЗА",
+        "award.w.mtsvane": "Кахури Мцване",
+        "award.w.rkatsiteli": "Ркацители",
+        "award.w.saperavi": "Саперави",
+        "testi.eyebrow": "Их словами",
+        "testi.title": "Что говорят о винодельне Ахметели",
+        "testi.1.text": "«Каждая бутылка рассказывает историю Кахетии. Саперави — насыщенное, глубокое и незабываемое, будто пьёшь саму историю.»",
+        "testi.1.name": "Нино Татишвили",
+        "testi.1.role": "Винный коллекционер",
+        "testi.2.text": "«Уже два года мы подаём вина Ахметели в нашем ресторане. Гости всегда спрашивают про янтарное Ркацители — квеври-виноделие в лучшем виде.»",
+        "testi.2.name": "Лука Романо",
+        "testi.2.role": "Сомелье",
+        "testi.3.text": "«Визит на винодельню в Ахмете стал главным событием поездки. Тёплые люди, честное вино и традиция, которую чувствуешь в каждом бокале.»",
+        "testi.3.name": "Сара Мюллер",
+        "testi.3.role": "Гостья",
+        "faq.eyebrow": "Полезно знать",
+        "faq.title": "Часто задаваемые вопросы",
+        "faq.q1": "Где производят вина Ахметели?",
+        "faq.a1": "В Ахметском районе Кахетии, на востоке Грузии — в сердце Алазанской долины, где растёт наш виноград, а вино вызревает в традиционных квеври.",
+        "faq.q2": "Что такое вино квеври?",
+        "faq.a2": "Квеври — большие глиняные сосуды, закопанные в землю; в Грузии их используют более 8000 лет. Вино бродит и созревает в них естественно, придавая янтарным винам глубину и характер. Наследие ЮНЕСКО.",
+        "faq.q3": "Доставляете ли вы вино?",
+        "faq.a3": "Да. Мы доставляем по всей Грузии и по запросу организуем международную отправку. Свяжитесь с нами по вопросам опта и экспорта.",
+        "faq.q4": "Можно ли посетить винодельню с дегустацией?",
+        "faq.a4": "Конечно. Мы принимаем гостей на дегустации и экскурсии по марани по предварительной записи. Позвоните или напишите, чтобы забронировать визит в Ахмету.",
+        "faq.q5": "Натуральные ли ваши вина?",
+        "faq.a5": "Наши вина делаются традиционно — грузинские сорта, спонтанное брожение в квеври и минимальное вмешательство, чтобы говорил подлинный характер виноградника.",
         "foot.explore": "Навигация",
         "foot.legal": "Правовая информация",
         "foot.terms": "Условия и положения",
@@ -782,8 +926,26 @@
         const v = dict[el.getAttribute("data-i18n")];
         if (v !== undefined) el.textContent = v;
       });
+      // attribute translations, e.g. data-i18n-attr="content:meta.desc"
+      document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+        el.getAttribute("data-i18n-attr").split(",").forEach(pair => {
+          const [attr, key] = pair.split(":").map(s => s.trim());
+          const v = dict[key];
+          if (attr && v !== undefined) el.setAttribute(attr, v);
+        });
+      });
       document.querySelectorAll(".lang-switch button").forEach(b => {
         b.classList.toggle("active", b.dataset.lang === lang);
+      });
+      // hero cards: swap baked-English photos for translated versions (EN = original)
+      document.querySelectorAll("img.wstack__pic, img.chacha__pic").forEach(img => {
+        if (!img.dataset.enSrc) img.dataset.enSrc = img.getAttribute("src");
+        const en = img.dataset.enSrc;
+        const want = lang === "en" ? en : en.replace(/\.(png|jpe?g)$/i, "-" + lang + ".jpg");
+        if (img.getAttribute("src") !== want) {
+          img.onerror = function () { img.onerror = null; if (img.getAttribute("src") !== en) img.src = en; };
+          img.src = want;
+        }
       });
     }
 

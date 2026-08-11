@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop — Akhmeteli Winery</title>
+  <title data-i18n="meta.title.shop">Shop — Akhmeteli Winery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -52,7 +52,7 @@
         <ul class="s2-cat" id="s2-cat"></ul>
 
         <div class="s2-group s2-price-group open">
-          <button class="s2-group__head" type="button" data-acc>Price<i class="s2-chev"></i></button>
+          <button class="s2-group__head" type="button" data-acc><span data-i18n="shop.filter.price">Price</span><i class="s2-chev"></i></button>
           <div class="s2-group__body">
             <div class="s2-price">
               <div class="s2-price__inputs">
@@ -72,21 +72,21 @@
 
         <div id="s2-groups"></div>
 
-        <button class="s2-reset" id="s2-reset">Reset filter</button>
+        <button class="s2-reset" id="s2-reset" data-i18n="shop.filter.reset">Reset filter</button>
       </aside>
 
       <div class="s2-main">
         <div class="s2-toolbar">
           <button class="s2-filter-toggle" id="s2-filter-toggle" type="button">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
-            <span>Filters</span>
+            <span data-i18n="shop.filters">Filters</span>
           </button>
-          <label for="s2-sort">Sort by:</label>
+          <label for="s2-sort" data-i18n="shop.sort.label">Sort by:</label>
           <select class="s2-sort" id="s2-sort" aria-label="Sort">
-            <option value="newest">Newest</option>
-            <option value="priceAsc">Price: Low to High</option>
-            <option value="priceDesc">Price: High to Low</option>
-            <option value="name">Name</option>
+            <option value="newest" data-i18n="shop.sort.newest">Newest</option>
+            <option value="priceAsc" data-i18n="shop.sort.priceAsc">Price: Low to High</option>
+            <option value="priceDesc" data-i18n="shop.sort.priceDesc">Price: High to Low</option>
+            <option value="name" data-i18n="shop.sort.name">Name</option>
           </select>
         </div>
         <div class="s2-grid" id="s2-grid"></div>
@@ -130,8 +130,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; <span id="year"></span> Akhmeteli Winery. <span data-i18n="footer.rights"></span></span>
-        <span>Akhmeta · Kakheti · Georgia</span>
+        <span>&copy; <span id="year"></span> <span data-i18n="brand.producer"></span>. <span data-i18n="footer.rights"></span></span>
+        <span data-i18n="foot.region">Akhmeta · Kakheti · Georgia</span>
       </div>
     </div>
   </footer>
