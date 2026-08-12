@@ -18,3 +18,15 @@ package-lock.json
 
 # FTP deploy credentials
 .deploy.json
+
+# Admin credentials. This repo is public: the login name plus the password
+# digest would be an offline brute-force target. The live copy is deployed by
+# FTP, never by git — see admin/config.example.php.
+admin/config.php
+
+# Admin panel server-side state: the password override, the brute-force
+# counters and the catalogue backups belong to the live server, not the repo.
+admin/data/*
+!admin/data/.htaccess
+admin/backups/*
+!admin/backups/.htaccess

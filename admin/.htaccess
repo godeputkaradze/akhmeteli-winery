@@ -1,0 +1,31 @@
+# Akhmeteli Winery — admin panel (PHP, cPanel).
+# /admin/ serves index.php. Everything here stays out of search engines and
+# out of the browser cache; the panel's internals are never served as files.
+
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "same-origin"
+  Header set Cache-Control "no-store, no-cache, must-revalidate"
+</IfModule>
+
+# config.php holds the credential digest and lib.php the auth logic. They are
+# only ever included by index.php / api.php — direct requests are refused, so a
+# server that stops running PHP cannot hand them out as plain text.
+<FilesMatch "^(config|lib)\.php$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Session state, throttle counters, the password override and the catalogue
+# backups are server-side only.
+RedirectMatch 404 ^/admin/(data|backups)(/|$)

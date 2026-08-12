@@ -61,3 +61,31 @@ scroll. There is **no custom cursor** — the site uses the normal OS pointer. T
 This is a static site — to see animation working, ask me to **run it on :3456,
 screenshot, and check the browser console**, then iterate against the rendered result.
 Reduced-motion behaviour should be tested by toggling the OS setting / emulation.
+
+## Shop admin panel — `/admin/` (PHP, cPanel only)
+
+`admin/index.php` (login + shell) · `admin/api.php` (JSON API) · `admin/lib.php`
+(auth, throttle, catalogue I/O) · `admin/config.php` (credentials) ·
+`admin/assets/panel.{css,js}` (UI). **PHP does not run on Vercel** — there `/admin`
+still rewrites to the older token-based `admin.html`, which is kept, not deleted.
+
+- **One account, no registration:** `admin_aleko`. The password is stored only as a
+  PBKDF2-SHA256 digest (210k iterations) in `config.php`; changing it from the panel
+  writes a new digest to `<private>/data/auth.json`, which then wins.
+- **Private storage** is `dirname(docroot)/akhmeteli-admin` (on cPanel:
+  `/home/<user>/akhmeteli-admin`) so throttle counters, the password override and
+  the backups are unreachable by URL. If that parent is read-only it falls back to
+  `admin/data` + `admin/backups`, both denied by their own `.htaccess`.
+- **It edits `js/products.js` directly** — the same `window.PRODUCTS` file the shop
+  reads — after copying the current version into `<private>/backups/` (last 40 kept,
+  restorable from More ▾ → Backups). Saves are validated server-side (enums, unique
+  ids, hex colour, award image paths must sit inside `assets/`) and written atomically.
+- **Images** go to `assets/Products/<id>/{bottle,background,grape,information}.png`,
+  mirroring `window.AKH.productPhoto()` including the `mukuzani` → `bottle-trim.png`
+  exception; medals go to `assets/medals/`. Non-PNG uploads are converted with GD.
+- **Local testing needs PHP** (not installed on this machine): download a portable
+  build and run `php -S 127.0.0.1:8899 -t .`, then open `/admin/`. The static
+  `serve` on :3456 cannot execute the panel.
+- **⚠ Divergence:** once the owner edits on the server, `js/products.js` there is
+  newer than the repo. Pull it back with More ▾ → **Download products.js** before
+  running `node deploy.js upload`, or the upload overwrites his changes.

@@ -1,0 +1,9 @@
+# Timestamped catalogue backups written before every save. Never served over HTTP;
+# restore them from the panel (More ▾ → Backups & restore).
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

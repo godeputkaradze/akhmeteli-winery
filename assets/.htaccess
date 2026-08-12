@@ -1,0 +1,11 @@
+# The admin panel writes uploaded pictures into this tree, so make sure nothing
+# in here can ever be executed as a script — only served as static media.
+<FilesMatch "\.(php|phtml|phps|php[0-9]|phar|cgi|pl|py|sh)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

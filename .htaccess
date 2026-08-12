@@ -9,12 +9,15 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Force HTTPS — enable AFTER the SSL certificate is issued for the domain.
-  # RewriteCond %{HTTPS} !=on
-  # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  # Force HTTPS — live since 2026-08-11, when AutoSSL issued the Let's Encrypt
+  # certificate for akhmeteli.ge + www.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-  # /admin -> admin.html (same rewrite vercel.json declares)
-  RewriteRule ^admin/?$ admin.html [L]
+  # /admin/ is the PHP admin panel — a real directory (admin/index.php), so it
+  # needs no rewrite: mod_dir serves it and admin/.htaccess sets its index.
+  # The older token-based panel is still reachable at /admin.html, and Vercel
+  # (no PHP there) keeps pointing /admin at it via vercel.json.
 
   # Clean URLs: /shop serves shop.html. Internal rewrite, not a redirect, so the
   # existing .html links keep working unchanged.

@@ -1,0 +1,19 @@
+# Vercel has no PHP runtime: anything in admin/ would be served as plain TEXT,
+# publishing the panel's logic and its credential digest. The PHP panel belongs
+# to the cPanel host only — Vercel keeps the older token-based admin.html, which
+# vercel.json still rewrites /admin to.
+admin/
+
+# Local tooling and secrets — never part of the deployed site.
+node_modules
+package.json
+package-lock.json
+deploy.js
+.deploy.json
+.deploy.example.json
+.htaccess
+
+# Internal notes and the dev-only asset browser.
+CLAUDE.md
+README.md
+assets-gallery.html
