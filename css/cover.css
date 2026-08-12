@@ -732,3 +732,71 @@ html[lang="ka"] .contact__form textarea{font-family:var(--geo)}
   display:block;
   object-fit:cover;
 }
+
+/* ================= 2026-08 COPY REFRESH ================= */
+/* New narrative sections reuse the .about photo-panel pattern; each just
+   swaps the background image and which side the copy sits on. */
+.about--craft{--sec-img:url("../assets/hero/hero-2.png")}
+.about--grapes{--sec-img:url("../assets/hero/hero-4.png")}
+.about--qvevri{--sec-img:url("../assets/hero/cover.png")}
+/* grapes mirrors to the right, like .about--alt */
+.about--grapes .about__copy{margin-left:auto;text-align:right}
+.about--grapes .about__title,.about--grapes .about__text{margin-left:auto}
+.about--grapes::before{
+  background:
+    linear-gradient(270deg,rgba(7,5,4,.9) 0%,rgba(7,5,4,.66) 42%,rgba(7,5,4,.22) 72%,transparent 100%),
+    linear-gradient(180deg,rgba(7,5,4,.5) 0%,transparent 24%,transparent 78%,rgba(7,5,4,.6) 100%);
+}
+/* second and third paragraphs sit tighter than the first */
+.about__text + .about__text{margin-top:1rem}
+
+/* intro copy under a centred section heading (collection, chacha) */
+.wines__text{
+  font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.7;color:var(--ink-soft);
+  max-width:62ch;margin:1.2rem auto 0;
+}
+html[lang="ka"] .wines__text{font-family:var(--geo)}
+
+/* ---- awards: intro copy + 7-medal grid ---- */
+.awards__text{
+  font-size:clamp(1rem,1.3vw,1.14rem);line-height:1.7;color:var(--ink-soft);
+  max-width:64ch;margin:1.2rem auto 0;
+}
+.awards__sub{
+  margin:clamp(2.6rem,5vw,4rem) 0 clamp(1.6rem,3vw,2.4rem);
+  font-size:clamp(1.05rem,1.6vw,1.35rem);font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--gold-bright);text-align:center;
+}
+.awards-grid{
+  display:grid;gap:clamp(1.6rem,3vw,2.6rem);
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  align-items:center;justify-items:center;
+}
+.awards-grid .award{justify-content:flex-start;width:100%;max-width:320px}
+.awards__more{display:flex;justify-content:center;margin-top:clamp(2.4rem,4vw,3.4rem)}
+html[lang="ka"] .awards__text,html[lang="ka"] .awards__sub{font-family:var(--geo)}
+
+/* ---- chacha CTA ---- */
+.chacha__more{display:flex;justify-content:center;margin-top:clamp(2.2rem,4vw,3.2rem)}
+
+/* ---- online-shop CTA band ---- */
+.shopcta{background:var(--bg);padding:clamp(5rem,10vw,8rem) 0;text-align:center}
+.shopcta__inner{width:min(760px,90vw);margin:0 auto}
+.shopcta__eyebrow{font-size:.85rem;color:var(--gold-bright);margin-bottom:1.1rem}
+.shopcta__title{
+  font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:500;line-height:1.08;color:var(--ink);
+}
+.shopcta__text{
+  font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.7;color:var(--ink-soft);
+  margin:1.3rem auto 2.2rem;
+}
+.shopcta .cover__cta{display:inline-flex}
+html[lang="ka"] .shopcta__title,html[lang="ka"] .shopcta__text{font-family:var(--geo)}
+
+/* ---- footer slogan ---- */
+.foot__slogan{
+  margin:1rem 0 .2rem;font-size:.98rem;line-height:1.5;color:var(--ink-soft);
+  max-width:34ch;
+}
+html[lang="ka"] .foot__slogan{font-family:var(--geo)}
+

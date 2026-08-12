@@ -111,7 +111,7 @@ window.I18N_DICT = {
     "contact.form.send": "გაგზავნა",
     "contact.form.sent": "გმადლობთ! მალე დაგიკავშირდებით.",
 
-    "footer.tagline": "კახეთის ღვინო — 8000 წლის ტრადიცია.",
+    "footer.tagline": "Akhmeteli — ხარისხი, რომელიც იგრძნობა",
     "footer.rights": "ყველა უფლება დაცულია.",
     "footer.follow": "გაგვყევი"
   },
@@ -224,7 +224,7 @@ window.I18N_DICT = {
     "contact.form.send": "Send",
     "contact.form.sent": "Thank you! We'll be in touch shortly.",
 
-    "footer.tagline": "Wine of Kakheti — 8,000 years of tradition.",
+    "footer.tagline": "Akhmeteli — quality you can taste.",
     "footer.rights": "All rights reserved.",
     "footer.follow": "Follow"
   },
@@ -272,9 +272,9 @@ window.I18N_DICT = {
     "shop.filter.method": "Метод",
     "shop.filter.price": "Цена",
     "shop.filter.clear": "Очистить",
-    "shop.cat.red": "Красные",
-    "shop.cat.white": "Белые",
-    "shop.cat.amber": "Янтарные",
+    "shop.cat.red": "Красное",
+    "shop.cat.white": "Белое",
+    "shop.cat.amber": "Янтарное",
     "shop.cat.spirit": "Чача",
     "shop.sweet.dry": "Сухое",
     "shop.sweet.semi-dry": "Полусухое",
@@ -337,7 +337,7 @@ window.I18N_DICT = {
     "contact.form.send": "Отправить",
     "contact.form.sent": "Спасибо! Мы скоро с вами свяжемся.",
 
-    "footer.tagline": "Вино Кахетии — 8000 лет традиции.",
+    "footer.tagline": "Akhmeteli — качество, которое чувствуется.",
     "footer.rights": "Все права защищены.",
     "footer.follow": "Мы в соцсетях"
   }

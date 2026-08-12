@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Eagle+Lake&family=Great+Vibes&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js")</script>
   <link rel="icon" type="image/png" href="img/logo.png" />
-  <link rel="stylesheet" href="css/cover.css" />
-  <link rel="stylesheet" href="css/legal.css" />
+  <link rel="stylesheet" href="css/cover.css?v=20260812" />
+  <link rel="stylesheet" href="css/legal.css?v=20260812" />
   <!-- 18+ age gate (runs before paint to avoid a flash of content) -->
-  <link rel="stylesheet" href="css/age-gate.css" />
-  <script src="js/age-gate.js"></script>
+  <link rel="stylesheet" href="css/age-gate.css?v=20260812" />
+  <script src="js/age-gate.js?v=20260812"></script>
 </head>
 <body>
 
@@ -46,11 +46,10 @@
     <div class="cover__inner">
       <div class="cover__copy reveal reveal--up">
         <h1 class="cover__title" data-i18n="cover.title">Akhmeteli</h1>
-        <p class="cover__tagline" data-i18n="cover.tagline">Georgian Wine Heritage</p>
+        <p class="cover__tagline" data-i18n="cover.tagline">Georgian wine defined by its origin</p>
         <p class="cover__text" data-i18n="cover.text">
-          Rooted in the heart of Kakheti, Akhmeteli is dedicated to the timeless
-          traditions of Georgian winemaking. Crafted in qvevri, shaped by nature,
-          and passed down through generations.
+          The nature of Kakheti, Georgian grape varieties, and winemaking built
+          around quality.
         </p>
         <a class="cover__cta" href="shop.html">
           <span data-i18n="cover.cta">Discover Our Wines</span>
@@ -85,10 +84,13 @@
     <span class="block-tag">B2 · Awards</span>
     <div class="awards__inner">
       <header class="awards__head reveal reveal--up">
-        <p class="awards__eyebrow uc" data-i18n="awards.eyebrow">International Recognition</p>
-        <h2 class="awards__title" data-i18n="awards.title">Awards &amp; Distinctions</h2>
+        <p class="awards__eyebrow uc" data-i18n="awards.eyebrow">Awards</p>
+        <h2 class="awards__title" data-i18n="awards.title">International Recognition</h2>
+        <p class="awards__text" data-i18n="awards.text1">Quality shows best in the wine itself — though international recognition is an important confirmation of it.</p>
+        <p class="awards__text" data-i18n="awards.text2">Akhmeteli wines have been awarded gold, silver and bronze medals at international wine competitions.</p>
       </header>
-      <div class="awards-bar">
+      <h3 class="awards__sub reveal reveal--up" data-i18n="awards.sub">International Awards</h3>
+      <div class="awards-grid">
         <div class="award reveal reveal--up">
           <span class="medal medal--gold" aria-hidden="true">
             <span class="medal__face">
@@ -98,12 +100,10 @@
             </span>
           </span>
           <div class="award__txt">
-            <div class="t">IWSC <span data-i18n="award.gold">Gold</span></div>
             <div class="w"><span data-i18n="award.w.mtsvane">Kakhuri Mtsvane</span> 2023</div>
-            <div class="p">95 <span data-i18n="award.points">Points</span></div>
+            <div class="t"><span data-i18n="award.t.gold">Gold Medal</span> — IWSC 2026</div>
           </div>
         </div>
-        <span class="sep"></span>
         <div class="award reveal reveal--up">
           <span class="medal medal--silver" aria-hidden="true">
             <span class="medal__face">
@@ -113,12 +113,23 @@
             </span>
           </span>
           <div class="award__txt">
-            <div class="t">IWSC <span data-i18n="award.silver">Silver</span></div>
             <div class="w"><span data-i18n="award.w.rkatsiteli">Rkatsiteli</span> 2023</div>
-            <div class="p">92 <span data-i18n="award.points">Points</span></div>
+            <div class="t"><span data-i18n="award.t.silver">Silver Medal</span> — IWSC 2026</div>
           </div>
         </div>
-        <span class="sep"></span>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--silver" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.silver">SILVER</span>
+              <span class="medal__year">2026</span>
+            </span>
+          </span>
+          <div class="award__txt">
+            <div class="w"><span data-i18n="award.w.tsarapi">Tsarapi</span> 2023</div>
+            <div class="t"><span data-i18n="award.t.silver">Silver Medal</span> — IWSC 2026</div>
+          </div>
+        </div>
         <div class="award reveal reveal--up">
           <span class="medal medal--bronze" aria-hidden="true">
             <span class="medal__face">
@@ -128,11 +139,55 @@
             </span>
           </span>
           <div class="award__txt">
-            <div class="t">IWSC <span data-i18n="award.bronze">Bronze</span></div>
             <div class="w"><span data-i18n="award.w.saperavi">Saperavi</span> 2023</div>
-            <div class="p">89 <span data-i18n="award.points">Points</span></div>
+            <div class="t"><span data-i18n="award.t.bronze">Bronze Medal</span> — IWSC 2026</div>
           </div>
         </div>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--bronze" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.bronze">BRONZE</span>
+              <span class="medal__year">2026</span>
+            </span>
+          </span>
+          <div class="award__txt">
+            <div class="w"><span data-i18n="award.w.kisi">Kisi</span> 2023</div>
+            <div class="t"><span data-i18n="award.t.bronze">Bronze Medal</span> — IWSC 2026</div>
+          </div>
+        </div>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--bronze" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.bronze">BRONZE</span>
+              <span class="medal__year">2025</span>
+            </span>
+          </span>
+          <div class="award__txt">
+            <div class="w"><span data-i18n="award.w.mukuzani">Mukuzani</span> 2023</div>
+            <div class="t"><span data-i18n="award.t.bronze">Bronze Medal</span> — IWSC 2025</div>
+          </div>
+        </div>
+        <div class="award reveal reveal--up">
+          <span class="medal medal--bronze" aria-hidden="true">
+            <span class="medal__face">
+              <span class="medal__brand"><i class="medal__mark"></i>IWSC</span>
+              <span class="medal__tier" data-i18n="medal.bronze">BRONZE</span>
+              <span class="medal__year">2025</span>
+            </span>
+          </span>
+          <div class="award__txt">
+            <div class="w"><span data-i18n="award.w.tibaani">Tibaani</span> 2023</div>
+            <div class="t"><span data-i18n="award.t.bronze">Bronze Medal</span> — IWSC 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="awards__more reveal reveal--up">
+        <a class="cover__cta" href="shop.html">
+          <span data-i18n="awards.cta">See all awards</span>
+          <span class="arw"></span>
+        </a>
       </div>
     </div>
   </section>
@@ -158,14 +213,15 @@
     <div class="about__bg"></div>
     <div class="about__inner">
       <div class="about__copy reveal reveal--left">
-        <p class="about__eyebrow uc" data-i18n="about.eyebrow">About the Company</p>
-        <h2 class="about__title" data-i18n="about.title">A tradition that lives in clay</h2>
+        <p class="about__eyebrow uc" data-i18n="about.eyebrow">About Us</p>
+        <h2 class="about__title" data-i18n="about.title">Everything begins in the vineyard</h2>
         <p class="about__text" data-i18n="about.text">
-          Akhmeteli was born in the heart of Kakheti, where the art of winemaking
-          passes from one generation to the next. We carry on the ancient qvevri
-          tradition — clay vessels buried in the earth, in which wine matures
-          naturally, just as our ancestors did for millennia. Every bottle is the
-          fruit of the Alazani Valley's sun, soil, and craft.
+          Akhmeteli makes Georgian wine with its focus on origin, grape variety
+          and the production technology that gives each wine its individual character.
+        </p>
+        <p class="about__text" data-i18n="about.text2">
+          Our aim is to preserve in every bottle the qualities that make Georgian
+          wine distinctive.
         </p>
         <a class="about__cta cover__cta" href="#wines">
           <span data-i18n="about.cta">Read our story</span>
@@ -181,18 +237,43 @@
     <div class="about__bg"></div>
     <div class="about__inner">
       <div class="about__copy reveal reveal--right">
-        <p class="about__eyebrow uc" data-i18n="place.eyebrow">The Place</p>
-        <h2 class="about__title" data-i18n="place.title">Akhmeta — heart of the Alazani Valley</h2>
+        <p class="about__eyebrow uc" data-i18n="place.eyebrow">Kakheti</p>
+        <h2 class="about__title" data-i18n="place.title">In the heart of Georgian winemaking</h2>
         <p class="about__text" data-i18n="place.text">
-          In the Akhmeta district, where the snow-capped Caucasus meets the fertile
-          Alazani Valley, vineyards have been tended for millennia. Ancient monasteries
-          watch over the plain, and the same soil and sun that shaped this land shape
-          every Akhmeteli wine.
+          Kakheti is Georgia's most important wine region — a place where climate,
+          soil and generations of winemaking experience create a unique environment.
+        </p>
+        <p class="about__text" data-i18n="place.text2">
+          This is where the character of Akhmeteli takes shape — through native grape
+          varieties and wines that express their origin clearly.
         </p>
         <a class="about__cta cover__cta" href="#visit">
           <span data-i18n="place.cta">Visit us</span>
           <span class="arw"></span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= #3b · WINEMAKING (craft) ================= -->
+  <section class="about about--craft" id="craft">
+    <span class="block-tag">B3b · Winemaking</span>
+    <div class="about__bg"></div>
+    <div class="about__inner">
+      <div class="about__copy reveal reveal--left">
+        <p class="about__eyebrow uc" data-i18n="craft.eyebrow">Winemaking</p>
+        <h2 class="about__title" data-i18n="craft.title">Respect for tradition. Precision at every stage.</h2>
+        <p class="about__text" data-i18n="craft.text1">
+          For us, tradition is not simply a repetition of the past.
+        </p>
+        <p class="about__text" data-i18n="craft.text2">
+          It is understanding the grape variety correctly, respecting its origin, and
+          making a considered decision at every stage of winemaking.
+        </p>
+        <p class="about__text" data-i18n="craft.text3">
+          Akhmeteli combines the experience of Georgian winemaking with modern approaches
+          to create balanced, distinctive wine of consistently high quality.
+        </p>
       </div>
     </div>
   </section>
@@ -203,56 +284,42 @@
     <div class="adv__inner">
       <header class="adv__head reveal reveal--up">
         <p class="adv__eyebrow uc" data-i18n="adv.eyebrow">Why Akhmeteli</p>
-        <h2 class="adv__title" data-i18n="adv.title">The Akhmeteli difference</h2>
+        <h2 class="adv__title" data-i18n="adv.title">What sets Akhmeteli apart</h2>
       </header>
       <ol class="adv__list">
         <li class="adv__item reveal reveal--left">
           <span class="adv__num">01</span>
           <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.1.t">Highest Quality</h3>
-            <p class="adv__text" data-i18n="adv.1.d">Strict quality control from vineyard to bottle. Every stage protects the purity, consistency, and natural character of the wine.</p>
+            <h3 class="adv__name" data-i18n="adv.1.t">Georgian Grape Varieties</h3>
+            <p class="adv__text" data-i18n="adv.1.d">Wines that showcase Georgia's unique viticulture.</p>
           </div>
         </li>
         <li class="adv__item reveal reveal--right">
           <span class="adv__num">02</span>
           <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.2.t">International Recognition</h3>
-            <p class="adv__text" data-i18n="adv.2.d">Award-winning wines that meet the highest international standards — a proud representation of Georgian winemaking on the world stage.</p>
+            <h3 class="adv__name" data-i18n="adv.2.t">Distinctive Origin</h3>
+            <p class="adv__text" data-i18n="adv.2.d">A collection tied to Kakheti and to Georgia's renowned wine microzones.</p>
           </div>
         </li>
         <li class="adv__item reveal reveal--left">
           <span class="adv__num">03</span>
           <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.3.t">Exceptional Land &amp; Climate</h3>
-            <p class="adv__text" data-i18n="adv.3.d">Vineyards set in one of Georgia's finest wine regions, where rich soil, generous sun, and a gentle climate yield grapes of rare depth and aroma.</p>
+            <h3 class="adv__name" data-i18n="adv.3.t">International Recognition</h3>
+            <p class="adv__text" data-i18n="adv.3.d">Wines that have won significant awards at international competitions.</p>
           </div>
         </li>
         <li class="adv__item reveal reveal--right">
           <span class="adv__num">04</span>
           <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.4.t">Selected Georgian Grapes</h3>
-            <p class="adv__text" data-i18n="adv.4.d">Crafted from Georgia's noblest varieties — Saperavi, Rkatsiteli, Kisi, Kakhuri Mtsvane and more — each lending its own character and taste.</p>
+            <h3 class="adv__name" data-i18n="adv.4.t">Tradition and a Modern Approach</h3>
+            <p class="adv__text" data-i18n="adv.4.d">The experience of Georgian winemaking together with modern standards.</p>
           </div>
         </li>
         <li class="adv__item reveal reveal--left">
           <span class="adv__num">05</span>
           <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.5.t">Traditional Qvevri Wine</h3>
-            <p class="adv__text" data-i18n="adv.5.d">Made the ancient Georgian way, in buried clay qvevri that preserve the wine's natural structure, deep aroma, and true identity.</p>
-          </div>
-        </li>
-        <li class="adv__item reveal reveal--right">
-          <span class="adv__num">06</span>
-          <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.6.t">Premium Georgian Chacha</h3>
-            <p class="adv__text" data-i18n="adv.6.d">Alongside the wines, a traditional Georgian chacha — a strong, characterful spirit at the heart of Georgian hospitality.</p>
-          </div>
-        </li>
-        <li class="adv__item reveal reveal--left">
-          <span class="adv__num">07</span>
-          <div class="adv__body">
-            <h3 class="adv__name" data-i18n="adv.7.t">Tradition Meets Modern Standards</h3>
-            <p class="adv__text" data-i18n="adv.7.d">Centuries-old craft, natural terroir, and modern quality standards united in products that proudly represent Georgia.</p>
+            <h3 class="adv__name" data-i18n="adv.5.t">A Diverse Collection</h3>
+            <p class="adv__text" data-i18n="adv.5.d">From classic wines to qvevri wines and chacha.</p>
           </div>
         </li>
       </ol>
@@ -265,7 +332,8 @@
     <span class="block-tag">B5 · Wines</span>
     <header class="wines__head reveal reveal--up">
       <p class="wines__eyebrow uc" data-i18n="wines.eyebrow">Our Collection</p>
-      <h2 class="wines__title" data-i18n="wines.title">Wines</h2>
+      <h2 class="wines__title" data-i18n="wines.title">Discover Akhmeteli</h2>
+      <p class="wines__text" data-i18n="wines.text">A diverse collection of wines built on Georgian grape varieties and renowned microzones.</p>
     </header>
     <div class="wstack" id="wstack">
       <!-- White -->
@@ -289,54 +357,80 @@
     </div>
   </section>
 
+  <!-- ================= #5b · GEORGIAN GRAPE VARIETIES ================= -->
+  <section class="about about--grapes" id="grapes">
+    <span class="block-tag">B5b · Grape Varieties</span>
+    <div class="about__bg"></div>
+    <div class="about__inner">
+      <div class="about__copy reveal reveal--right">
+        <p class="about__eyebrow uc" data-i18n="grapes.eyebrow">Georgian Grape Varieties</p>
+        <h2 class="about__title" data-i18n="grapes.title">Georgia's diversity in every variety</h2>
+        <p class="about__text" data-i18n="grapes.text1">
+          Our collection showcases the diversity of Georgian grape varieties.
+        </p>
+        <p class="about__text" data-i18n="grapes.text2">
+          Saperavi, Tsinandali, Kisi and Kakhuri Mtsvane create entirely different
+          characters — from intense reds to aromatic, structured whites and ambers.
+        </p>
+        <p class="about__text" data-i18n="grapes.text3">
+          Different varieties. Different character. One origin — Georgia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= #5c · QVEVRI ================= -->
+  <section class="about about--qvevri" id="qvevri">
+    <span class="block-tag">B5c · Qvevri</span>
+    <div class="about__bg"></div>
+    <div class="about__inner">
+      <div class="about__copy reveal reveal--left">
+        <p class="about__eyebrow uc" data-i18n="qvevri.eyebrow">Qvevri</p>
+        <h2 class="about__title" data-i18n="qvevri.title">Georgian tradition with a modern vision</h2>
+        <p class="about__text" data-i18n="qvevri.text1">
+          Ageing wine in qvevri is one of the most important parts of Georgian winemaking.
+        </p>
+        <p class="about__text" data-i18n="qvevri.text2">
+          Akhmeteli combines the traditional method with a modern approach, so that the
+          wine retains the natural character, depth and balance of the grape variety.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= #6 · CHACHA (3 static pictures) ================= -->
   <section class="chacha" id="chacha">
     <span class="block-tag">B6 · Chacha</span>
     <header class="wines__head reveal reveal--up">
-      <p class="wines__eyebrow uc" data-i18n="chacha.eyebrow">Georgian Spirit</p>
-      <h2 class="wines__title" data-i18n="chacha.title">Chacha</h2>
+      <p class="wines__eyebrow uc" data-i18n="chacha.eyebrow">Chacha</p>
+      <h2 class="wines__title" data-i18n="chacha.title">Beyond wine</h2>
+      <p class="wines__text" data-i18n="chacha.text1">Akhmeteli also presents Georgian winemaking culture through another important product — chacha.</p>
+      <p class="wines__text" data-i18n="chacha.text2">Strong character, Georgian origin and tradition in a different form.</p>
     </header>
     <div class="wstack" id="cstack">
       <img class="wstack__pic reveal reveal--up" src="assets/chacha/classic.png" alt="Akhmeteli Chacha Classic" />
       <img class="wstack__pic reveal reveal--up" src="assets/chacha/gold.png" alt="Akhmeteli Chacha Gold" loading="lazy" />
       <img class="wstack__pic reveal reveal--up" src="assets/chacha/silver.png" alt="Akhmeteli Chacha Silver" loading="lazy" />
     </div>
+    <div class="chacha__more reveal reveal--up">
+      <a class="cover__cta" href="shop.html">
+        <span data-i18n="chacha.cta">Discover Akhmeteli Chacha</span>
+        <span class="arw"></span>
+      </a>
+    </div>
   </section>
 
-  <!-- ================= TESTIMONIALS ================= -->
-  <section class="testi" id="testimonials">
-    <span class="block-tag">B7 · Testimonials</span>
-    <div class="testi__inner">
-      <header class="testi__head reveal reveal--up">
-        <p class="testi__eyebrow uc" data-i18n="testi.eyebrow">In Their Words</p>
-        <h2 class="testi__title" data-i18n="testi.title">What customers say about Akhmeteli</h2>
-      </header>
-      <div class="testi__grid">
-        <figure class="testi__card reveal reveal--up">
-          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
-          <blockquote class="testi__quote" data-i18n="testi.1.text">"Every bottle tells the story of Kakheti. The Saperavi is rich, deep and unforgettable — the closest I've come to drinking history."</blockquote>
-          <figcaption class="testi__by">
-            <span class="testi__name" data-i18n="testi.1.name">Nino Tatishvili</span>
-            <span class="testi__role" data-i18n="testi.1.role">Wine Collector</span>
-          </figcaption>
-        </figure>
-        <figure class="testi__card reveal reveal--up">
-          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
-          <blockquote class="testi__quote" data-i18n="testi.2.text">"We've poured Akhmeteli wines at our restaurant for two years. Guests always ask about the amber Rkatsiteli — qvevri winemaking at its finest."</blockquote>
-          <figcaption class="testi__by">
-            <span class="testi__name" data-i18n="testi.2.name">Luca Romano</span>
-            <span class="testi__role" data-i18n="testi.2.role">Sommelier</span>
-          </figcaption>
-        </figure>
-        <figure class="testi__card reveal reveal--up">
-          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
-          <blockquote class="testi__quote" data-i18n="testi.3.text">"Visiting the winery in Akhmeta was the highlight of our trip. Warm people, honest wine, and a tradition you can taste in every glass."</blockquote>
-          <figcaption class="testi__by">
-            <span class="testi__name" data-i18n="testi.3.name">Sarah Müller</span>
-            <span class="testi__role" data-i18n="testi.3.role">Visitor</span>
-          </figcaption>
-        </figure>
-      </div>
+  <!-- ================= #7 · ONLINE SHOP ================= -->
+  <section class="shopcta" id="shop-cta">
+    <span class="block-tag">B7 · Online Shop</span>
+    <div class="shopcta__inner reveal reveal--up">
+      <p class="shopcta__eyebrow uc" data-i18n="shopcta.eyebrow">Online Shop</p>
+      <h2 class="shopcta__title" data-i18n="shopcta.title">Choose your wine</h2>
+      <p class="shopcta__text" data-i18n="shopcta.text">Explore the Akhmeteli collection and choose a wine for the everyday table, for a special occasion, or as a gift.</p>
+      <a class="cover__cta" href="shop.html">
+        <span data-i18n="shopcta.cta">View the collection</span>
+        <span class="arw"></span>
+      </a>
     </div>
   </section>
 
@@ -377,9 +471,9 @@
   <section class="contact" id="contact">
     <div class="contact__inner">
       <header class="contact__head reveal reveal--up">
-        <p class="contact__eyebrow uc" data-i18n="contact.eyebrow">Get in Touch</p>
-        <h2 class="contact__title" data-i18n="contact.title">Contact Us</h2>
-        <p class="contact__text" data-i18n="contact.text">Have a question, a wholesale enquiry, or planning a visit? Send us a message and we'll get back to you shortly.</p>
+        <p class="contact__eyebrow uc" data-i18n="contact.eyebrow">Contact</p>
+        <h2 class="contact__title" data-i18n="contact.title">Get in touch</h2>
+        <p class="contact__text" data-i18n="contact.text">For more information about our wines, distribution or partnership, get in touch with us.</p>
       </header>
 
       <div class="contact__grid">
@@ -435,6 +529,7 @@
       <!-- brand + phone -->
       <div class="foot__brand reveal reveal--up">
         <a class="foot__logo" href="index.html"><img src="img/logo-gold.png" alt="Akhmeteli Winery" /></a>
+        <p class="foot__slogan" data-i18n="foot.slogan">Akhmeteli — quality you can taste.</p>
         <a class="foot__phone" href="tel:+995577080525">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1.2 4.5a1 1 0 0 1-.27 1L7.21 11.12a16 16 0 0 0 6 6l1.87-1.87a1 1 0 0 1 1-.27l4.5 1.2a1 1 0 0 1 .75 1z"/></svg>
           <span>+995 577 08 05 25</span>
@@ -600,78 +695,87 @@
         "nav.awards": "ჯილდოები",
         "nav.visit": "ვიზიტი",
         "nav.shop": "მაღაზია",
-        "cover.title": "ახმეტელი",
-        "cover.tagline": "ქართული ღვინის მემკვიდრეობა",
-        "cover.text": "კახეთის გულში დაბადებული, ახმეტელი ერთგულია ქართული მეღვინეობის უძველესი ტრადიციებისა. დამზადებული ქვევრში, ბუნებით ნაკვები და თაობიდან თაობას გადაცემული.",
+        "cover.title": "Akhmeteli",
+        "cover.tagline": "ქართული ღვინო, რომელსაც წარმოშობა განსაზღვრავს",
+        "cover.text": "კახეთის ბუნება, ქართული ვაზის ჯიშები და ხარისხზე ორიენტირებული მეღვინეობა.",
         "cover.cta": "აღმოაჩინე ჩვენი ღვინოები",
         "partners.label": "ჩვენი პარტნიორები",
-        "about.eyebrow": "კომპანიის შესახებ",
-        "about.title": "ტრადიცია, რომელიც ქვევრში ცოცხლობს",
-        "about.text": "ახმეტელი დაიბადა კახეთის გულში, სადაც ღვინის დაყენების ხელოვნება თაობიდან თაობას გადაეცემა. ჩვენ ვაგრძელებთ ქვევრის უძველეს ტრადიციას — მიწაში ჩაფლული თიხის ჭურჭელი, რომელშიც ღვინო ბუნებრივად მწიფდება, ისე როგორც ჩვენი წინაპრები აკეთებდნენ ათასწლეულების მანძილზე. თითოეული ბოთლი ალაზნის ველის მზის, ნიადაგისა და ხელოსნობის ნაყოფია.",
+        "about.eyebrow": "ჩვენს შესახებ",
+        "about.title": "ყველაფერი ვენახიდან იწყება",
+        "about.text": "Akhmeteli ქმნის ქართულ ღვინოს, სადაც მთავარი ყურადღება ეთმობა წარმოშობას, ვაზის ჯიშს და ღვინის წარმოების ტექნოლოგიას, რომელიც განსაზღვრავს მის ინდივიდუალურ ხასიათს.",
+        "about.text2": "ჩვენი მიზანია თითოეულ ბოთლში შევინარჩუნოთ ის თვისებები, რომლებიც ქართულ ღვინოს გამორჩეულს ხდის.",
         "about.cta": "ჩვენი ისტორია",
-        "place.eyebrow": "ადგილი",
-        "place.title": "ახმეტა — ალაზნის ველის გული",
-        "place.text": "ახმეტის მხარეში, სადაც თოვლიანი კავკასიონი ალაზნის ნაყოფიერ ველს ხვდება, ვენახებს ათასწლეულების მანძილზე უვლიან. უძველესი მონასტრები დარაჯად უდგას ველს, და იგივე ნიადაგი და მზე, რომელმაც ეს მიწა შექმნა, ქმნის ყველა ახმეტელის ღვინოს.",
+        "place.eyebrow": "კახეთი",
+        "place.title": "საქართველოს მეღვინეობის გულში",
+        "place.text": "კახეთი საქართველოს უმნიშვნელოვანესი ღვინის რეგიონია — ადგილი, სადაც კლიმატი, ნიადაგი და მეღვინეობის მრავალწლიანი გამოცდილება უნიკალურ გარემოს ქმნის.",
+        "place.text2": "სწორედ აქ ყალიბდება Akhmeteli-ს ხასიათი — ადგილობრივი ვაზის ჯიშებითა და ღვინოებით, რომლებიც საკუთარ წარმომავლობას მკაფიოდ გამოხატავენ.",
         "place.cta": "ეწვიე ჩვენ",
-        "adv.eyebrow": "უპირატესობები",
-        "adv.title": "რატომ ახმეტელი",
-        "adv.1.t": "უმაღლესი ხარისხი",
-        "adv.1.d": "მკაცრი ხარისხის კონტროლი ვენახიდან ბოთლამდე. ყოველი ეტაპი იცავს ღვინის სიწმინდეს, თანმიმდევრულობასა და ბუნებრივ ხასიათს.",
-        "adv.2.t": "საერთაშორისო აღიარება",
-        "adv.2.d": "ჯილდოებით აღიარებული ღვინოები, რომლებიც აკმაყოფილებენ უმაღლეს საერთაშორისო სტანდარტებს — ქართული მეღვინეობის ღირსეული წარმომადგენლობა მსოფლიო ასპარეზზე.",
-        "adv.3.t": "გამორჩეული მიწა და კლიმატი",
-        "adv.3.d": "ვენახები საქართველოს ერთ-ერთ საუკეთესო მხარეშია, სადაც ნაყოფიერი ნიადაგი, უხვი მზე და რბილი კლიმატი იშვიათი სიღრმისა და არომატის ყურძენს იძლევა.",
-        "adv.4.t": "რჩეული ქართული ჯიშები",
-        "adv.4.d": "შექმნილია საქართველოს კეთილშობილური ჯიშებისგან — საფერავი, რქაწითელი, ქისი, კახური მწვანე და სხვა — თითოეული თავისი ხასიათითა და გემოთი.",
-        "adv.5.t": "ტრადიციული ქვევრის ღვინო",
-        "adv.5.d": "დაყენებული უძველესი ქართული წესით, მიწაში ჩაფლულ ქვევრში, რომელიც ინახავს ღვინის ბუნებრივ სტრუქტურას, ღრმა არომატსა და ნამდვილ ვინაობას.",
-        "adv.6.t": "პრემიუმ ქართული ჭაჭა",
-        "adv.6.d": "ღვინოებთან ერთად — ტრადიციული ქართული ჭაჭა, ძლიერი და გამორჩეული სასმელი, ქართული სტუმართმოყვარეობის გულში.",
-        "adv.7.t": "ტრადიცია თანამედროვე სტანდარტებს ხვდება",
-        "adv.7.d": "საუკუნოვანი ხელოვნება, ბუნებრივი ტერუარი და თანამედროვე ხარისხის სტანდარტები — გაერთიანებული პროდუქტებში, რომლებიც ამაყად წარმოადგენენ საქართველოს.",
+        "craft.eyebrow": "მეღვინეობა",
+        "craft.title": "ტრადიციის პატივისცემა. სიზუსტე ყველა ეტაპზე.",
+        "craft.text1": "ჩვენთვის ტრადიცია მხოლოდ წარსულის გამეორება არ არის.",
+        "craft.text2": "ეს არის ვაზის ჯიშის სწორად გაგება, მისი წარმომავლობის პატივისცემა და მეღვინეობის თითოეულ ეტაპზე გააზრებული გადაწყვეტილება.",
+        "craft.text3": "Akhmeteli აერთიანებს ქართული მეღვინეობის გამოცდილებას და თანამედროვე მიდგომებს, რათა შექმნას დაბალანსებული, გამორჩეული და სტაბილურად მაღალი ხარისხის ღვინო.",
+        "adv.eyebrow": "რატომ Akhmeteli",
+        "adv.title": "რა გამოარჩევს Akhmeteli-ს",
+        "adv.1.t": "ქართული ვაზის ჯიშები",
+        "adv.1.d": "ღვინოები, რომლებიც საქართველოს უნიკალურ მევენახეობას წარმოაჩენს.",
+        "adv.2.t": "გამორჩეული წარმოშობა",
+        "adv.2.d": "კახეთთან და საქართველოს ცნობილ ღვინის მიკროზონებთან დაკავშირებული კოლექცია.",
+        "adv.3.t": "საერთაშორისო აღიარება",
+        "adv.3.d": "ღვინოები, რომლებმაც საერთაშორისო კონკურსებზე მნიშვნელოვანი ჯილდოები მოიპოვეს.",
+        "adv.4.t": "ტრადიცია და თანამედროვე მიდგომა",
+        "adv.4.d": "ქართული მეღვინეობის გამოცდილება თანამედროვე სტანდარტებთან ერთად.",
+        "adv.5.t": "მრავალფეროვანი კოლექცია",
+        "adv.5.d": "კლასიკური ღვინოებიდან ქვევრის ღვინოებსა და ჭაჭამდე.",
         "wines.eyebrow": "ჩვენი კოლექცია",
-        "wines.title": "ღვინოები",
+        "wines.title": "აღმოაჩინე Akhmeteli",
+        "wines.text": "ქართული ვაზის ჯიშებსა და ცნობილ მიკროზონებზე დაფუძნებული ღვინოების მრავალფეროვანი კოლექცია.",
         "wines.g.white": "თეთრი ღვინო",
         "wines.g.amber": "ქარვისფერი ღვინო",
         "wines.g.red": "წითელი ღვინო",
-        "chacha.eyebrow": "ქართული სასმელი",
-        "chacha.title": "ჭაჭა",
-        "prod.eyebrow": "ჯილდოსმფლობელი ქართული ღვინო",
-        "prod.grape": "ჯიში",
-        "prod.origin": "მხარე",
-        "prod.muk.name": "მუკუზანი",
-        "prod.muk.type": "წითელი მშრალი ღვინო",
-        "prod.muk.grape": "საფერავი",
-        "prod.muk.origin": "მუკუზანი, კახეთი, საქართველო",
-        "award.gold": "ოქრო",
-        "award.silver": "ვერცხლი",
-        "award.bronze": "ბრინჯაო",
-        "award.points": "ქულა",
-        "brand.producer": "ახმეტელის მარანი",
-        "meta.title": "ახმეტელის მარანი — ქართული ღვინის მემკვიდრეობა",
-        "meta.desc": "ახმეტელის მარანი — კახეთის გულში ფესვგადგმული, ერთგული ქართული მეღვინეობის უძველესი ტრადიციებისა. დაყენებული ქვევრში.",
-        "awards.eyebrow": "საერთაშორისო აღიარება",
-        "awards.title": "ჯილდოები და აღიარება",
+        "grapes.eyebrow": "ქართული ვაზის ჯიშები",
+        "grapes.title": "საქართველოს მრავალფეროვნება თითოეულ ჯიშში",
+        "grapes.text1": "ჩვენი კოლექცია ქართული ვაზის ჯიშების მრავალფეროვნებას წარმოაჩენს.",
+        "grapes.text2": "საფერავი, წინანდალი, ქისი და კახური მწვანე ერთმანეთისგან სრულიად განსხვავებულ ხასიათს ქმნიან — ინტენსიური წითელი ღვინოებიდან არომატულ და სტრუქტურულ თეთრ თუ ქარვისფერ ღვინოებამდე.",
+        "grapes.text3": "სხვადასხვა ჯიში. განსხვავებული ხასიათი. ერთი წარმოშობა — საქართველო.",
+        "qvevri.eyebrow": "ქვევრი",
+        "qvevri.title": "ქართული ტრადიცია თანამედროვე ხედვით",
+        "qvevri.text1": "ქვევრში ღვინის დაყენება ქართული მეღვინეობის ერთ-ერთი ყველაზე მნიშვნელოვანი ნაწილია.",
+        "qvevri.text2": "Akhmeteli ტრადიციულ მეთოდს თანამედროვე მიდგომასთან აერთიანებს, რათა ღვინოში შენარჩუნდეს ვაზის ჯიშის ბუნებრივი ხასიათი, სიღრმე და ბალანსი.",
+        "chacha.eyebrow": "ჭაჭა",
+        "chacha.title": "ღვინის მიღმა",
+        "chacha.text1": "Akhmeteli ქართული მეღვინეობის კულტურას კიდევ ერთი მნიშვნელოვანი პროდუქტის — ჭაჭის — საშუალებითაც წარმოაჩენს.",
+        "chacha.text2": "ძლიერი ხასიათი, ქართული წარმოშობა და ტრადიცია განსხვავებულ ფორმაში.",
+        "chacha.cta": "აღმოაჩინე Akhmeteli-ს ჭაჭა",
+        "shopcta.eyebrow": "ონლაინ მაღაზია",
+        "shopcta.title": "აირჩიე შენი ღვინო",
+        "shopcta.text": "აღმოაჩინე Akhmeteli-ს კოლექცია და შეარჩიე ღვინო ყოველდღიური სუფრისთვის, განსაკუთრებული შემთხვევისთვის ან საჩუქრად.",
+        "shopcta.cta": "იხილე კოლექცია",
+        "brand.producer": "Akhmeteli-ს მარანი",
+        "meta.title": "Akhmeteli — ქართული ღვინო, რომელსაც წარმოშობა განსაზღვრავს",
+        "meta.desc": "Akhmeteli — ქართული ღვინო კახეთიდან. ქართული ვაზის ჯიშები, ცნობილი მიკროზონები და ხარისხზე ორიენტირებული მეღვინეობა.",
+        "awards.eyebrow": "ჯილდოები",
+        "awards.title": "საერთაშორისო აღიარება",
+        "awards.text1": "ხარისხი ყველაზე კარგად თავად ღვინოში ჩანს — თუმცა საერთაშორისო აღიარებაც მის მნიშვნელოვან დადასტურებას წარმოადგენს.",
+        "awards.text2": "Akhmeteli-ს ღვინოები საერთაშორისო ღვინის კონკურსებზე ოქროს, ვერცხლისა და ბრინჯაოს მედლებით არის დაჯილდოებული.",
+        "awards.sub": "საერთაშორისო ჯილდოები",
+        "awards.cta": "იხილე ყველა ჯილდო",
         "medal.gold": "ოქრო",
         "medal.silver": "ვერცხლი",
         "medal.bronze": "ბრინჯაო",
+        "award.t.gold": "ოქროს მედალი",
+        "award.t.silver": "ვერცხლის მედალი",
+        "award.t.bronze": "ბრინჯაოს მედალი",
         "award.w.mtsvane": "კახური მწვანე",
         "award.w.rkatsiteli": "რქაწითელი",
+        "award.w.tsarapi": "წარაფი",
         "award.w.saperavi": "საფერავი",
-        "testi.eyebrow": "მათი სიტყვებით",
-        "testi.title": "რას ამბობენ ახმეტელზე",
-        "testi.1.text": "„ყოველი ბოთლი კახეთის ისტორიას ჰყვება. საფერავი მდიდარი, ღრმა და დაუვიწყარია — თითქოს ისტორიას სვამ.“",
-        "testi.1.name": "ნინო ტატიშვილი",
-        "testi.1.role": "ღვინის კოლექციონერი",
-        "testi.2.text": "„ორი წელია ჩვენს რესტორანში ახმეტელის ღვინოს ვასხამთ. სტუმრები ყოველთვის ქარვისფერ რქაწითელზე გვეკითხებიან — ქვევრის მეღვინეობა საუკეთესო სახით.“",
-        "testi.2.name": "ლუკა რომანო",
-        "testi.2.role": "სომელიე",
-        "testi.3.text": "„ახმეტაში მარნის მონახულება ჩვენი მოგზაურობის მთავარი მოვლენა იყო. თბილი ხალხი, გულწრფელი ღვინო და ტრადიცია, რომელიც ყველა ჭიქაში იგრძნობა.“",
-        "testi.3.name": "სარა მიულერი",
-        "testi.3.role": "სტუმარი",
+        "award.w.kisi": "ქისი",
+        "award.w.mukuzani": "მუკუზანი",
+        "award.w.tibaani": "ტიბაანი",
         "faq.eyebrow": "სასარგებლო ინფორმაცია",
         "faq.title": "ხშირად დასმული კითხვები",
-        "faq.q1": "სად მზადდება ახმეტელის ღვინო?",
+        "faq.q1": "სად მზადდება Akhmeteli-ს ღვინო?",
         "faq.a1": "კახეთში, ახმეტის მუნიციპალიტეტში — ალაზნის ველის გულში, სადაც ვაშენებთ ვენახს და ღვინო ტრადიციულ ქვევრში მწიფდება.",
         "faq.q2": "რა არის ქვევრის ღვინო?",
         "faq.a2": "ქვევრი დიდი თიხის ჭურჭელია, მიწაში ჩაფლული, რომელსაც საქართველოში 8000 წელზე მეტია იყენებენ. ღვინო მასში ბუნებრივად დუღს და მწიფდება — აქედანაა ქარვისფერი ღვინის სიღრმე და ხასიათი. UNESCO-ს მემკვიდრეობა.",
@@ -681,6 +785,7 @@
         "faq.a4": "რა თქმა უნდა. სტუმრებს ვიღებთ დეგუსტაციასა და მარნის ტურზე წინასწარი შეთანხმებით. დაგვირეკეთ ან მოგვწერეთ ვიზიტის დასაჯავშნად.",
         "faq.q5": "ნატურალურია თქვენი ღვინო?",
         "faq.a5": "ჩვენი ღვინო ტრადიციულად მზადდება — ქართული ჯიშები, სპონტანური დადუღება ქვევრში და მინიმალური ჩარევა, რომ ვენახის ნამდვილი ხასიათი ალაპარაკდეს.",
+        "foot.slogan": "Akhmeteli — ხარისხი, რომელიც იგრძნობა",
         "foot.explore": "ნავიგაცია",
         "foot.legal": "სამართლებრივი",
         "foot.terms": "წესები და პირობები",
@@ -692,9 +797,9 @@
         "foot.follow": "გამოგვყევით",
         "foot.rights": "ყველა უფლება დაცულია.",
         "foot.region": "ახმეტა · კახეთი · საქართველო",
-        "contact.eyebrow": "დაგვიკავშირდით",
-        "contact.title": "კონტაქტი",
-        "contact.text": "გაქვთ შეკითხვა, საბითუმო შეკვეთა ან გსურთ ვიზიტი? მოგვწერეთ და მალე დაგიკავშირდებით.",
+        "contact.eyebrow": "კონტაქტი",
+        "contact.title": "დაგვიკავშირდით",
+        "contact.text": "ღვინოების, დისტრიბუციის ან პარტნიორობის შესახებ დამატებითი ინფორმაციისთვის დაგვიკავშირდით.",
         "contact.addr": "მისამართი",
         "contact.addr.val": "ახმეტა, კახეთი, საქართველო",
         "contact.tel": "ტელეფონი",
@@ -709,77 +814,86 @@
       en: {
         "nav.menu": "Menu",
         "nav.awards": "Awards",
-        "nav.visit": "Visit Us",
+        "nav.visit": "Visit",
         "nav.shop": "Wine Shop",
         "cover.title": "Akhmeteli",
-        "cover.tagline": "Georgian Wine Heritage",
-        "cover.text": "Rooted in the heart of Kakheti, Akhmeteli is dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri, shaped by nature, and passed down through generations.",
+        "cover.tagline": "Georgian wine defined by its origin",
+        "cover.text": "The nature of Kakheti, Georgian grape varieties, and winemaking built around quality.",
         "cover.cta": "Discover Our Wines",
         "partners.label": "Our Partners",
-        "about.eyebrow": "About the Company",
-        "about.title": "A tradition that lives in clay",
-        "about.text": "Akhmeteli was born in the heart of Kakheti, where the art of winemaking passes from one generation to the next. We carry on the ancient qvevri tradition — clay vessels buried in the earth, in which wine matures naturally, just as our ancestors did for millennia. Every bottle is the fruit of the Alazani Valley's sun, soil, and craft.",
+        "about.eyebrow": "About Us",
+        "about.title": "Everything begins in the vineyard",
+        "about.text": "Akhmeteli makes Georgian wine with its focus on origin, grape variety and the production technology that gives each wine its individual character.",
+        "about.text2": "Our aim is to preserve in every bottle the qualities that make Georgian wine distinctive.",
         "about.cta": "Read our story",
-        "place.eyebrow": "The Place",
-        "place.title": "Akhmeta — heart of the Alazani Valley",
-        "place.text": "In the Akhmeta district, where the snow-capped Caucasus meets the fertile Alazani Valley, vineyards have been tended for millennia. Ancient monasteries watch over the plain, and the same soil and sun that shaped this land shape every Akhmeteli wine.",
+        "place.eyebrow": "Kakheti",
+        "place.title": "In the heart of Georgian winemaking",
+        "place.text": "Kakheti is Georgia's most important wine region — a place where climate, soil and generations of winemaking experience create a unique environment.",
+        "place.text2": "This is where the character of Akhmeteli takes shape — through native grape varieties and wines that express their origin clearly.",
         "place.cta": "Visit us",
+        "craft.eyebrow": "Winemaking",
+        "craft.title": "Respect for tradition. Precision at every stage.",
+        "craft.text1": "For us, tradition is not simply a repetition of the past.",
+        "craft.text2": "It is understanding the grape variety correctly, respecting its origin, and making a considered decision at every stage of winemaking.",
+        "craft.text3": "Akhmeteli combines the experience of Georgian winemaking with modern approaches to create balanced, distinctive wine of consistently high quality.",
         "adv.eyebrow": "Why Akhmeteli",
-        "adv.title": "The Akhmeteli difference",
-        "adv.1.t": "Highest Quality",
-        "adv.1.d": "Strict quality control from vineyard to bottle. Every stage protects the purity, consistency, and natural character of the wine.",
-        "adv.2.t": "International Recognition",
-        "adv.2.d": "Award-winning wines that meet the highest international standards — a proud representation of Georgian winemaking on the world stage.",
-        "adv.3.t": "Exceptional Land & Climate",
-        "adv.3.d": "Vineyards set in one of Georgia's finest wine regions, where rich soil, generous sun, and a gentle climate yield grapes of rare depth and aroma.",
-        "adv.4.t": "Selected Georgian Grapes",
-        "adv.4.d": "Crafted from Georgia's noblest varieties — Saperavi, Rkatsiteli, Kisi, Kakhuri Mtsvane and more — each lending its own character and taste.",
-        "adv.5.t": "Traditional Qvevri Wine",
-        "adv.5.d": "Made the ancient Georgian way, in buried clay qvevri that preserve the wine's natural structure, deep aroma, and true identity.",
-        "adv.6.t": "Premium Georgian Chacha",
-        "adv.6.d": "Alongside the wines, a traditional Georgian chacha — a strong, characterful spirit at the heart of Georgian hospitality.",
-        "adv.7.t": "Tradition Meets Modern Standards",
-        "adv.7.d": "Centuries-old craft, natural terroir, and modern quality standards united in products that proudly represent Georgia.",
+        "adv.title": "What sets Akhmeteli apart",
+        "adv.1.t": "Georgian Grape Varieties",
+        "adv.1.d": "Wines that showcase Georgia's unique viticulture.",
+        "adv.2.t": "Distinctive Origin",
+        "adv.2.d": "A collection tied to Kakheti and to Georgia's renowned wine microzones.",
+        "adv.3.t": "International Recognition",
+        "adv.3.d": "Wines that have won significant awards at international competitions.",
+        "adv.4.t": "Tradition and a Modern Approach",
+        "adv.4.d": "The experience of Georgian winemaking together with modern standards.",
+        "adv.5.t": "A Diverse Collection",
+        "adv.5.d": "From classic wines to qvevri wines and chacha.",
         "wines.eyebrow": "Our Collection",
-        "wines.title": "Wines",
+        "wines.title": "Discover Akhmeteli",
+        "wines.text": "A diverse collection of wines built on Georgian grape varieties and renowned microzones.",
         "wines.g.white": "White Wine",
         "wines.g.amber": "Amber Wine",
         "wines.g.red": "Red Wine",
-        "chacha.eyebrow": "Georgian Spirit",
-        "chacha.title": "Chacha",
-        "prod.eyebrow": "Award Winning Georgian Wine",
-        "prod.grape": "Grape Variety",
-        "prod.origin": "Origin",
-        "prod.muk.name": "Mukuzani",
-        "prod.muk.type": "Red Dry Wine",
-        "prod.muk.grape": "Saperavi",
-        "prod.muk.origin": "Mukuzani, Kakheti, Georgia",
-        "award.gold": "Gold",
-        "award.silver": "Silver",
-        "award.bronze": "Bronze",
-        "award.points": "Points",
+        "grapes.eyebrow": "Georgian Grape Varieties",
+        "grapes.title": "Georgia's diversity in every variety",
+        "grapes.text1": "Our collection showcases the diversity of Georgian grape varieties.",
+        "grapes.text2": "Saperavi, Tsinandali, Kisi and Kakhuri Mtsvane create entirely different characters — from intense reds to aromatic, structured whites and ambers.",
+        "grapes.text3": "Different varieties. Different character. One origin — Georgia.",
+        "qvevri.eyebrow": "Qvevri",
+        "qvevri.title": "Georgian tradition with a modern vision",
+        "qvevri.text1": "Ageing wine in qvevri is one of the most important parts of Georgian winemaking.",
+        "qvevri.text2": "Akhmeteli combines the traditional method with a modern approach, so that the wine retains the natural character, depth and balance of the grape variety.",
+        "chacha.eyebrow": "Chacha",
+        "chacha.title": "Beyond wine",
+        "chacha.text1": "Akhmeteli also presents Georgian winemaking culture through another important product — chacha.",
+        "chacha.text2": "Strong character, Georgian origin and tradition in a different form.",
+        "chacha.cta": "Discover Akhmeteli Chacha",
+        "shopcta.eyebrow": "Online Shop",
+        "shopcta.title": "Choose your wine",
+        "shopcta.text": "Explore the Akhmeteli collection and choose a wine for the everyday table, for a special occasion, or as a gift.",
+        "shopcta.cta": "View the collection",
         "brand.producer": "Akhmeteli Winery",
-        "meta.title": "Akhmeteli Winery — Georgian Wine Heritage",
-        "meta.desc": "Akhmeteli Winery — rooted in the heart of Kakheti, dedicated to the timeless traditions of Georgian winemaking. Crafted in qvevri.",
-        "awards.eyebrow": "International Recognition",
-        "awards.title": "Awards & Distinctions",
+        "meta.title": "Akhmeteli — Georgian wine defined by its origin",
+        "meta.desc": "Akhmeteli — Georgian wine from Kakheti. Georgian grape varieties, renowned microzones, and winemaking built around quality.",
+        "awards.eyebrow": "Awards",
+        "awards.title": "International Recognition",
+        "awards.text1": "Quality shows best in the wine itself — though international recognition is an important confirmation of it.",
+        "awards.text2": "Akhmeteli wines have been awarded gold, silver and bronze medals at international wine competitions.",
+        "awards.sub": "International Awards",
+        "awards.cta": "See all awards",
         "medal.gold": "GOLD",
         "medal.silver": "SILVER",
         "medal.bronze": "BRONZE",
+        "award.t.gold": "Gold Medal",
+        "award.t.silver": "Silver Medal",
+        "award.t.bronze": "Bronze Medal",
         "award.w.mtsvane": "Kakhuri Mtsvane",
         "award.w.rkatsiteli": "Rkatsiteli",
+        "award.w.tsarapi": "Tsarapi",
         "award.w.saperavi": "Saperavi",
-        "testi.eyebrow": "In Their Words",
-        "testi.title": "What customers say about Akhmeteli",
-        "testi.1.text": "“Every bottle tells the story of Kakheti. The Saperavi is rich, deep and unforgettable — the closest I’ve come to drinking history.”",
-        "testi.1.name": "Nino Tatishvili",
-        "testi.1.role": "Wine Collector",
-        "testi.2.text": "“We’ve poured Akhmeteli wines at our restaurant for two years. Guests always ask about the amber Rkatsiteli — qvevri winemaking at its finest.”",
-        "testi.2.name": "Luca Romano",
-        "testi.2.role": "Sommelier",
-        "testi.3.text": "“Visiting the winery in Akhmeta was the highlight of our trip. Warm people, honest wine, and a tradition you can taste in every glass.”",
-        "testi.3.name": "Sarah Müller",
-        "testi.3.role": "Visitor",
+        "award.w.kisi": "Kisi",
+        "award.w.mukuzani": "Mukuzani",
+        "award.w.tibaani": "Tibaani",
         "faq.eyebrow": "Good to Know",
         "faq.title": "Frequently Asked Questions",
         "faq.q1": "Where are Akhmeteli wines made?",
@@ -792,6 +906,7 @@
         "faq.a4": "Absolutely. We welcome guests for tastings and cellar tours by appointment. Call or message us to book your visit to Akhmeta.",
         "faq.q5": "Are your wines natural?",
         "faq.a5": "Our wines are made the traditional way — native Georgian grapes, spontaneous fermentation in qvevri, and minimal intervention, so the true character of the vineyard speaks.",
+        "foot.slogan": "Akhmeteli — quality you can taste.",
         "foot.explore": "Explore",
         "foot.legal": "Legal",
         "foot.terms": "Terms & Conditions",
@@ -803,9 +918,9 @@
         "foot.follow": "Follow Us",
         "foot.rights": "All rights reserved.",
         "foot.region": "Akhmeta · Kakheti · Georgia",
-        "contact.eyebrow": "Get in Touch",
-        "contact.title": "Contact Us",
-        "contact.text": "Have a question, a wholesale enquiry, or planning a visit? Send us a message and we'll get back to you shortly.",
+        "contact.eyebrow": "Contact",
+        "contact.title": "Get in touch",
+        "contact.text": "For more information about our wines, distribution or partnership, get in touch with us.",
         "contact.addr": "Address",
         "contact.addr.val": "Akhmeta, Kakheti, Georgia",
         "contact.tel": "Phone",
@@ -821,88 +936,98 @@
         "nav.menu": "Меню",
         "nav.awards": "Награды",
         "nav.visit": "Визит",
-        "nav.shop": "Магазин вин",
-        "cover.title": "Ахметели",
-        "cover.tagline": "Наследие грузинского вина",
-        "cover.text": "Уходящая корнями в сердце Кахетии, Ахметели верна вечным традициям грузинского виноделия. Создано в квеври, сформировано природой и передаётся из поколения в поколение.",
-        "cover.cta": "Открыть наши вина",
+        "nav.shop": "Магазин",
+        "cover.title": "Akhmeteli",
+        "cover.tagline": "Грузинское вино, которое определяет происхождение",
+        "cover.text": "Природа Кахетии, грузинские сорта винограда и виноделие, ориентированное на качество.",
+        "cover.cta": "Откройте наши вина",
         "partners.label": "Наши партнёры",
-        "about.eyebrow": "О компании",
-        "about.title": "Традиция, что живёт в глине",
-        "about.text": "Ахметели родилась в сердце Кахетии, где искусство виноделия передаётся из поколения в поколение. Мы продолжаем древнюю традицию квеври — глиняные сосуды, закопанные в землю, в которых вино созревает естественно, как делали наши предки тысячелетиями. Каждая бутылка — плод солнца, почвы и мастерства Алазанской долины.",
+        "about.eyebrow": "О нас",
+        "about.title": "Всё начинается с виноградника",
+        "about.text": "Akhmeteli создаёт грузинское вино, уделяя главное внимание происхождению, сорту винограда и технологии производства, которая определяет его индивидуальный характер.",
+        "about.text2": "Наша цель — сохранить в каждой бутылке те качества, которые делают грузинское вино особенным.",
         "about.cta": "Наша история",
-        "place.eyebrow": "Место",
-        "place.title": "Ахмета — сердце Алазанской долины",
-        "place.text": "В Ахметском крае, где заснеженный Кавказ встречается с плодородной Алазанской долиной, виноградники возделывают тысячелетиями. Древние монастыри хранят долину, и та же почва и солнце, что создали эту землю, создают каждое вино Ахметели.",
+        "place.eyebrow": "Кахетия",
+        "place.title": "В сердце грузинского виноделия",
+        "place.text": "Кахетия — важнейший винодельческий регион Грузии, где климат, почва и многолетний опыт виноделия создают уникальную среду.",
+        "place.text2": "Именно здесь формируется характер Akhmeteli — благодаря местным сортам винограда и винам, которые ясно выражают своё происхождение.",
         "place.cta": "Посетите нас",
-        "adv.eyebrow": "Преимущества",
-        "adv.title": "Почему Ахметели",
-        "adv.1.t": "Высочайшее качество",
-        "adv.1.d": "Строгий контроль качества от лозы до бутылки. Каждый этап оберегает чистоту, постоянство и природный характер вина.",
-        "adv.2.t": "Международное признание",
-        "adv.2.d": "Отмеченные наградами вина, отвечающие высочайшим международным стандартам, — достойное представление грузинского виноделия на мировой сцене.",
-        "adv.3.t": "Исключительная земля и климат",
-        "adv.3.d": "Виноградники в одном из лучших винодельческих регионов Грузии, где плодородная почва, щедрое солнце и мягкий климат рождают виноград редкой глубины и аромата.",
-        "adv.4.t": "Отборные грузинские сорта",
-        "adv.4.d": "Создано из благороднейших сортов Грузии — Саперави, Ркацители, Киси, Кахури Мцване и других, — каждый придаёт свой характер и вкус.",
-        "adv.5.t": "Традиционное вино в квеври",
-        "adv.5.d": "Сделано древним грузинским способом, в закопанных глиняных квеври, что сохраняют природную структуру, глубокий аромат и истинную суть вина.",
-        "adv.6.t": "Премиальная грузинская чача",
-        "adv.6.d": "Наряду с винами — традиционная грузинская чача, крепкий и характерный напиток в сердце грузинского гостеприимства.",
-        "adv.7.t": "Традиции и современные стандарты",
-        "adv.7.d": "Вековое мастерство, природный терруар и современные стандарты качества — в продуктах, которые с гордостью представляют Грузию.",
+        "craft.eyebrow": "Виноделие",
+        "craft.title": "Уважение к традиции. Точность на каждом этапе.",
+        "craft.text1": "Для нас традиция — это не просто повторение прошлого.",
+        "craft.text2": "Это правильное понимание сорта винограда, уважение к его происхождению и продуманное решение на каждом этапе виноделия.",
+        "craft.text3": "Akhmeteli объединяет опыт грузинского виноделия и современные подходы, чтобы создавать сбалансированное, выразительное вино стабильно высокого качества.",
+        "adv.eyebrow": "Почему Akhmeteli",
+        "adv.title": "Что отличает Akhmeteli",
+        "adv.1.t": "Грузинские сорта винограда",
+        "adv.1.d": "Вина, представляющие уникальное виноградарство Грузии.",
+        "adv.2.t": "Особое происхождение",
+        "adv.2.d": "Коллекция, связанная с Кахетией и известными винными микрозонами Грузии.",
+        "adv.3.t": "Международное признание",
+        "adv.3.d": "Вина, получившие значимые награды на международных конкурсах.",
+        "adv.4.t": "Традиция и современный подход",
+        "adv.4.d": "Опыт грузинского виноделия вместе с современными стандартами.",
+        "adv.5.t": "Разнообразная коллекция",
+        "adv.5.d": "От классических вин до вин в квеври и чачи.",
         "wines.eyebrow": "Наша коллекция",
-        "wines.title": "Вина",
+        "wines.title": "Откройте Akhmeteli",
+        "wines.text": "Разнообразная коллекция вин, основанная на грузинских сортах винограда и известных микрозонах.",
         "wines.g.white": "Белое вино",
         "wines.g.amber": "Янтарное вино",
         "wines.g.red": "Красное вино",
-        "chacha.eyebrow": "Грузинский напиток",
-        "chacha.title": "Чача",
-        "prod.eyebrow": "Отмеченное наградами грузинское вино",
-        "prod.grape": "Сорт",
-        "prod.origin": "Регион",
-        "prod.muk.name": "Мукузани",
-        "prod.muk.type": "Красное сухое вино",
-        "prod.muk.grape": "Саперави",
-        "prod.muk.origin": "Мукузани, Кахети, Грузия",
-        "award.gold": "Золото",
-        "award.silver": "Серебро",
-        "award.bronze": "Бронза",
-        "award.points": "баллов",
-        "brand.producer": "Винодельня Ахметели",
-        "meta.title": "Винодельня Ахметели — наследие грузинского вина",
-        "meta.desc": "Винодельня Ахметели — корнями в сердце Кахетии, верна вечным традициям грузинского виноделия. Создано в квеври.",
-        "awards.eyebrow": "Международное признание",
-        "awards.title": "Награды и отличия",
+        "grapes.eyebrow": "Грузинские сорта винограда",
+        "grapes.title": "Разнообразие Грузии в каждом сорте",
+        "grapes.text1": "Наша коллекция представляет разнообразие грузинских сортов винограда.",
+        "grapes.text2": "Саперави, Цинандали, Киси и Кахури Мцване создают совершенно разные характеры — от насыщенных красных вин до ароматных и структурных белых и янтарных.",
+        "grapes.text3": "Разные сорта. Разный характер. Одно происхождение — Грузия.",
+        "qvevri.eyebrow": "Квеври",
+        "qvevri.title": "Грузинская традиция в современном прочтении",
+        "qvevri.text1": "Выдержка вина в квеври — одна из важнейших частей грузинского виноделия.",
+        "qvevri.text2": "Akhmeteli объединяет традиционный метод с современным подходом, чтобы вино сохраняло природный характер сорта, глубину и баланс.",
+        "chacha.eyebrow": "Чача",
+        "chacha.title": "За пределами вина",
+        "chacha.text1": "Akhmeteli представляет культуру грузинского виноделия и через другой важный продукт — чачу.",
+        "chacha.text2": "Сильный характер, грузинское происхождение и традиция в другой форме.",
+        "chacha.cta": "Откройте чачу Akhmeteli",
+        "shopcta.eyebrow": "Интернет-магазин",
+        "shopcta.title": "Выберите своё вино",
+        "shopcta.text": "Откройте коллекцию Akhmeteli и выберите вино для повседневного стола, особого случая или в подарок.",
+        "shopcta.cta": "Смотреть коллекцию",
+        "brand.producer": "Винодельня Akhmeteli",
+        "meta.title": "Akhmeteli — грузинское вино, которое определяет происхождение",
+        "meta.desc": "Akhmeteli — грузинское вино из Кахетии. Грузинские сорта винограда, известные микрозоны и виноделие, ориентированное на качество.",
+        "awards.eyebrow": "Награды",
+        "awards.title": "Международное признание",
+        "awards.text1": "Качество лучше всего видно в самом вине — однако международное признание служит его важным подтверждением.",
+        "awards.text2": "Вина Akhmeteli отмечены золотыми, серебряными и бронзовыми медалями международных винных конкурсов.",
+        "awards.sub": "Международные награды",
+        "awards.cta": "Все награды",
         "medal.gold": "ЗОЛОТО",
         "medal.silver": "СЕРЕБРО",
         "medal.bronze": "БРОНЗА",
+        "award.t.gold": "Золотая медаль",
+        "award.t.silver": "Серебряная медаль",
+        "award.t.bronze": "Бронзовая медаль",
         "award.w.mtsvane": "Кахури Мцване",
         "award.w.rkatsiteli": "Ркацители",
+        "award.w.tsarapi": "Царапи",
         "award.w.saperavi": "Саперави",
-        "testi.eyebrow": "Их словами",
-        "testi.title": "Что говорят о винодельне Ахметели",
-        "testi.1.text": "«Каждая бутылка рассказывает историю Кахетии. Саперави — насыщенное, глубокое и незабываемое, будто пьёшь саму историю.»",
-        "testi.1.name": "Нино Татишвили",
-        "testi.1.role": "Винный коллекционер",
-        "testi.2.text": "«Уже два года мы подаём вина Ахметели в нашем ресторане. Гости всегда спрашивают про янтарное Ркацители — квеври-виноделие в лучшем виде.»",
-        "testi.2.name": "Лука Романо",
-        "testi.2.role": "Сомелье",
-        "testi.3.text": "«Визит на винодельню в Ахмете стал главным событием поездки. Тёплые люди, честное вино и традиция, которую чувствуешь в каждом бокале.»",
-        "testi.3.name": "Сара Мюллер",
-        "testi.3.role": "Гостья",
+        "award.w.kisi": "Киси",
+        "award.w.mukuzani": "Мукузани",
+        "award.w.tibaani": "Тибаани",
         "faq.eyebrow": "Полезно знать",
         "faq.title": "Часто задаваемые вопросы",
-        "faq.q1": "Где производят вина Ахметели?",
-        "faq.a1": "В Ахметском районе Кахетии, на востоке Грузии — в сердце Алазанской долины, где растёт наш виноград, а вино вызревает в традиционных квеври.",
-        "faq.q2": "Что такое вино квеври?",
-        "faq.a2": "Квеври — большие глиняные сосуды, закопанные в землю; в Грузии их используют более 8000 лет. Вино бродит и созревает в них естественно, придавая янтарным винам глубину и характер. Наследие ЮНЕСКО.",
-        "faq.q3": "Доставляете ли вы вино?",
-        "faq.a3": "Да. Мы доставляем по всей Грузии и по запросу организуем международную отправку. Свяжитесь с нами по вопросам опта и экспорта.",
+        "faq.q1": "Где производятся вина Akhmeteli?",
+        "faq.a1": "В Кахетии, в Ахметском муниципалитете — в сердце Алазанской долины, где мы выращиваем виноград, а вино созревает в традиционных квеври.",
+        "faq.q2": "Что такое вино в квеври?",
+        "faq.a2": "Квеври — большие глиняные сосуды, закопанные в землю, которые используются в Грузии более 8000 лет. Вино в них бродит и созревает естественно — отсюда глубина и характер янтарных вин. Наследие ЮНЕСКО.",
+        "faq.q3": "Осуществляете ли вы доставку?",
+        "faq.a3": "Да. Мы доставляем по всей Грузии и по запросу организуем международную отправку. Свяжитесь с нами по вопросам оптовых поставок и экспорта.",
         "faq.q4": "Можно ли посетить винодельню с дегустацией?",
-        "faq.a4": "Конечно. Мы принимаем гостей на дегустации и экскурсии по марани по предварительной записи. Позвоните или напишите, чтобы забронировать визит в Ахмету.",
+        "faq.a4": "Конечно. Мы принимаем гостей на дегустации и экскурсии по марани по предварительной договорённости. Позвоните или напишите нам, чтобы забронировать визит.",
         "faq.q5": "Натуральные ли ваши вина?",
-        "faq.a5": "Наши вина делаются традиционно — грузинские сорта, спонтанное брожение в квеври и минимальное вмешательство, чтобы говорил подлинный характер виноградника.",
+        "faq.a5": "Наши вина создаются традиционным способом — грузинские сорта, спонтанное брожение в квеври и минимальное вмешательство, чтобы говорил подлинный характер виноградника.",
+        "foot.slogan": "Akhmeteli — качество, которое чувствуется.",
         "foot.explore": "Навигация",
         "foot.legal": "Правовая информация",
         "foot.terms": "Условия и положения",
@@ -913,10 +1038,10 @@
         "foot.contact": "Контакты",
         "foot.follow": "Мы в соцсетях",
         "foot.rights": "Все права защищены.",
-        "foot.region": "Ахмета · Кахети · Грузия",
-        "contact.eyebrow": "Свяжитесь с нами",
-        "contact.title": "Контакты",
-        "contact.text": "Есть вопрос, оптовый заказ или планируете визит? Напишите нам, и мы скоро ответим.",
+        "foot.region": "Ахмета · Кахетия · Грузия",
+        "contact.eyebrow": "Контакты",
+        "contact.title": "Свяжитесь с нами",
+        "contact.text": "Для получения дополнительной информации о винах, дистрибуции или партнёрстве свяжитесь с нами.",
         "contact.addr": "Адрес",
         "contact.addr.val": "Ахмета, Кахетия, Грузия",
         "contact.tel": "Телефон",
@@ -974,6 +1099,6 @@
   })();
   </script>
 
-  <script src="js/company.js"></script>
+  <script src="js/company.js?v=20260812"></script>
 </body>
 </html>

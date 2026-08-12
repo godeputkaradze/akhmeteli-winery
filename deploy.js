@@ -122,7 +122,11 @@ function summarize(files) {
       const size = fs.statSync(local).size;
       for (let attempt = 1; ; attempt++) {
         try {
-          if (await remoteSize(rel) === size) { skipped++; break; }
+          // The same-size skip is what makes a full re-run cheap, but it hides
+          // edits that keep the byte count identical ("Красные" -> "Красное",
+          // "?v=1" -> "?v=2"). Naming files explicitly means "push these", so
+          // the check only applies to a full mirror.
+          if (!ONLY.length && await remoteSize(rel) === size) { skipped++; break; }
           const dir = path.posix.dirname(rel);
           if (dir !== ".") {
             await client.ensureDir(dir);
